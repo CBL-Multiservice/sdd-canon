@@ -3,6 +3,19 @@
 Format based on Keep a Changelog; semantic versioning (see README for the
 MAJOR/MINOR/PATCH semantics specific to canon content).
 
+## [0.2.0] — 2026-08-13
+
+### Added
+
+- `canon/advisory-sources.md` (`sdd: canon-advisory`) — the advisory level:
+  a curated list of official live sources per dimension (WCAG, CWE Top 25,
+  OWASP families, Well-Architected, endoflife.date, OSV, OTel semconv, CIS,
+  SLSA, NIST CSRC, FinOps, ADR), with the epistemic rule: live consultation
+  never decides — consulted content enters work as `[P]` until verified or
+  promoted into the pinned canon; never consumed by enforcement. MINOR bump:
+  new canon content (requires a kit whose `canon-check` accepts the
+  `canon-advisory` kind — SDD kit 3.0, story SDD3-22).
+
 ## [0.1.2] — 2026-08-13
 
 ### Changed
