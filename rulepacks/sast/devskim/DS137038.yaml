@@ -1,0 +1,13 @@
+rules:
+  - id: DS137038
+    languages:
+      - ruby
+    severity: INFO
+    message: "Notice: Outbound HTTP Connection — Inbound HTTP"
+    metadata:
+      source: devskim
+      source-rule: DS137038
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/attack_surface/outbound_network.json
+      references:
+        - DS137138.md
+    pattern-regex: \bNet::HTTP\b

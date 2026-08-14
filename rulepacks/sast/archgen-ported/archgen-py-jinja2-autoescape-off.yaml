@@ -1,0 +1,17 @@
+rules:
+  - id: archgen-py-jinja2-autoescape-off
+    patterns:
+      - pattern: jinja2.Environment(...)
+      - pattern-not: jinja2.Environment(..., autoescape=True, ...)
+      - pattern-not: jinja2.Environment(..., autoescape=jinja2.select_autoescape(...), ...)
+      - pattern-not: jinja2.Environment(..., autoescape=select_autoescape(...), ...)
+    message: jinja2.Environment sem autoescape=True (o default é False!) renderiza
+      HTML sem escape — XSS com qualquer dado externo no template. Passe
+      autoescape=True ou select_autoescape.
+    languages:
+      - python
+    severity: WARNING
+    metadata:
+      cwe: CWE-79
+      source-rule: bandit B701
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b701_jinja2_autoescape_false.html

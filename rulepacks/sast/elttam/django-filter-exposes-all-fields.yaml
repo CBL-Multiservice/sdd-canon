@@ -1,0 +1,29 @@
+rules:
+  - id: django-filter-exposes-all-fields
+    message: FilterSet exposes all model fields. Sensitive fields (password, tokens,
+      PII) may unintentionally become filterable via lookup operators.
+    severity: INFO
+    metadata:
+      cwe:
+        - "CWE-203: Observable Discrepancy"
+      owasp:
+        - A01:2021 - Broken Access Control
+      references:
+        - https://cwe.mitre.org/data/definitions/203.html
+        - https://owasp.org/Top10/A01_2021-Broken_Access_Control/
+        - https://www.elttam.com/blog/plormbing-your-django-orm/
+      category: security
+      technology:
+        - python
+      subcategory:
+        - vuln
+      likelihood: LOW
+      impact: MEDIUM
+      confidence: LOW
+    languages:
+      - python
+    pattern: |
+      class $CLS(FilterSet):
+        class Meta:
+          model = $MODEL
+          fields = "__all__"

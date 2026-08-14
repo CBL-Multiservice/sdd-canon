@@ -1,0 +1,43 @@
+rules:
+  - id: len-cast-into-binary-length-prefix
+    message: "A narrowing cast of len() is written as a binary length prefix via
+      encoding/binary, then the corresponding payload is emitted. This is the
+      exploitable shape from the msgp/DEF CON 32 class: if the length exceeds
+      the narrow type's max it wraps, the on-wire length field desynchronises
+      from the actual payload, and a downstream parser can be smuggled
+      extra/short data. Bound the length against the type max (or the protocol
+      limit) before writing it, and reject oversized payloads."
+    languages:
+      - go
+    severity: WARNING
+    patterns:
+      - pattern-either:
+          - pattern: binary.$ORDER.PutUint32($BUF, uint32(len($X)))
+          - pattern: binary.$ORDER.PutUint16($BUF, uint16(len($X)))
+          - pattern: binary.Write($W, $ORDER, uint32(len($X)))
+          - pattern: binary.Write($W, $ORDER, uint16(len($X)))
+      - pattern-not-inside: |
+          if len($X) > $MAX { ... }
+          ...
+      - pattern-not-inside: |
+          if len($X) <= $MAX { ... }
+          ...
+      - pattern-not-inside: |
+          if len($X) >= $MAX { ... }
+          ...
+    metadata:
+      cwe:
+        - "CWE-190: Integer Overflow or Wraparound"
+      owasp:
+        - A03:2021 - Injection
+      category: security
+      subcategory:
+        - vuln
+      confidence: MEDIUM
+      likelihood: LOW
+      impact: HIGH
+      technology:
+        - go
+      references:
+        - https://media.defcon.org/DEF%20CON%2032/DEF%20CON%2032%20presentations/
+        - https://github.com/tinylib/msgp/blob/v1.5.0/msgp/write.go

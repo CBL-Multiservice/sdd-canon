@@ -1,0 +1,25 @@
+rules:
+  - id: DS101155
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: ERROR
+    message: Disabled certificate validation — Extend default certificate
+      validation, but do not disable or override default rules. — Always use a
+      valid certificate, even during testing.
+    metadata:
+      source: devskim
+      source-rule: DS101155
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/general.json
+      references:
+        - DS181865.md
+    pattern-either:
+      - pattern-regex: encrypt\s*=\s*false
+      - pattern-regex: encryption\s*=\s*false
+      - pattern-regex: unencrypted.*password
+      - pattern-regex: TODO.*crypt

@@ -1,0 +1,44 @@
+rules:
+  - id: web-xml
+    message: web.xml Struts2 filter $FILTER_NAME class $...FILTER_CLASS
+    severity: INFO
+    languages:
+      - generic
+    metadata:
+      category: security
+      subcategory: audit
+      likelihood: LOW
+      impact: LOW
+      confidence: LOW
+      technology:
+        - JVM
+        - Struts2
+    paths:
+      include:
+        - web.xml
+        - web-xml.xml
+    patterns:
+      - pattern: |
+          <filter>
+              ...
+              <filter-name>$FILTER_NAME</filter-name>
+              ...
+              <filter-class>$...FILTER_CLASS</filter-class>
+              ...
+          </filter>
+      - pattern-not: |
+          <filter>
+              ...
+              <filter-name>$FILTER_NAME</filter-name>
+              ...
+              <filter-class>...</filter-class>
+              ...
+          </filter>
+          ...
+          <filter-mapping>
+              ...
+              <filter-name>$FILTER_NAME</filter-name>
+              ...
+              <url-pattern>...</url-pattern>
+              ...
+          </filter-mapping>

@@ -1,0 +1,13 @@
+rules:
+  - id: archgen-py-eval-use
+    pattern: eval(...)
+    message: eval() executa a string como código Python. Com qualquer influência de
+      entrada externa é injeção de código. Para avaliar literais use
+      ast.literal_eval.
+    languages:
+      - python
+    severity: WARNING
+    metadata:
+      cwe: CWE-95
+      source-rule: bandit B307
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b307_eval.html

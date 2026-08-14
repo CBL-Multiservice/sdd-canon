@@ -1,0 +1,24 @@
+rules:
+  - id: convention-annotation-package-info
+    message: Struts2 Convention plugin annotation $ANNOTATION params $...PARAMS
+      package $PACKAGE
+    severity: INFO
+    languages:
+      - java
+    metadata:
+      category: security
+      subcategory: audit
+      likelihood: LOW
+      impact: LOW
+      confidence: LOW
+      technology:
+        - JVM
+        - Struts2
+        - Struts2 Convention Plugin
+    patterns:
+      - pattern: |
+          @$ANNOTATION($...PARAMS)
+          package $PACKAGE;
+      - metavariable-regex:
+          metavariable: $ANNOTATION
+          regex: (org.apache.struts2.convention.annotation.Namespace|Namespace|ParentPackage)

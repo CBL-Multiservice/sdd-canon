@@ -1,0 +1,19 @@
+rules:
+  - id: DS165746
+    languages:
+      - swift
+    severity: WARNING
+    message: Do not execute user-provided JavaScript — This line of code shows the
+      dynamic evaluation of JavaScript, sourced from a string. It's important
+      that this string not contain unsanitized user-supplied data, as it could
+      be a vector for a cross-site scripting (XSS) attack.
+    metadata:
+      source: devskim
+      source-rule: DS165746
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/control_flow/dynamic_execution.json
+      references:
+        - DS165746.md
+    pattern-either:
+      - pattern-regex: \bstringByEvaluatingJavaScriptFromString\b
+      - pattern-regex: \bevaluateJavaScript\b
+      - pattern-regex: \bcallAsyncJavaScript\b

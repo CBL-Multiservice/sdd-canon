@@ -1,0 +1,47 @@
+rules:
+  - id: DS169127
+    languages:
+      - cpp
+    severity: WARNING
+    message: An Outdated or Banned SSL/TLS Protocol is Used — An Outdated or Banned
+      SSL/TLS Protocol is Used — Use TLS 1.2
+    metadata:
+      source: devskim
+      source-rule: DS169127
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/protocol.json
+      references:
+        - DS169126.md
+    pattern-either:
+      - pattern-regex: \bSECURITY_FLAG_40BIT\b
+      - pattern-regex: \bSECURITY_FLAG_56BIT\b
+      - pattern-regex: \bSECURITY_FLAG_NORMALBITNESS\b
+      - pattern-regex: \bSECURITY_FLAG_PCT\b
+      - pattern-regex: \bSECURITY_FLAG_PCT4\b
+      - pattern-regex: \bSECURITY_FLAG_SSL\b
+      - pattern-regex: \bSECURITY_FLAG_SSL3\b
+      - pattern-regex: \bSECURITY_FLAG_STRENGTH_MEDIUM\b
+      - pattern-regex: \bSECURITY_FLAG_STRENGTH_WEAK\b
+      - pattern-regex: \bSECURITY_FLAG_UNKNOWNBIT\b
+      - pattern-regex: \bWINHTTP_FLAG_SECURE_PROTOCOL_SSL2\b
+      - pattern-regex: \bWINHTTP_FLAG_SECURE_PROTOCOL_SSL3\b
+      - pattern-regex: \bWINHTTP_FLAG_SECURE_PROTOCOL_TLS1\b
+      - pattern-regex: \bWINHTTP_FLAG_SECURE_PROTOCOL_ALL\b
+      - pattern-regex: \bSECURITY_FLAG_STRENGTH_MEDIUM\b
+      - pattern-regex: \bSECURITY_FLAG_STRENGTH_WEAK\b
+      - pattern-regex: SP_PROT_(PCT1|SSL2|SSL3|TLS1|TLS1_0)_(CLIENT|SERVER)
+      - pattern-regex: \bNSStreamSocketSecurityLevelNone\b
+      - pattern-regex: \bNSStreamSocketSecurityLevelSSLv2\b
+      - pattern-regex: \bNSStreamSocketSecurityLevelSSLv3\b
+      - pattern-regex: \bNSStreamSocketSecurityLevelTLSv1\b
+      - pattern-regex: \bkCFStreamSocketSecurityLevelNone\b
+      - pattern-regex: \bkCFStreamSocketSecurityLevelSSLv2\b
+      - pattern-regex: \bkCFStreamSocketSecurityLevelSSLv3\b
+      - pattern-regex: \bkCFStreamSocketSecurityLevelTLSv1\b
+      - pattern-regex: \bkSSLProtocolUnknown \b
+      - pattern-regex: \bkSSLProtocol3\b
+      - pattern-regex: \bkTLSProtocol1\b
+      - pattern-regex: \bkDTLSProtocol1\b
+      - pattern-regex: \bkSSLProtocol2\b
+      - pattern-regex: \bkSSLProtocol3Only\b
+      - pattern-regex: \bkTLSProtocol1Only\b
+      - pattern-regex: \bkSSLProtocolAll\b

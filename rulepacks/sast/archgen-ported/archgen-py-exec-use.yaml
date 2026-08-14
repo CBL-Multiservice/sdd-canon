@@ -1,0 +1,12 @@
+rules:
+  - id: archgen-py-exec-use
+    pattern: exec(...)
+    message: exec() executa a string como código Python — mesmo risco do eval, sem
+      valor de retorno que o justifique. Reavalie o desenho.
+    languages:
+      - python
+    severity: WARNING
+    metadata:
+      cwe: CWE-95
+      source-rule: bandit B102
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b102_exec_used.html

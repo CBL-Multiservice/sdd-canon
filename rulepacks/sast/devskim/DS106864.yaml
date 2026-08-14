@@ -1,0 +1,14 @@
+rules:
+  - id: DS106864
+    languages:
+      - csharp
+    severity: ERROR
+    message: Do not use the DES symmetric block cipher. — The DES cipher was found,
+      which is widely considered to be broken. — Use AES instead.
+    metadata:
+      source: devskim
+      source-rule: DS106864
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/ciphers.json
+      references:
+        - DS106864.md
+    pattern-regex: \bDESCryptoServiceProvider\b

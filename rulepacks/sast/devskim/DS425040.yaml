@@ -1,0 +1,15 @@
+rules:
+  - id: DS425040
+    languages:
+      - csharp
+    severity: INFO
+    message: Do not deserialize untrusted data. — Deserializing attacker-supplied
+      data using Newtonsoft.JSON with TypeNameHandling can result in code
+      execution. — Use TypeNameHandling.None
+    metadata:
+      source: devskim
+      source-rule: DS425040
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/deserialization.json
+      references:
+        - DS425000.md
+    pattern-regex: TypeNameHandling\.(Objects|Arrays|Auto|All)

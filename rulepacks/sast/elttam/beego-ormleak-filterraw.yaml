@@ -1,0 +1,26 @@
+rules:
+  - id: beego-ormleak-filterraw
+    message: Beego ORM FilterRaw used. Docs warn it treats input directly as a query
+      condition and Beego performs no checks. Review carefully (can enable
+      injection or leak oracles).
+    severity: WARNING
+    metadata:
+      cwe:
+        - "CWE-203: Observable Discrepancy"
+      owasp:
+        - A01:2021 - Broken Access Control
+      references:
+        - https://cwe.mitre.org/data/definitions/203.html
+        - https://owasp.org/Top10/A01_2021-Broken_Access_Control/
+        - https://www.elttam.com/blog/leaking-more-than-you-joined-for/
+      category: security
+      technology:
+        - golang
+      subcategory:
+        - vuln
+      likelihood: LOW
+      impact: MEDIUM
+      confidence: LOW
+    languages:
+      - go
+    pattern: $QS.FilterRaw($RAW, ...)

@@ -1,0 +1,12 @@
+rules:
+  - id: archgen-py-ssl-unverified-context
+    pattern: ssl._create_unverified_context(...)
+    message: Contexto TLS sem verificação de certificado — sujeito a
+      man-in-the-middle. Use ssl.create_default_context().
+    languages:
+      - python
+    severity: ERROR
+    metadata:
+      cwe: CWE-295
+      source-rule: bandit B323
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b323_unverified_context.html

@@ -1,0 +1,20 @@
+rules:
+  - id: DS440014
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: INFO
+    message: "LibreSSL: Hard-coded SSL/TLS Protocol — LibreSSL: Hard-coded SSL/TLS
+      Protocol — Review to ensure that a TLS protocol agility is maintained."
+    metadata:
+      source: devskim
+      source-rule: DS440014
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_generic.json
+      references:
+        - DS440001.md
+    pattern-regex: (SSL|D?TLS)[01239_\.]+_VERSION(_MAJOR|_MINOR)?

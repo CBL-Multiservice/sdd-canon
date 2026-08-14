@@ -1,0 +1,24 @@
+rules:
+  - id: DS169126
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: WARNING
+    message: An Outdated or Banned SSL/TLS Protocol is Used — An Outdated or Banned
+      SSL/TLS Protocol is Used — Use TLS 1.2
+    metadata:
+      source: devskim
+      source-rule: DS169126
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/protocol.json
+      references:
+        - DS169126.md
+    pattern-either:
+      - pattern-regex: (SSL|TLS)v(2|23|3|1)_(client|server)
+      - pattern-regex: \bSSLv2\b
+      - pattern-regex: \bSSLv3\b
+      - pattern-regex: TLSv1(?![._]?[2-9])

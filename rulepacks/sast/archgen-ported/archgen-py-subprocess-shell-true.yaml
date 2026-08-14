@@ -1,0 +1,18 @@
+rules:
+  - id: archgen-py-subprocess-shell-true
+    pattern-either:
+      - pattern: subprocess.call(..., shell=True, ...)
+      - pattern: subprocess.run(..., shell=True, ...)
+      - pattern: subprocess.Popen(..., shell=True, ...)
+      - pattern: subprocess.check_call(..., shell=True, ...)
+      - pattern: subprocess.check_output(..., shell=True, ...)
+    message: subprocess com shell=True passa o comando pelo shell — concatenar
+      entrada externa aqui é injeção de comando. Prefira lista de argumentos com
+      shell=False.
+    languages:
+      - python
+    severity: ERROR
+    metadata:
+      cwe: CWE-78
+      source-rule: bandit B602
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html

@@ -1,0 +1,21 @@
+rules:
+  - id: DS450001
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: WARNING
+    message: Cookie Secure flag is disabled (.NET) — Disabling the Secure flag could
+      result in the disclosure of sensitive cookie information over HTTP. —
+      Enable the Secure cookie on cookies.
+    metadata:
+      source: devskim
+      source-rule: DS450001
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/frameworks/dotnet_framework.json
+      references:
+        - DS450001.md
+    pattern-regex: "false"

@@ -1,0 +1,19 @@
+rules:
+  - id: archgen-py-weak-hash
+    pattern-either:
+      - pattern: hashlib.md5(...)
+      - pattern: hashlib.sha1(...)
+      - pattern: hashlib.new("md5", ...)
+      - pattern: hashlib.new("sha1", ...)
+      - pattern: hashlib.new("md4", ...)
+    message: MD5/SHA1 são quebrados por colisão — inaceitáveis para senha,
+      assinatura ou integridade de dado que importa. Use SHA-256+ (integridade)
+      ou bcrypt/scrypt/argon2 (senha). Para uso não-criptográfico declare
+      usedforsecurity=False.
+    languages:
+      - python
+    severity: WARNING
+    metadata:
+      cwe: CWE-327
+      source-rule: bandit B324
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b324_hashlib.html

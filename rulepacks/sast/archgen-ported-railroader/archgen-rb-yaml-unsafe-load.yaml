@@ -1,0 +1,16 @@
+rules:
+  - id: archgen-rb-yaml-unsafe-load
+    pattern-either:
+      - pattern: YAML.load(...)
+      - pattern: YAML.unsafe_load(...)
+      - pattern: Psych.load(...)
+    message: YAML.load instancia objetos Ruby arbitrários do YAML (ao contrário de
+      JSON) — dado não-confiável vira execução de código (gadget chains). Use
+      YAML.safe_load.
+    languages:
+      - ruby
+    severity: ERROR
+    metadata:
+      cwe: CWE-502
+      source-rule: railroader check_yaml_parsing
+      source-url: https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_yaml_parsing.rb

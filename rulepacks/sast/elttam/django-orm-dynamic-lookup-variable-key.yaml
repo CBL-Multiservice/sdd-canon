@@ -1,0 +1,39 @@
+rules:
+  - id: django-orm-dynamic-lookup-variable-key
+    message: Dynamic kwargs passed into Django ORM lookup methods with a variable
+      key. Review if these keys can be attacker-controlled (e.g.
+      "user__password__contains"). This is a primary ORM Leak sink.
+    severity: INFO
+    metadata:
+      cwe:
+        - "CWE-203: Observable Discrepancy"
+      owasp:
+        - A01:2021 - Broken Access Control
+      references:
+        - https://cwe.mitre.org/data/definitions/203.html
+        - https://owasp.org/Top10/A01_2021-Broken_Access_Control/
+        - https://www.elttam.com/blog/plormbing-your-django-orm/
+      category: security
+      technology:
+        - python
+      subcategory:
+        - vuln
+      likelihood: LOW
+      impact: MEDIUM
+      confidence: LOW
+    languages:
+      - python
+    mode: taint
+    pattern-sources:
+      - patterns:
+          - pattern-either:
+              - pattern: "{..., $K: $V, ...}"
+              - pattern: "{$K: $V for $K, $V in $ARR}"
+          - metavariable-pattern:
+              metavariable: $K
+              patterns:
+                - pattern-not: '"..."'
+    pattern-sinks:
+      - pattern: $MDL.objects.filter(..., **..., ...)
+      - pattern: $MDL.objects.get(..., **..., ...)
+      - pattern: Q(..., **..., ...)

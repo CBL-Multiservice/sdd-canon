@@ -1,0 +1,9 @@
+rules:
+  - id: odd-comparison-subtract-lt-zero
+    patterns:
+      - pattern: $X - $Y < 0
+    fix: $Y > $X
+    message: Odd comparison
+    languages:
+      - go
+    severity: ERROR

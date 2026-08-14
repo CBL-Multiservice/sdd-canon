@@ -1,0 +1,20 @@
+rules:
+  - id: archgen-py-ssl-insecure-version
+    pattern-either:
+      - pattern: ssl.wrap_socket(..., ssl_version=ssl.PROTOCOL_SSLv2, ...)
+      - pattern: ssl.wrap_socket(..., ssl_version=ssl.PROTOCOL_SSLv3, ...)
+      - pattern: ssl.wrap_socket(..., ssl_version=ssl.PROTOCOL_TLSv1, ...)
+      - pattern: ssl.wrap_socket(..., ssl_version=ssl.PROTOCOL_TLSv1_1, ...)
+      - pattern: ssl.SSLContext(ssl.PROTOCOL_SSLv2)
+      - pattern: ssl.SSLContext(ssl.PROTOCOL_SSLv3)
+      - pattern: ssl.SSLContext(ssl.PROTOCOL_TLSv1)
+      - pattern: ssl.SSLContext(ssl.PROTOCOL_TLSv1_1)
+    message: Protocolo TLS/SSL obsoleto e quebrado (SSLv2/v3, TLS 1.0/1.1). Use TLS
+      1.2+ (PROTOCOL_TLS_CLIENT).
+    languages:
+      - python
+    severity: ERROR
+    metadata:
+      cwe: CWE-326
+      source-rule: bandit B502
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b502_ssl_with_bad_version.html

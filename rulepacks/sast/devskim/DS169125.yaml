@@ -1,0 +1,20 @@
+rules:
+  - id: DS169125
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: WARNING
+    message: Do not use outdated SSL/TLS protocols — An outdated SSL/TLS protocol
+      version is specified. — Use TLS 1.2
+    metadata:
+      source: devskim
+      source-rule: DS169125
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/protocol.json
+      references:
+        - DS169126.md
+    pattern-regex: \b(?:(SSLv?2|SSLv?3|TLSv?1(?![._]?[2-9])|TLSv?1[._]?[01]))\b

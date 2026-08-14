@@ -1,0 +1,3257 @@
+{
+  "artifact": "sdd-canon rulepack (SAST)",
+  "generator": "archgenerator canon-export (STORY-492 / RF-X1)",
+  "proposedVersion": "0.3.0",
+  "baseRegistryVersion": "0.2.0",
+  "generatedAt": "2026-08-14T19:38:21.623Z",
+  "rules": {
+    "included": 291,
+    "excludedByLicense": {
+      "LGPL-3.0": 164,
+      "LGPL-2.1": 36
+    },
+    "bySource": {
+      "archgen-ported": 23,
+      "archgen-ported-codeql": 13,
+      "archgen-ported-railroader": 13,
+      "devskim": 64,
+      "dgryski": 66,
+      "dotta": 11,
+      "elttam": 92,
+      "gitlab-mit": 9
+    },
+    "byLicense": {
+      "Apache-2.0": 23,
+      "MIT": 268
+    },
+    "byLanguage": {
+      "python": 31,
+      "java": 53,
+      "ruby": 40,
+      "c": 39,
+      "cpp": 42,
+      "csharp": 44,
+      "rust": 24,
+      "swift": 25,
+      "bash": 24,
+      "go": 80,
+      "kotlin": 5,
+      "php": 8,
+      "generic": 16,
+      "yaml": 6,
+      "javascript": 8,
+      "typescript": 6,
+      "scala": 1
+    },
+    "bySeverity": {
+      "WARNING": 90,
+      "ERROR": 109,
+      "INFO": 92
+    }
+  },
+  "files": [
+    {
+      "path": "rulepack/archgen-ported/archgen-py-django-mark-safe-dynamic.yaml",
+      "sha256": "1adf9dedb680e16486179bea6fb02b6fcbabb30b28c0df49ac3f9f437e8f64bc"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-django-raw-sql.yaml",
+      "sha256": "731cb5f87ac9c0f84dbe6a0fd05f5f9666cd03fee0d569670c6cac54e73193a4"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-eval-use.yaml",
+      "sha256": "45b5a31d621889c256a92854c38f6f95e01c7f52ebae7f8be8ceb0bf6fe1e005"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-exec-use.yaml",
+      "sha256": "50f4e44f020c76c8f774722cb7ce208bd440ef30a706f8dae1ee8b33a5645f7f"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-flask-debug.yaml",
+      "sha256": "9c2ad06804595c5ef7c751eb53d9b45714dfe7c58b5af832ab4549e1c4145f75"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-ftplib.yaml",
+      "sha256": "44c7b4e640621150bdce27d0a2d24dd81223d58a99d5dfa53ab0eac991a10fa0"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-insecure-cipher.yaml",
+      "sha256": "be8b6f3468ed341b4cf1d4877239972009bb1c775514ca87df8e55999d9a1eb1"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-jinja2-autoescape-off.yaml",
+      "sha256": "49228d24ee9d64be918982669bd585737be70e6354ba9144e7693e47fea92d6b"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-marshal-load.yaml",
+      "sha256": "c92d6827fd7c9b518c3e67c98377247fdd5a304d1562a0cfea22204043377d21"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-os-system-dynamic.yaml",
+      "sha256": "cf2b115505df69258059f0c4c15dfc85f46e445607e54f7fb7b18be93cb3d6bd"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-paramiko-auto-add.yaml",
+      "sha256": "b572dadfefaf1f2efa4f13d1cd783b3cb2277cd38b7b2d71a8c9e124bdbab420"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-pickle-load.yaml",
+      "sha256": "013c0ae6a6d595a60d7beac5fd0bc2b378469265327bb864d58212a8a599174d"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-requests-verify-false.yaml",
+      "sha256": "1a4809afc66de91db1a98e98f9a4b5601a1a25a6ab755a55fb62f30eee0481c8"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-sql-string-built.yaml",
+      "sha256": "642e5b4ecd4fa67d25e08fe12b750615f9831a9360d38e2d647edf4f23249553"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-ssl-insecure-version.yaml",
+      "sha256": "8d69b2adc5a62a3eb1e8d02c9658ae3600fb3dc84f2f51d6813c906fa61a9087"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-ssl-unverified-context.yaml",
+      "sha256": "9fc6d9096846ad0e919ac4b5ec5ceb0b5cff6042db6e5c3fb3c12cd00b1eb136"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-subprocess-shell-true.yaml",
+      "sha256": "2353c9128a1a905c872ebf41df00d4328eea4da52d00e3f32516562ff29664ec"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-tarfile-extractall-nofilter.yaml",
+      "sha256": "30494750bf6f8aee1c0c3573d8ed0aa864cd01439f3c4883a3f1c10318a46e22"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-telnetlib.yaml",
+      "sha256": "f953a3ea218e9e862b0c02108d29f2b93f1073c13799fa79ba186e7d8efd8334"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-tempfile-mktemp.yaml",
+      "sha256": "051d39e0a172071785f5b4f94b9fd125dfdf04da4dd9ac811c44e9498fc32bc7"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-weak-hash.yaml",
+      "sha256": "a61c04ac61a5a05406fc446b5e226281b5a1960c431a27868ad68dd8311d531c"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-xml-stdlib-parse.yaml",
+      "sha256": "e2e9fc96e9390dd6810fc94ac4b06ce202963c651f40b39763b832033390fbd2"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-yaml-unsafe-load.yaml",
+      "sha256": "b544fecf02ec84251412220145fe963617185efb681bc392937c576e0b188b86"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-broken-cipher.yaml",
+      "sha256": "e4e2f2cbad027290184b6f726627b50eaa64bfc26ca7cb827e2cfb2dc623a498"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-cookie-insecure.yaml",
+      "sha256": "786ebd51991aa6b0ad5d57c6fee4aa3028fc51efcccbd2786112b5ad9a977ab0"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-cookie-no-httponly.yaml",
+      "sha256": "a640116f0c1146bd467b4ab2000b961bb30f7ab1a9dc9cc6b06362a0306cf34b"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-ecb-mode.yaml",
+      "sha256": "d58a62ae13c8ca58fb93fe1df360277a2700ce1d11608fd59a4638b9abda5bf6"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-exec-concat.yaml",
+      "sha256": "ad746d21cf13b3e21c0272272213f0818fcb5bf8cd6b4a770b85b1f3fbf71e47"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-hostname-verifier-true.yaml",
+      "sha256": "ce3b0f789d70233bb4cb5ffed48a1f077fe3961b79e84c3107fcd43165a3145e"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-jpa-query-concat.yaml",
+      "sha256": "2db7ddb80a77d12d32c25a1238c8e59df0b1a04b42b4ca65a698079a9aca664d"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-ldap-filter-concat.yaml",
+      "sha256": "5543d205869522a5f31338ad52275f3ddc0008e8f48cf08ad065087a25c32ccb"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-sql-concat.yaml",
+      "sha256": "1c13afefa157e8baf8278854cb6279e53d80d735c5118a4210a59ce06ae32588"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-trust-all-manager.yaml",
+      "sha256": "bc5e69202114931fb82173641797362928b48c28e2e7ec850a50fdc36fc32806"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-weak-hash.yaml",
+      "sha256": "d70ada31805c064074c0d125ec75ffa3f52bd5bfe1399364e7ce7853fe62f7ef"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-xpath-concat.yaml",
+      "sha256": "ba32654046eb61c9264ede97a63066653bc0b81a40bbca01d0c041156a29d598"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-xxe-features-enabled.yaml",
+      "sha256": "5ef84e4bb34c6af84985c3bfaded82cbeedfe23f4d9b32e72cb7367070f43540"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-command-injection.yaml",
+      "sha256": "c52b4457dd5c3f807e4c3664cee2d5bf5ec35bb30819de1050c1941c62652681"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-constantize-dynamic.yaml",
+      "sha256": "9a36abb6a365740e838cc30502e9a09ab20350fe3b8ab4d80b8755c9a01f934c"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-csrf-skip-global.yaml",
+      "sha256": "207ac920b8cdef96a94dcea9d2b2572c017f435b11f7d48bc47af77227bd632c"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-detailed-exceptions-enabled.yaml",
+      "sha256": "31c445361bb45955d632caaa55aca299e808baf8977877c0c1c16238123e41a9"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-file-path-concat.yaml",
+      "sha256": "e2cf6e078ca4b8a09414b312482e7bd58cb9dbc3f77b0b624f3da4f07a75fd05"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-header-injection.yaml",
+      "sha256": "b6aee226fd446ed0c894fa153177c143bb3f5d2e81822917bc9eaf360ae3c84c"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-json-load.yaml",
+      "sha256": "9f7f411884b555809b54d74984f2f347023af44a2505911ae5f70881ecf00474"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-marshal-load.yaml",
+      "sha256": "c12a32029f93d4fdecd7ccd16fe76ddd3e2967f3412f463ef30b4b55a9407090"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-permit-all.yaml",
+      "sha256": "85c1acaf6304a59e816d45e9b0a967e0cfd1f4fe32d0e82152ccf991f914e6bc"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-redirect-tainted.yaml",
+      "sha256": "b58d6462c417cb988c9455da37a3b00d22e4fb06631edeee0b67960aec8d16cc"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-sql-concat.yaml",
+      "sha256": "a5c503c2cc5d216423257618ff675e85be69402f7b3776598a3ca4bd7d2c160d"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-xss-raw-dynamic.yaml",
+      "sha256": "24b0fc5162f44cf4a94622d08a939c742544e2ae428b19daa4240ae7252674c9"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-yaml-unsafe-load.yaml",
+      "sha256": "6a837538f07f59b67a01e8cdfd3d0b8fb444d4483501b02e9fb02655958c316b"
+    },
+    {
+      "path": "rulepack/devskim/DS101155.yaml",
+      "sha256": "e7b97759ff65ffa997e5d70a2bbf5d6264e7cfddad9bd9bf7e3d39067ca723c3"
+    },
+    {
+      "path": "rulepack/devskim/DS101159.yaml",
+      "sha256": "63e60ae7a2cf191cbaecc54331912dd2122845dbcd023625a741b11de364e545"
+    },
+    {
+      "path": "rulepack/devskim/DS106863.yaml",
+      "sha256": "ce2c411c58d5743933b02f10e9bac38c5a8135a2002fc6295271bbc680c8920b"
+    },
+    {
+      "path": "rulepack/devskim/DS106864.yaml",
+      "sha256": "4a124aa59516aff03a53c2023f0654965b14a0dfcaff50872c5c48928a0ce5d7"
+    },
+    {
+      "path": "rulepack/devskim/DS108330.yaml",
+      "sha256": "57e9cbf37ae8ff85bb78792b296a0176e2b2040d750d00cb3a3b79b4c32d1cb9"
+    },
+    {
+      "path": "rulepack/devskim/DS108647.yaml",
+      "sha256": "bfb95806303e5d3fac8b79c416d8884f34ddf3c78bbca5cc128358bdf2c7fcee"
+    },
+    {
+      "path": "rulepack/devskim/DS109501.yaml",
+      "sha256": "f219c89c502b8c740344309e6a39fa71a6eac25d49c5666915c9886e96427f89"
+    },
+    {
+      "path": "rulepack/devskim/DS109733.yaml",
+      "sha256": "0700b5eb67680ab0903be4ccc6bfc414dede49088ec62ad3064304fbbdc376ba"
+    },
+    {
+      "path": "rulepack/devskim/DS111237.yaml",
+      "sha256": "41c6d87930e22ea147a7fb532f1b296c6688ad41cbfc3486fd00cdd3f3029543"
+    },
+    {
+      "path": "rulepack/devskim/DS112266.yaml",
+      "sha256": "2b71dbbbaa701fde273c2d648ade043b4b5161d2d812632b0e92624069e13a2a"
+    },
+    {
+      "path": "rulepack/devskim/DS112835.yaml",
+      "sha256": "c439a3e94ac9d89d8401fc2455ee9a6866df35d003c3b33210868cfdd82b2820"
+    },
+    {
+      "path": "rulepack/devskim/DS112836.yaml",
+      "sha256": "b836d34387a2ff9114765d1fdcf5ced0888a1c7417170b879bb9f35bcc3d07eb"
+    },
+    {
+      "path": "rulepack/devskim/DS112837.yaml",
+      "sha256": "418be90220af1c7726d1b18aa405d4dbeb455e7033672dd999e588485657a36c"
+    },
+    {
+      "path": "rulepack/devskim/DS112839.yaml",
+      "sha256": "1e183ab6a338e8f21e2b85f79f9b67c457e7fca0dc72e18624c90af46a728b12"
+    },
+    {
+      "path": "rulepack/devskim/DS117838.yaml",
+      "sha256": "6e3df9d8ba921275e6f868465e9c77f6587de7fc175a066d18820f146caea2f8"
+    },
+    {
+      "path": "rulepack/devskim/DS121708.yaml",
+      "sha256": "0ed5e6b5fdc1b240030ed801b4e9daf4c10069e5a2a15d3f86c97324efd88d43"
+    },
+    {
+      "path": "rulepack/devskim/DS126187.yaml",
+      "sha256": "70aba44503fe2199865bb0f01769542170b887b98ca84bbfea6351651e62c75b"
+    },
+    {
+      "path": "rulepack/devskim/DS126188.yaml",
+      "sha256": "64a07e5d0fe4087c8d6460649d7d5e008b9343a8fe8785b02d53d535bb8d89d3"
+    },
+    {
+      "path": "rulepack/devskim/DS126858.yaml",
+      "sha256": "35c4e0fff7807e2d00d61c51348ca5019f0abf02bcea4854a20f3946e007218a"
+    },
+    {
+      "path": "rulepack/devskim/DS127101.yaml",
+      "sha256": "d9a189749e94596c3068d87d6f14ee2ee776aa0e71cad1cd990d52f68b8b76e1"
+    },
+    {
+      "path": "rulepack/devskim/DS132780.yaml",
+      "sha256": "1697ad629ab71292a1656a0a7a1a020d975ecc3cf5bc2dbf4f08893d3276bf69"
+    },
+    {
+      "path": "rulepack/devskim/DS137038.yaml",
+      "sha256": "61708889e6b6b193ef6902d87db7243fa687e1edcbad43ac0d2a3ce8fc24b991"
+    },
+    {
+      "path": "rulepack/devskim/DS140021.yaml",
+      "sha256": "1b6c8ed8b1d9d84cdacb7354e26b80f49ae7b54055e54debc2600a285c332dac"
+    },
+    {
+      "path": "rulepack/devskim/DS141863.yaml",
+      "sha256": "fab952f6640ee029f52fece355e4be8f3f9dbe03863584f6b9a1624746655084"
+    },
+    {
+      "path": "rulepack/devskim/DS144436.yaml",
+      "sha256": "d0d3696b0de27b6e511b7587ef7e5b6965face3a6b6b6464117ee1d76fab197c"
+    },
+    {
+      "path": "rulepack/devskim/DS148264.yaml",
+      "sha256": "04513484a294ffb31203df24d998f91e4cad1d72813185fbacd619cbcde5fa68"
+    },
+    {
+      "path": "rulepack/devskim/DS149435.yaml",
+      "sha256": "9685665f6127bcb769e9727364102d67c9da78bf185d9fa20408c2010e9cb8d1"
+    },
+    {
+      "path": "rulepack/devskim/DS154189.yaml",
+      "sha256": "2096b9b3cf529c3c9d8b1ea5a4d76a689ec6ba9d25d50be39f2dddd1919518b6"
+    },
+    {
+      "path": "rulepack/devskim/DS156431.yaml",
+      "sha256": "e78cb8f3b03d62c3f998e526bbc6b37e5ba2a0c310e48eabc8006debb7d450ce"
+    },
+    {
+      "path": "rulepack/devskim/DS159369.yaml",
+      "sha256": "57c0cdadc7adc6f48d5e8f612eddf72d6ef8268b0af751e9250c7d46012cb73f"
+    },
+    {
+      "path": "rulepack/devskim/DS161085.yaml",
+      "sha256": "bfa8f646675299eb762bce48ac73f10de26b7f605a2a7b2fe7a8555b30347caf"
+    },
+    {
+      "path": "rulepack/devskim/DS162092.yaml",
+      "sha256": "2783d715c2397cdb0ff735eea2e7fff3353210ff0a9ef377f448c82d33a750a5"
+    },
+    {
+      "path": "rulepack/devskim/DS165746.yaml",
+      "sha256": "60b97b05dda9874fc7f85c3125ffd32f9049583ca22fd029681c042e38241411"
+    },
+    {
+      "path": "rulepack/devskim/DS168931.yaml",
+      "sha256": "8b4054f8fa8201d4a61b66dd652716bc69f20077ba3670f36671c4b2600a0ac2"
+    },
+    {
+      "path": "rulepack/devskim/DS169125.yaml",
+      "sha256": "fe6b53024f6c6a3d50db3e8dddb04a2b6f2a95fab999a931f1fc2195f1f8ba2a"
+    },
+    {
+      "path": "rulepack/devskim/DS169126.yaml",
+      "sha256": "5b439cf33e8a568a263190e796069255961430d2670829358c8591783e62f6e8"
+    },
+    {
+      "path": "rulepack/devskim/DS169127.yaml",
+      "sha256": "7f52e75e82c29917913f2c139adf2e474eb5fa7eb8772605e78477fa02d0a089"
+    },
+    {
+      "path": "rulepack/devskim/DS172412.yaml",
+      "sha256": "879b908971b6aa9c02c8f88a193f7b93d437cc5007cf301f15f56a7911e3f204"
+    },
+    {
+      "path": "rulepack/devskim/DS176209.yaml",
+      "sha256": "edbc071856a0b2ba3957d8cf7ec3c8dd3233cc597c015db98d3f53b21f024763"
+    },
+    {
+      "path": "rulepack/devskim/DS176603.yaml",
+      "sha256": "c4a14c7259383fad633588f3c20c801969380b43580397a40365e49f0174c43f"
+    },
+    {
+      "path": "rulepack/devskim/DS179924.yaml",
+      "sha256": "8f9954c83c75a674efeb46d00378ae12de4e31ca9edca9a984c4add5030f3d10"
+    },
+    {
+      "path": "rulepack/devskim/DS180000.yaml",
+      "sha256": "93c0c060c4db83ee1daedf7c868b558114071537a7b6d05fc2e1e18dd2a6b132"
+    },
+    {
+      "path": "rulepack/devskim/DS181021.yaml",
+      "sha256": "f53ea9e4da977c5b7f296f32238b27528f686f2a92d0a65ebc229f29c941ab8f"
+    },
+    {
+      "path": "rulepack/devskim/DS185832.yaml",
+      "sha256": "10ac170b787003afcde75f818ee6f383773d68002db26f39c524b91a3de8cc01"
+    },
+    {
+      "path": "rulepack/devskim/DS187371.yaml",
+      "sha256": "cc5d7d49e84387ffdd30db5ff2809bc1a33657f7983b64c43d09f414f7b6e6a9"
+    },
+    {
+      "path": "rulepack/devskim/DS197836.yaml",
+      "sha256": "25e93cabcb0e5a6f07c13889af0c0746ef4d0c7491fff2b39b097f2e1df2499d"
+    },
+    {
+      "path": "rulepack/devskim/DS425030.yaml",
+      "sha256": "e52217027e59d9c4f027f2a3875c47e4a40ea4678f247fb3d23c730ba5413ac8"
+    },
+    {
+      "path": "rulepack/devskim/DS425040.yaml",
+      "sha256": "8e9451fa3e4e815d22ae027f04c173480c8cd806c94eca34fb1b85f08b21a25c"
+    },
+    {
+      "path": "rulepack/devskim/DS440010.yaml",
+      "sha256": "80e496bf1c4466edd6128ca95ee17ddb41ad922f1e10d484ee183e8e951fae1e"
+    },
+    {
+      "path": "rulepack/devskim/DS440011.yaml",
+      "sha256": "5ce4d4cc3c0f2361b9c2b15efa7d75e2e036bfe507f9f756bf082ba35b1008e0"
+    },
+    {
+      "path": "rulepack/devskim/DS440012.yaml",
+      "sha256": "2a1855a188541c30a5c4e8f731e6502ef9cf8bd987138fac470009620efcf94b"
+    },
+    {
+      "path": "rulepack/devskim/DS440013.yaml",
+      "sha256": "891dd78b897e61e0ced843a54a375f61423544e33d1893744d1a18f71c9a01c0"
+    },
+    {
+      "path": "rulepack/devskim/DS440014.yaml",
+      "sha256": "47ac57fef3f0b45a9f4a9641be3669c4dc6abd6855f118dc8e95a6d832a5fcc8"
+    },
+    {
+      "path": "rulepack/devskim/DS440015.yaml",
+      "sha256": "0bc8ac15ae7e92ed02db850485af9a7459bad082c214227817f8c8bd6604c816"
+    },
+    {
+      "path": "rulepack/devskim/DS440020.yaml",
+      "sha256": "a574bb6b270526770f62572f1649edfa83fa0c0e4b86626760dbd66a537bc70f"
+    },
+    {
+      "path": "rulepack/devskim/DS440073.yaml",
+      "sha256": "99e068032bbe5f12117d3fa2d62fb40984a656f4e12873d68b009c5d0bf9b05e"
+    },
+    {
+      "path": "rulepack/devskim/DS440074.yaml",
+      "sha256": "5626d239062e658dbf0bb1e72f406675cb93fa981204c4c0865e8e5f390e9ca2"
+    },
+    {
+      "path": "rulepack/devskim/DS440075.yaml",
+      "sha256": "676b041c3ae1010cf135baed6c1e44e27cac51ee3fa773e535642357ce0b1326"
+    },
+    {
+      "path": "rulepack/devskim/DS440076.yaml",
+      "sha256": "550a32eb12cb1464e240c46039ab79be50b750f525ff6623211f4a927ab98a46"
+    },
+    {
+      "path": "rulepack/devskim/DS440077.yaml",
+      "sha256": "53c45ba0dc6f2371a2a45222f1a2b717343d040e7bb8bc04e5c98f36902aee6f"
+    },
+    {
+      "path": "rulepack/devskim/DS440080.yaml",
+      "sha256": "c7215ddf28bfac9681a2175d56d8a336c8a0bfe5bc0c577604c4be16a035b4a5"
+    },
+    {
+      "path": "rulepack/devskim/DS440100.yaml",
+      "sha256": "1425b94798ea330f03be3cbcf8a977e3acb1a2f0646244b27b6196a31caf38f9"
+    },
+    {
+      "path": "rulepack/devskim/DS450001.yaml",
+      "sha256": "ae60b87a974ba542ce10fd4dfe7bf6f4aa1e3a33741fef989bdae38539bef0ee"
+    },
+    {
+      "path": "rulepack/devskim/DS450003.yaml",
+      "sha256": "149c26d033e71a0ff051bc8888cf9f53284cd5287ba6d8cf3b60f0928a8e7f02"
+    },
+    {
+      "path": "rulepack/dgryski/anonymous-struct-args.yaml",
+      "sha256": "af6571c6fe5c3b9602afc959169483e3241a918b9d6eeb768efbbe983a3ceca9"
+    },
+    {
+      "path": "rulepack/dgryski/bad-exponentiation.yaml",
+      "sha256": "e0ef9139b487870dd1ecffe8d36c57edfee3d05e9b35488ab913236cc649c079"
+    },
+    {
+      "path": "rulepack/dgryski/bad-nil-guard.yaml",
+      "sha256": "4ebaa606894f07f7c04a0da481e62e63befe3d0b97123514b7d7ec5dd1ff8ea7"
+    },
+    {
+      "path": "rulepack/dgryski/bad-sort-slice-function.yaml",
+      "sha256": "e4b52e98e6ebaca3106ba1fb4cd6351e5cc2c9c90cc3b63f724e7e7b94fcc6d1"
+    },
+    {
+      "path": "rulepack/dgryski/cancelable-context-not-systematically-cancelled.yaml",
+      "sha256": "48523bd695bd834de58e3af19d70c730b73172d2f6a579aa842f5fc31c999b8d"
+    },
+    {
+      "path": "rulepack/dgryski/context-todo.yaml",
+      "sha256": "228290891c7ba92f8ad1a9f8282350c591fdff33ad4191f7325e3c66fe4cb9e4"
+    },
+    {
+      "path": "rulepack/dgryski/ctx-done-and-timers.yaml",
+      "sha256": "47a691aee8508ab6b81c461baa69da29251195deef460d87fc1561a9c91eb7e6"
+    },
+    {
+      "path": "rulepack/dgryski/deprecated-ioutil-discard.yaml",
+      "sha256": "52c3cc696745e82b43c0d0c137b79ec70ce7a16c72b1f7307afb61c7693d6f38"
+    },
+    {
+      "path": "rulepack/dgryski/deprecated-ioutil-nopcloser.yaml",
+      "sha256": "db87bf49e3b26a0023baf0291f358274f91e2d774b1889a9d7c508bfd3809c53"
+    },
+    {
+      "path": "rulepack/dgryski/deprecated-ioutil-readall.yaml",
+      "sha256": "981be75588534c3efcb575bc8601721d93103e8f397e0194e7a621a131f7b5a8"
+    },
+    {
+      "path": "rulepack/dgryski/deprecated-ioutil-readdir.yaml",
+      "sha256": "64b35e84868f0a6f66103c9f15febf8458c076504c547a465528ac84e857d1a9"
+    },
+    {
+      "path": "rulepack/dgryski/deprecated-ioutil-readfile.yaml",
+      "sha256": "3ba9fe6bc730396e937faa986eb51209990f387cee4d97d86e44e0ce450d346b"
+    },
+    {
+      "path": "rulepack/dgryski/deprecated-ioutil-tempdir.yaml",
+      "sha256": "ea86c362299b5cf7299d9b405b06af31f18d18acca2b34f5eda7077d5ff08646"
+    },
+    {
+      "path": "rulepack/dgryski/deprecated-ioutil-tempfile.yaml",
+      "sha256": "f6fa59f6c8ad7df9c279bc36fa201cb837dbfa6f3f302f059f3a8fb661853f8a"
+    },
+    {
+      "path": "rulepack/dgryski/deprecated-ioutil-writefile.yaml",
+      "sha256": "c0d8e3c6d4fc177c1183b64b72b5fb6781d8f6f8a2126fa0ab2ba4fbafaed43c"
+    },
+    {
+      "path": "rulepack/dgryski/err-nil-check.yaml",
+      "sha256": "a06c5a99747f18b72d41dd90c7d80c37d36c8cd4c1d3c704a0c0812c8687455d"
+    },
+    {
+      "path": "rulepack/dgryski/err-todo.yaml",
+      "sha256": "ace291d6e236ed70cf7d4f9d1887827350dc0a36d991c1b677744e24ef4da9c6"
+    },
+    {
+      "path": "rulepack/dgryski/go-fuzz-to-native-fuzzing.yaml",
+      "sha256": "76ea5a17bfe48a41e16c197d0cfd8d9e0091fdbaf2f3fd5f0715d26b829e1487"
+    },
+    {
+      "path": "rulepack/dgryski/hash-sum-without-write.yaml",
+      "sha256": "a5e8a863fb7cf9f22a6c9b89bffe0d46d51b7251c5119cebddda77c4279a5c41"
+    },
+    {
+      "path": "rulepack/dgryski/hmac-needs-new.yaml",
+      "sha256": "0381b9ccef56d57fcdee9c4ca3352e3ade03536cb0de2b73e1b85193a39331cc"
+    },
+    {
+      "path": "rulepack/dgryski/http-request-go-context.yaml",
+      "sha256": "c6004f16cee632650c35553ffb67c2ca483b8330468fd78ceca6b4dc84177232"
+    },
+    {
+      "path": "rulepack/dgryski/io-readfull-n.yaml",
+      "sha256": "87f8eca354cbdb9b689d11a0bb85c5f7af83b06c265206b56c4b4dcaa7c2172b"
+    },
+    {
+      "path": "rulepack/dgryski/json-encoder-needs-type.yaml",
+      "sha256": "a04a9d81fdc57e944284d6fff36fb487304847ba6c229f3252d0cdfcd2b86862"
+    },
+    {
+      "path": "rulepack/dgryski/leaky-time-after.yaml",
+      "sha256": "62a84496960d8b4da945b9824d6a0484efd6b79b907d6f083cb0e9570d7a9346"
+    },
+    {
+      "path": "rulepack/dgryski/marshal-json-misspell.yaml",
+      "sha256": "956af015d7d937d2a1460102e0147b1eb0f7d2d3f40d577f34d5a78cb337ea31"
+    },
+    {
+      "path": "rulepack/dgryski/marshal-json-pointer-receiver.yaml",
+      "sha256": "6b1853ffa66fe47c2d01a01077c09c5723caf204203d5e8951ea279784ed477d"
+    },
+    {
+      "path": "rulepack/dgryski/marshal-yaml-misspell.yaml",
+      "sha256": "43fe7ccc43d41299f4bc25ce6f241d134676e2c8e2d39332151e7347c9e1d61a"
+    },
+    {
+      "path": "rulepack/dgryski/maybe-wrong-err.yaml",
+      "sha256": "f62f834bd5364f561373659646230146befdb38c9faa4f36985d3e33ea52db01"
+    },
+    {
+      "path": "rulepack/dgryski/net-ip-req-remoteaddr.yaml",
+      "sha256": "b3eaff536cafb7c4a11681e674a0804d2e81c6c7971fe4f5414bb51e8fc3dd22"
+    },
+    {
+      "path": "rulepack/dgryski/newrelic-start-without-end.yaml",
+      "sha256": "6b867ef2aaf5cc2b1450e8e68139dd2e98b09501d1a1c975d834ba480bced7d6"
+    },
+    {
+      "path": "rulepack/dgryski/not-after.yaml",
+      "sha256": "afbd4ba89f59fbbca026277ea2ea5c88afaacaa2228108d072fe3ce0b55d4589"
+    },
+    {
+      "path": "rulepack/dgryski/not-before.yaml",
+      "sha256": "25869483ca05468bda11345e7504c38f1991f416059e3b37f827aac6e3ee874c"
+    },
+    {
+      "path": "rulepack/dgryski/odd-bits-leadingzeros.yaml",
+      "sha256": "e12b12ca6959af28658b57748ed944cd3a3fcebdd2a27434a240d413915b1aa8"
+    },
+    {
+      "path": "rulepack/dgryski/odd-bitwise.yaml",
+      "sha256": "96057b2c4bc4a4f9b6f87faf132b9ceb93778d4628f0f1b05d7dff4dc5031807"
+    },
+    {
+      "path": "rulepack/dgryski/odd-comparison-subtract-eq-zero.yaml",
+      "sha256": "b39dd1c616c8e784725cb42488ae7db4a3a74078d788b572d35e58c6fa7f81b2"
+    },
+    {
+      "path": "rulepack/dgryski/odd-comparison-subtract-gt-zero.yaml",
+      "sha256": "843301fdfb413b99c65890f9672efbb96ae99de41265775d5abae4e43be86852"
+    },
+    {
+      "path": "rulepack/dgryski/odd-comparison-subtract-gte-zero.yaml",
+      "sha256": "aad9166dd85616b39479e2633c7264415592aa47f1aa4c4c5326cc9b921dc920"
+    },
+    {
+      "path": "rulepack/dgryski/odd-comparison-subtract-lt-zero.yaml",
+      "sha256": "322cf74df53ba4058cd846e8f32cf654122ba5f0776d0db5dc73f9aea7ed5243"
+    },
+    {
+      "path": "rulepack/dgryski/odd-comparison-subtract-lte-zero.yaml",
+      "sha256": "ebc3306ce48e9017b79cf40a20157cfbb39f953f39873eb3be41d5b74790c440"
+    },
+    {
+      "path": "rulepack/dgryski/odd-comparison-subtract-neq-zero.yaml",
+      "sha256": "25690aa26f0ea561a0cf1f5a00c3b5e0e1956800066e3ad311cba3edfbd27804"
+    },
+    {
+      "path": "rulepack/dgryski/odd-comparison-xor-eq-zero.yaml",
+      "sha256": "62cb10b52dba03fcecf7c032aa4a74b08feee8283bd306ec71c1356b5d02bad0"
+    },
+    {
+      "path": "rulepack/dgryski/odd-comparison-xor-neq-zero.yaml",
+      "sha256": "8c3a25f7df5355fe5522c503b12496573d615e51f4f291f7bd2156da58784550"
+    },
+    {
+      "path": "rulepack/dgryski/odd-compound-expression.yaml",
+      "sha256": "7fc20ca0b7bcf1b44427548ece277d81395332a4eaaa8dfb265c726ee268d740"
+    },
+    {
+      "path": "rulepack/dgryski/odd-sequence-ifs.yaml",
+      "sha256": "39dead6805afc01a40e54b42d9a3f1c52cdb7af8ba2d196c621849a7aa2d3efe"
+    },
+    {
+      "path": "rulepack/dgryski/os-error-is-exist.yaml",
+      "sha256": "2a9be15f96ad35129bc326c908a245bb88f3cc7313a2ac0ac7e4c5bc638340fc"
+    },
+    {
+      "path": "rulepack/dgryski/os-error-is-not-exist.yaml",
+      "sha256": "096aab3d2f4fbca574d3c347998461512175995557ded28364845f9b31db82e6"
+    },
+    {
+      "path": "rulepack/dgryski/os-error-is-permission.yaml",
+      "sha256": "3e9f5bbac05a3ca050d6c08af783a0b82d85a3e7dea39089d7e0859c047b86cf"
+    },
+    {
+      "path": "rulepack/dgryski/os-error-is-timeout.yaml",
+      "sha256": "e87fb60650bf0282d89d7c488b0f73b70df22870fd12f73a3040fdb5754128f1"
+    },
+    {
+      "path": "rulepack/dgryski/parseint-downcast.yaml",
+      "sha256": "e103884dd01f67b8c0d6472149308e11b17a5e002d85b2963d9206e42013a851"
+    },
+    {
+      "path": "rulepack/dgryski/read-io-eof.yaml",
+      "sha256": "d30df5ceee307dc47370a8c0f0a9307ff568b4e7fc6a9fc5c7e0d30fd473fc67"
+    },
+    {
+      "path": "rulepack/dgryski/return-nil.yaml",
+      "sha256": "f025edcaea133ae35e62d956ece55dd7c4226221c04b4699c6f9511c9a25e8bd"
+    },
+    {
+      "path": "rulepack/dgryski/return-nil-err.yaml",
+      "sha256": "7d2bc1b9d24d9e99d96fad60b1128530da7ab9123af10745364ee940480a984a"
+    },
+    {
+      "path": "rulepack/dgryski/rows-not-closed.yaml",
+      "sha256": "36a92b78fde14ed216db1b24d783a47153295223754b498360e366d10b78f6f7"
+    },
+    {
+      "path": "rulepack/dgryski/sprintf-host-port.yaml",
+      "sha256": "16405242ddb8f644a5c14eb3bfd5a8b5d41068c1d4579b6f40f18a9c1cd05440"
+    },
+    {
+      "path": "rulepack/dgryski/sprintf-mail-address.yaml",
+      "sha256": "919df14722dd06415dae99d338fae5fc529ad4ef52286d1bd2b158fc21ad3d00"
+    },
+    {
+      "path": "rulepack/dgryski/unmarshal-json-misspell.yaml",
+      "sha256": "d931b7f1940d6e641e0145abac287c216b8b576246e017afaec08f0686762981"
+    },
+    {
+      "path": "rulepack/dgryski/unmarshal-yaml-misspell.yaml",
+      "sha256": "0fac45798546dde4af9e6282334023f3ec280c1d757f3cddcf410e9fe4bc7be1"
+    },
+    {
+      "path": "rulepack/dgryski/use-err-error.yaml",
+      "sha256": "da5a725df41a616ce32fc565441050bdd3ff98573c4850f47215045e91044c85"
+    },
+    {
+      "path": "rulepack/dgryski/use-fprintf-not-write-fsprint.yaml",
+      "sha256": "b18f5d610cac2c1a496dd608e34037285c5ebc1819c1c994f16d448cd2b60c95"
+    },
+    {
+      "path": "rulepack/dgryski/use-hmac-equal.yaml",
+      "sha256": "875207905c638b27b464458c07778664e18b3a9a87331356aeaa0147e28b0d7a"
+    },
+    {
+      "path": "rulepack/dgryski/use-math-bits.yaml",
+      "sha256": "25b6ebbb2d002588edabad566e234546934535af00c144fdd8c1f90374584133"
+    },
+    {
+      "path": "rulepack/dgryski/use-net-errclosed.yaml",
+      "sha256": "e4df58f23c3206732e030b40bdf379606c5cf1963fd3bc6654b0f2b1882a3255"
+    },
+    {
+      "path": "rulepack/dgryski/use-strings-join-path.yaml",
+      "sha256": "52ae83cb0bba38d438d31aaa863f4217b144437515cbd03f2acfb7d273a8b84e"
+    },
+    {
+      "path": "rulepack/dgryski/use-write-not-fprint.yaml",
+      "sha256": "032f898070109429e3f7b1ef5db453f535665f75013e120ca4e4db92b55c2e04"
+    },
+    {
+      "path": "rulepack/dgryski/use-writer-not-writestring.yaml",
+      "sha256": "f5a604509a592685a4dafbd9594fa154530d9bc46f4aeb96dcd965c65e23198c"
+    },
+    {
+      "path": "rulepack/dgryski/wrong-lock-unlock.yaml",
+      "sha256": "e59ae66a80ba54d56d166b51e4997b0cc22ac5a2f599afa6efd1df28dddbab91"
+    },
+    {
+      "path": "rulepack/dotta/android-apps3c.yaml",
+      "sha256": "64a818da97fb4dbc6a8df212757b3c798691354e1ab87f3b6fd0f6179ba6e999"
+    },
+    {
+      "path": "rulepack/dotta/android-webview-kotlin-apps3c.yaml",
+      "sha256": "a91a3a0594f6387d06bb2eeb26e6e2ae3c3b0f4aa1a856cea80b327309c150ae"
+    },
+    {
+      "path": "rulepack/dotta/auth-bypass-yii-framework-apps3c.yaml",
+      "sha256": "2f596587d8f20aa4cd01670e0fbd3101c02a7003a31319d4e0f4f8bb755d862b"
+    },
+    {
+      "path": "rulepack/dotta/auth-bypass-yii-framework-potential-apps3c.yaml",
+      "sha256": "cf7cbf7ca96598fe4824438e510282cdd74455a5abe04d0ca9086fddde7eb079"
+    },
+    {
+      "path": "rulepack/dotta/sql-injection-kotlin-apps3c.yaml",
+      "sha256": "ae0527bea195bfc98516820f67a23dd90b7735393a5b2c331bfef4b79e5c2b72"
+    },
+    {
+      "path": "rulepack/dotta/sql-injection-kotlin-potential-apps3c.yaml",
+      "sha256": "632ed3e5a9edb7730c36919fc95f6ad7ec047d603486559dc79ecf2d5c34c474"
+    },
+    {
+      "path": "rulepack/dotta/sql-injection-php-apps3c.yaml",
+      "sha256": "29a264e1fa2f6f6452490d0e5319bdc65be444e57ef75f8c178331c239eb17f1"
+    },
+    {
+      "path": "rulepack/dotta/sql-injection-php-potential-apps3c.yaml",
+      "sha256": "7e5116247425eea90603369e8f5d0244c0fdf98958417a245122f8e82b66c2d7"
+    },
+    {
+      "path": "rulepack/dotta/sql-injection-yii-framework-apps3c.yaml",
+      "sha256": "ec4426d3fab4054fe2800b084d34b575cec87d07d75db190a3099d6d7212806c"
+    },
+    {
+      "path": "rulepack/dotta/sql-injection-yii-framework-potential-apps3c.yaml",
+      "sha256": "235aaf8481c8500fe8807d490d672001c922dae0a5df601f9bf174e8c590cc74"
+    },
+    {
+      "path": "rulepack/dotta/xss-yii-framework-potential-apps3c.yaml",
+      "sha256": "1ad9676724eed7eb2f40cf6b59653d0a777e8c3473d9bc826ff67a2fc1271b60"
+    },
+    {
+      "path": "rulepack/elttam/UnsafeHttpInvokerServiceExporter-XML.yaml",
+      "sha256": "0f8d96d25655036bd3ff06a879ac450f51f2ac36bad036ad2cddee59fb433027"
+    },
+    {
+      "path": "rulepack/elttam/UnsafeHttpInvokerServiceExporter-func.yaml",
+      "sha256": "9401413fecda457f2fa6dd6d7086ed824bb8af28c13b3518a99502c7a24a6b10"
+    },
+    {
+      "path": "rulepack/elttam/UnsafeHttpInvokerServiceExporter-var.yaml",
+      "sha256": "b5a473f1db46d0637f02fc638fb9a33e3156ef99dc33296e6d4ccab5eb2ea7f0"
+    },
+    {
+      "path": "rulepack/elttam/allow-privilege-escalation.yaml",
+      "sha256": "c8f67f2d992c8108febdcf168802d7cfc942f52c6131c57480c55cc48a71563f"
+    },
+    {
+      "path": "rulepack/elttam/aspnet-controller-entrypoint.yaml",
+      "sha256": "4323b7a11679b01a801b0502bb250905f53113516970bf28fbea16e983bfaf2d"
+    },
+    {
+      "path": "rulepack/elttam/beego-ormleak-dynamic-expr-review.yaml",
+      "sha256": "42b778fba9ff47df140a6afb36a8031bb541db19733440c61a8672f40f9613e2"
+    },
+    {
+      "path": "rulepack/elttam/beego-ormleak-dynamic-orderby-review.yaml",
+      "sha256": "c53d88b44ca81e560539eef21652504df909f648d15f4c3d4725cd88f757627d"
+    },
+    {
+      "path": "rulepack/elttam/beego-ormleak-filterraw.yaml",
+      "sha256": "6fe5a6c90ad9fe11bb9165466eb727b6435ecfccb96d979d14107fd3e82255f7"
+    },
+    {
+      "path": "rulepack/elttam/beego-ormleak-taint-dynamic-expr.yaml",
+      "sha256": "67e874d945b838f11ab417a67aaecdf6d692b1c2a809299147ef3c3a8dc874cb"
+    },
+    {
+      "path": "rulepack/elttam/consumes-class-star.yaml",
+      "sha256": "ceb5b6027884c671f1f21f3daf3b9a9d810eb08d679f52026a01d5ff76d4e327"
+    },
+    {
+      "path": "rulepack/elttam/consumes-method-star.yaml",
+      "sha256": "c47d600e29cc21721ea5786a56e484936bc48a76d20c00b8be277640e141ce60"
+    },
+    {
+      "path": "rulepack/elttam/convention-annotation-package-info.yaml",
+      "sha256": "9eac6038db5fd04974c345b6789c6cbab012ad9d91f261bc3a3f821a74548cb0"
+    },
+    {
+      "path": "rulepack/elttam/default-properties-devmode.yaml",
+      "sha256": "b7157be447b4b12146800ad889b7fdfd169cbbc1bc352fe269aa70072f0d090a"
+    },
+    {
+      "path": "rulepack/elttam/django-filter-exposes-all-fields.yaml",
+      "sha256": "933245d210d2b7faf04215412c8b6f0ab9530e00393ddb1f5712049cb501afa0"
+    },
+    {
+      "path": "rulepack/elttam/django-orm-dynamic-lookup-kwargs.yaml",
+      "sha256": "59eb4b4a7ce997b16ebc5158ea88aaa909c6c286108aad5e31ac34cbb2bfd38a"
+    },
+    {
+      "path": "rulepack/elttam/django-orm-dynamic-lookup-variable-key.yaml",
+      "sha256": "2abb148bea0ac6b3c45b58609341a18b04ac61be2f1ca39afb5f7a281ce47f2c"
+    },
+    {
+      "path": "rulepack/elttam/django-orm-dynamic-orderby-or-values.yaml",
+      "sha256": "c0401ee81b2ed6664750c632a40cdbbd34d52aef347d41cbf79c5306f620db23"
+    },
+    {
+      "path": "rulepack/elttam/ef-ormleak-dynamic-orderby.yaml",
+      "sha256": "f63f13cf83df6b9e1324c04ef90774dd22d5197113ee7394284eeecc4b39d4bc"
+    },
+    {
+      "path": "rulepack/elttam/ef-ormleak-dynamic-where.yaml",
+      "sha256": "ba23f98d95ff461e86a48d7aea8c1e5da503b2c2b41fe6ee143db41831edcc42"
+    },
+    {
+      "path": "rulepack/elttam/ef-ormleak-taint-dynamic-include.yaml",
+      "sha256": "ec7f8fb708e130778d3c516c32cc618e08d8702ddeca4832aced625b53de458a"
+    },
+    {
+      "path": "rulepack/elttam/ef-ormleak-taint-property.yaml",
+      "sha256": "d7542032c9bb30f9a80bae3d721aa03fffe52bd931e47e89a8112578185b5cd9"
+    },
+    {
+      "path": "rulepack/elttam/email-domain-endswith.yaml",
+      "sha256": "b3559e9309d7d24f9ff5313a7a68b9cd28970179cd63ebf26f62fcd046413325"
+    },
+    {
+      "path": "rulepack/elttam/email-domain-lastindexof.yaml",
+      "sha256": "661da03b77f4c213ee1e25c3d220bcaf5774914fb1b1c5a0094c8d0b0f7de63a"
+    },
+    {
+      "path": "rulepack/elttam/email-domain-split-index.yaml",
+      "sha256": "7b7141bfa7d230da5dabfdb8668d0ee44a7e5578cf32f06ad80744b3942acd42"
+    },
+    {
+      "path": "rulepack/elttam/exec.yaml",
+      "sha256": "f484c109d7b1df809900230e9e6421a2840d8e883ccde1c8a7bb33dcde68f89e"
+    },
+    {
+      "path": "rulepack/elttam/execute-method.yaml",
+      "sha256": "d0c1c6af07cb2af8255c81423163cd441707cb5afb4f16002b38ec52764ede5b"
+    },
+    {
+      "path": "rulepack/elttam/express-app-router-handler.yaml",
+      "sha256": "6690c17a58f9cb60fcf34b37e1c77eb02cf9df4ac0994b014395ec5ae2784eb1"
+    },
+    {
+      "path": "rulepack/elttam/express-mongodb-nosqli.yaml",
+      "sha256": "074e0352c517347472e3a8c438cda98ca6388af99bb58917146fcff4de9d0d06"
+    },
+    {
+      "path": "rulepack/elttam/flask-app-route-handler.yaml",
+      "sha256": "1b9dea362b1628c2bc060b23bb77cd177914d657e1ebafb4efe61bda47d833d1"
+    },
+    {
+      "path": "rulepack/elttam/fromXML.yaml",
+      "sha256": "b4b98bb033bd3ae24b30d00c603492124e90e3678aa16d5fa36ef6acafb91a3f"
+    },
+    {
+      "path": "rulepack/elttam/gcm-static-iv.yaml",
+      "sha256": "f86af3a010198baa9b4f6f63409180fd160c02c5cf2138acc257aa311d73b0a3"
+    },
+    {
+      "path": "rulepack/elttam/gorilla-cookiestore-default-samesite-none.yaml",
+      "sha256": "9c5ef7f6bd3cc61f8c18630e24055449709c6168058c28047ba1502a7b79d126"
+    },
+    {
+      "path": "rulepack/elttam/hibernate-email-annotation-field.yaml",
+      "sha256": "1b3c3e2d45ec199b5f261564305c81e350a64cd79b065587f0bda2725ba9da05"
+    },
+    {
+      "path": "rulepack/elttam/http-method.class-path.yaml",
+      "sha256": "59d826f1873af1fcbce2353c255d9d9eef6642e4107df0a1dd88ecfb480f6224"
+    },
+    {
+      "path": "rulepack/elttam/http-method.no-path.yaml",
+      "sha256": "37c61aa7ea32e1cf2e329c55a3129b26daef035e538dff0efb64b8741a5206d8"
+    },
+    {
+      "path": "rulepack/elttam/http-method.path-path.yaml",
+      "sha256": "aeb0802b0e00045add30e74e52184550957c0b4f72da252d717497433da59cf4"
+    },
+    {
+      "path": "rulepack/elttam/jakarta-mail-internetaddress-overloaded-ctor.yaml",
+      "sha256": "d20f193b3572a5ffc493c85a59fe7c33a34876a6cf2797f6f2ba4a9d84b639a0"
+    },
+    {
+      "path": "rulepack/elttam/jakarta-mail-internetaddress-single-arg-validator.yaml",
+      "sha256": "b8aab5c777c3981c9079f2432c97cbe14143112bedfd80a0055f40d060e00158"
+    },
+    {
+      "path": "rulepack/elttam/jakarta-mail-mimemessage-newsgroups-recipients.yaml",
+      "sha256": "e1cf8a5835b125722a8046b854c873332c37d50b68bc93f0a2d06482fdb305e2"
+    },
+    {
+      "path": "rulepack/elttam/jakarta-mail-mimemessage-raw-envelope-ctor.yaml",
+      "sha256": "0178e8dd16b7b039f51289241934787f7213b27a574b0572b4ad79123418569e"
+    },
+    {
+      "path": "rulepack/elttam/jax-rs.httpmethod.yaml",
+      "sha256": "66f012f4c0b3aa86b415b49140480ac467a9e66e1169f5e0c24b0dcd92c97b8f"
+    },
+    {
+      "path": "rulepack/elttam/jax-rs.path-expression.yaml",
+      "sha256": "660a512e56ffd3693b11d2e8361db55633a006ab6738a4d463c115425ec38006"
+    },
+    {
+      "path": "rulepack/elttam/json-decode-without-content-type-check.yaml",
+      "sha256": "a2f5ea69ed95aa6539095f48ff6990fa743e4e6a1fd10bff064507c7a68057b2"
+    },
+    {
+      "path": "rulepack/elttam/json-marshaler-pointer-receiver.yaml",
+      "sha256": "c6bdf44000237cbbbcf52cdd7d2f58dd4fe09343315e5ac7b6aefca670d73092"
+    },
+    {
+      "path": "rulepack/elttam/len-cast-into-binary-length-prefix.yaml",
+      "sha256": "c12c9e5f2dab97b3cd8d4e9ca6e9ae84ad1bf67f8073395cf53e433f3fc86de1"
+    },
+    {
+      "path": "rulepack/elttam/len-cast-to-narrow-int-overflow.yaml",
+      "sha256": "37254bac709fb21e7ba5dd13874923ff39604e869be5e5f2dd58ed42d7a675d8"
+    },
+    {
+      "path": "rulepack/elttam/missing-null-byte-check-at-trust-boundary.yaml",
+      "sha256": "36bb955f2ba41279e9ea4d4bda61102be09c0afac01345727e562e5768bf03e5"
+    },
+    {
+      "path": "rulepack/elttam/net-url-pointer-alias-mutation.yaml",
+      "sha256": "650e85d1011844c0d24a5d0263fb13c230b320f5235842874c4f0f99714e5eb5"
+    },
+    {
+      "path": "rulepack/elttam/network-policy-ingress-any.yaml",
+      "sha256": "6b8ddde82b8a1b191f4d6bac696978adbc9228da9eae33e80ed880fe1fa0369f"
+    },
+    {
+      "path": "rulepack/elttam/no-security-context.yaml",
+      "sha256": "b87d746a8547799487e7f86cc2a8c4572f935b2e068e57fb6f98b29128f22e28"
+    },
+    {
+      "path": "rulepack/elttam/non-atomic-use-of-converted-uintptr.yaml",
+      "sha256": "095ad1426afa86cb8d89afad8bcc618455a8216da191dc4e80cb6bc34d8da300"
+    },
+    {
+      "path": "rulepack/elttam/path-class-method.yaml",
+      "sha256": "669c4e2739670156987e48d5a60e9c8c8b97b226e18f7e5710afa11c872f1742"
+    },
+    {
+      "path": "rulepack/elttam/path-method-string.yaml",
+      "sha256": "42205ee2ebed9aa8f4108d36e187da2a0ec4d099ac41b4a04a80c64cf77676e1"
+    },
+    {
+      "path": "rulepack/elttam/php-filter-chain-read-from-oracle.yaml",
+      "sha256": "7d9a8805047bbfe680082087ca9a42df7c9af3e72fdeec0c4528711055e322ef"
+    },
+    {
+      "path": "rulepack/elttam/polymorphic-typing.yaml",
+      "sha256": "884d2cf1cc41ddfd42f451ee883857a0c207dad161b5e2b9d12fa5d5e57a2a26"
+    },
+    {
+      "path": "rulepack/elttam/potential-symlink-takeover-with-os.executable.yaml",
+      "sha256": "3403bfda6417192853e7588fa51bf121f6105c7f2c70b79ca6d9150bf5091736"
+    },
+    {
+      "path": "rulepack/elttam/prisma-orm-operator-injection.yaml",
+      "sha256": "2a099c8d22bd9769ba0d71b6bad0953c326ce36a36f3fab342f0a0231e1594e9"
+    },
+    {
+      "path": "rulepack/elttam/prisma-ormleak-taint-orderby.yaml",
+      "sha256": "f559d859e07677c0c9c73fe2cc5610eecff81af8d5f5d6af4617d986c8309f0f"
+    },
+    {
+      "path": "rulepack/elttam/prisma-ormleak-taint-projection.yaml",
+      "sha256": "1d9e5b52ad7b86c0f98725d10b650e7176aa22a763c741e62c6883a9f5617c4f"
+    },
+    {
+      "path": "rulepack/elttam/prisma-ormleak-taint-where.yaml",
+      "sha256": "56b45dcfbad065b76f01e42a9b65e85b73cb4141a2b8f005bfef9ef418457fdf"
+    },
+    {
+      "path": "rulepack/elttam/privileged-container.yaml",
+      "sha256": "4d8bacd3ee9426f81e2f084cad69404cd9d72e95e355ee1f63d9eaa0a33273eb"
+    },
+    {
+      "path": "rulepack/elttam/processbuilder.yaml",
+      "sha256": "85707f07d25183f3fc8bf7c830a2a48cf6eabe176f4f3a2553a7a37eb91cd5c8"
+    },
+    {
+      "path": "rulepack/elttam/provider-class.yaml",
+      "sha256": "a8158682369d80a806b3e794d01a5495141aee48613d919bf860ab73d6fffc8f"
+    },
+    {
+      "path": "rulepack/elttam/rand-token-insecure-rng.yaml",
+      "sha256": "b24294aa6b5284f314cbb4337808cde59c2873567fc8b0e952d7bbd106946c08"
+    },
+    {
+      "path": "rulepack/elttam/randomstringutils-insecure-rng.yaml",
+      "sha256": "149bcea7333214ede33f62b029e24233d900791f457b417bb6a3a424180e5a8a"
+    },
+    {
+      "path": "rulepack/elttam/rest-DeleteMapping.yaml",
+      "sha256": "5ab6733579b2dfae6abf3ad346ce5a2634718c456600d54f8beb7bd07ad17188"
+    },
+    {
+      "path": "rulepack/elttam/rest-GetMapping.yaml",
+      "sha256": "48bf8af1c2a4275c69b74a02718b8230ab080b467ea927b6c2432e42b37445f6"
+    },
+    {
+      "path": "rulepack/elttam/rest-PatchMapping.yaml",
+      "sha256": "e1cd3d4806049b0ce30a38c672f590fdf4af993f20dd586110374810f37281ea"
+    },
+    {
+      "path": "rulepack/elttam/rest-PostMapping.yaml",
+      "sha256": "5dec18ceec3f7b893e89564587122fb235db5552af4cda57e91da1b929d623a9"
+    },
+    {
+      "path": "rulepack/elttam/rest-PutMapping.yaml",
+      "sha256": "b488a291b7b2ffa0d53ecf7be4353a3cd468c7a26643499fd1f7bcd7aff8b849"
+    },
+    {
+      "path": "rulepack/elttam/rest-ResponseBody.yaml",
+      "sha256": "3ec5e75dffdfe7de675562f0104578b0e0a7b9193153ae5fbcbfe74077f36aaf"
+    },
+    {
+      "path": "rulepack/elttam/rest-servletregistrationbean.yaml",
+      "sha256": "d84f6da3abbeb200869be26bf4b2210d7b9d3f0f4491929497556343eecc3ea2"
+    },
+    {
+      "path": "rulepack/elttam/run-as-non-root.yaml",
+      "sha256": "b87ff2c321efb8537fe4f7faffbd1fa3ff09e541f6f5baf922e1b0b313a1ffbd"
+    },
+    {
+      "path": "rulepack/elttam/run-as-non-root-unsafe-value.yaml",
+      "sha256": "11e194481ef515cfabc1e77aa28b3ef558265ec4600170184e5afd4b9dda6f59"
+    },
+    {
+      "path": "rulepack/elttam/save-state.yaml",
+      "sha256": "1cc19173b2b2bc7e15841263c02b2cd0688e535b306141b5a9fa6b1ffca958bb"
+    },
+    {
+      "path": "rulepack/elttam/spark-route-handler.yaml",
+      "sha256": "c6df3fa77a3ff1e41d5262525c1157f4a4ee2244f408393ce94c1b1995a8950d"
+    },
+    {
+      "path": "rulepack/elttam/spring-internetaddresseditor-usage.yaml",
+      "sha256": "ae7f2da739508c50446b35ecce794aaee9f556e33ebd3ca5a1cf49f7dfb21b15"
+    },
+    {
+      "path": "rulepack/elttam/spring-simplemailmessage-setfrom-raw.yaml",
+      "sha256": "35a12b066fa8e23cec01d7b64e8d8247e1fdf14ab6f35b65ec65455216640338"
+    },
+    {
+      "path": "rulepack/elttam/sprintf-unescaped-control-characters.yaml",
+      "sha256": "8de0e58ffa74abca003cbab313d0b870269d6db88b66c593fe237c8e25065500"
+    },
+    {
+      "path": "rulepack/elttam/struts-xml-action-dmi.yaml",
+      "sha256": "5a24209ec02353c1fa69d41c2f9bfc9fada3dddd7bce0c1fd4ecaa1a28239947"
+    },
+    {
+      "path": "rulepack/elttam/struts-xml-action-name.yaml",
+      "sha256": "773b049859d0e576949bc8bdbafd78db03e4b854fcef207257bcc84b09de6376"
+    },
+    {
+      "path": "rulepack/elttam/struts-xml-always-select-full-namespace.yaml",
+      "sha256": "d251d6f74b4b023cbec913352cdd839ad6c6dd899d0d27b330406771333c5285"
+    },
+    {
+      "path": "rulepack/elttam/struts-xml-devmode.yaml",
+      "sha256": "44723f2cac912176b87638fa4183ae2a3768245e30a396a045dc1fa7bce93c8f"
+    },
+    {
+      "path": "rulepack/elttam/struts-xml-dmi.yaml",
+      "sha256": "653c207a793fbceeeaa969144d23ee4bc458e90b8ca09848ae5d2ca72c558ddc"
+    },
+    {
+      "path": "rulepack/elttam/taglib-action.yaml",
+      "sha256": "9cbcbe20ebd65e2fc3b86de0d2d41bcb5cb601f8bb55c9535baa1848792283cd"
+    },
+    {
+      "path": "rulepack/elttam/taglib-action-dmi.yaml",
+      "sha256": "f53115a6ff1bbc117701047ab7fc1fe06e035f364298806ff0befe0f613fb8c9"
+    },
+    {
+      "path": "rulepack/elttam/taglib-directive.yaml",
+      "sha256": "1b5ced15b589f24dd69ff49e25df87141fb3f01c942f51e6134b9741bd79a991"
+    },
+    {
+      "path": "rulepack/elttam/type-resolver-override.yaml",
+      "sha256": "2c8cb9f68ac060f8b9cdd9cd284592fdc651ef00eaa20a06d42a2abdf99771f6"
+    },
+    {
+      "path": "rulepack/elttam/web-xml.yaml",
+      "sha256": "3332ee243d43e1235b9dc1934bd6fa56d734d144d7aec0820c53698810640f75"
+    },
+    {
+      "path": "rulepack/elttam/web-xml-devmode.yaml",
+      "sha256": "4926e3e8dc2a3b2e3a36a3cd275f2980da7113144a3fd02a3beca4c95bd484b2"
+    },
+    {
+      "path": "rulepack/elttam/web-xml-filter-url-pattern.yaml",
+      "sha256": "568f60be58b551ed44a02fae4f8d93eb51b60a1694af51529c8a9d8266586e3f"
+    },
+    {
+      "path": "rulepack/elttam/web-xml-listener.yaml",
+      "sha256": "5971c9885a61b71ec40915206d05c9439b2806175849b65ceae836e7184e55a3"
+    },
+    {
+      "path": "rulepack/gitlab-mit/generic_injection_rule-BiDiTrojanSource.yaml",
+      "sha256": "a6bc43576ccd6c5c281e1d5d8b52339e326518b29756af9087e40928c6d89a25"
+    },
+    {
+      "path": "rulepack/gitlab-mit/java_deserialization_rule-InsecureDeserialization.yaml",
+      "sha256": "49e5f47f2c2ca2dae776228ecaad6325362bfbd57f79376aa310eeb337b6108f"
+    },
+    {
+      "path": "rulepack/gitlab-mit/java_deserialization_rule-JacksonUnsafeDeserialization.yaml",
+      "sha256": "4871c820f516f8e9bb5b29b73f9d79abbf97e274c2799adf1e68fb6b3ae2a368"
+    },
+    {
+      "path": "rulepack/gitlab-mit/javascript_crypto_rule-NodeLibcurlSSLVerificationDisable.yaml",
+      "sha256": "6700a3effdb3d5aa6918b20203ef331bb021be5a17c6e1e19cc0897cab892937"
+    },
+    {
+      "path": "rulepack/gitlab-mit/kotlin_pathtraversal_rule-FilePathTraversal.yaml",
+      "sha256": "661dacdeecc5f1f93f7ae1baff02dd89d122dfee1eb9fbc9ea9ae26cbfbb00e4"
+    },
+    {
+      "path": "rulepack/gitlab-mit/python_exec_rule-start-process-partial-path.yaml",
+      "sha256": "b22aeda2ff0e100d876bb03b6adf356bb5ca98d8713e2a8c9c8edaf783163118"
+    },
+    {
+      "path": "rulepack/gitlab-mit/python_exec_rule-start-process-path.yaml",
+      "sha256": "1a7ded630a6572882ed3fad89f6617cb1c698b3261d467883f0b5096d1cc58cb"
+    },
+    {
+      "path": "rulepack/gitlab-mit/python_exec_rule-subprocess-call-array.yaml",
+      "sha256": "2403e0c82eb0077c5f54fa70a0b14be96c0b250d867d693a22c2f3ba577da1f1"
+    },
+    {
+      "path": "rulepack/gitlab-mit/scala_unsafe_rule-InformationExposureVariant2.yaml",
+      "sha256": "44a257b93dcee49769698c35cb2f304b4b5b49ed4865265c29cec63340792c3f"
+    }
+  ],
+  "perRule": [
+    {
+      "path": "rulepack/archgen-ported/archgen-py-django-mark-safe-dynamic.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-django-mark-safe-dynamic",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b703_django_mark_safe.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-django-raw-sql.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-django-raw-sql",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b611_django_rawsql_used.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-eval-use.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-eval-use",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b307_eval.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-exec-use.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-exec-use",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b102_exec_used.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-flask-debug.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-flask-debug",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b201_flask_debug_true.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-ftplib.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-ftplib",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b321_ftplib.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-insecure-cipher.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-insecure-cipher",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b304_b305_ciphers_and_modes.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-jinja2-autoescape-off.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-jinja2-autoescape-off",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b701_jinja2_autoescape_false.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-marshal-load.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-marshal-load",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b302_marshal.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-os-system-dynamic.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-os-system-dynamic",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-paramiko-auto-add.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-paramiko-auto-add",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b507_ssh_no_host_key_verification.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-pickle-load.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-pickle-load",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b301_pickle.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-requests-verify-false.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-requests-verify-false",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b501_request_with_no_cert_validation.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-sql-string-built.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-sql-string-built",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b608_hardcoded_sql_expressions.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-ssl-insecure-version.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-ssl-insecure-version",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b502_ssl_with_bad_version.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-ssl-unverified-context.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-ssl-unverified-context",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b323_unverified_context.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-subprocess-shell-true.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-subprocess-shell-true",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-tarfile-extractall-nofilter.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-tarfile-extractall-nofilter",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b202_tarfile_unsafe_members.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-telnetlib.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-telnetlib",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b312_telnetlib.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-tempfile-mktemp.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-tempfile-mktemp",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b306_mktemp_q.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-weak-hash.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-weak-hash",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b324_hashlib.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-xml-stdlib-parse.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-xml-stdlib-parse",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b313-b320_xml.html"
+    },
+    {
+      "path": "rulepack/archgen-ported/archgen-py-yaml-unsafe-load.yaml",
+      "source": "archgen-ported",
+      "ruleId": "archgen-py-yaml-unsafe-load",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://bandit.readthedocs.io/en/latest/plugins/b506_yaml_load.html"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-broken-cipher.yaml",
+      "source": "archgen-ported-codeql",
+      "ruleId": "archgen-java-broken-cipher",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-327/BrokenCryptoAlgorithm.ql"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-cookie-insecure.yaml",
+      "source": "archgen-ported-codeql",
+      "ruleId": "archgen-java-cookie-insecure",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-614/InsecureCookie.ql"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-cookie-no-httponly.yaml",
+      "source": "archgen-ported-codeql",
+      "ruleId": "archgen-java-cookie-no-httponly",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-1004/SensitiveCookieNotHttpOnly.ql"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-ecb-mode.yaml",
+      "source": "archgen-ported-codeql",
+      "ruleId": "archgen-java-ecb-mode",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-327/BrokenCryptoAlgorithm.ql"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-exec-concat.yaml",
+      "source": "archgen-ported-codeql",
+      "ruleId": "archgen-java-exec-concat",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-078/ExecUnescaped.ql"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-hostname-verifier-true.yaml",
+      "source": "archgen-ported-codeql",
+      "ruleId": "archgen-java-hostname-verifier-true",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-297/UnsafeHostnameVerification.ql"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-jpa-query-concat.yaml",
+      "source": "archgen-ported-codeql",
+      "ruleId": "archgen-java-jpa-query-concat",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-089/SqlTainted.ql"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-ldap-filter-concat.yaml",
+      "source": "archgen-ported-codeql",
+      "ruleId": "archgen-java-ldap-filter-concat",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-090/LdapInjection.ql"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-sql-concat.yaml",
+      "source": "archgen-ported-codeql",
+      "ruleId": "archgen-java-sql-concat",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-089/SqlConcatenated.ql"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-trust-all-manager.yaml",
+      "source": "archgen-ported-codeql",
+      "ruleId": "archgen-java-trust-all-manager",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-295/InsecureTrustManager.ql"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-weak-hash.yaml",
+      "source": "archgen-ported-codeql",
+      "ruleId": "archgen-java-weak-hash",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-327/BrokenCryptoAlgorithm.ql"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-xpath-concat.yaml",
+      "source": "archgen-ported-codeql",
+      "ruleId": "archgen-java-xpath-concat",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-643/XPathInjection.ql"
+    },
+    {
+      "path": "rulepack/archgen-ported-codeql/archgen-java-xxe-features-enabled.yaml",
+      "source": "archgen-ported-codeql",
+      "ruleId": "archgen-java-xxe-features-enabled",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-611/XXE.ql"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-command-injection.yaml",
+      "source": "archgen-ported-railroader",
+      "ruleId": "archgen-rb-command-injection",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_execute.rb"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-constantize-dynamic.yaml",
+      "source": "archgen-ported-railroader",
+      "ruleId": "archgen-rb-constantize-dynamic",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_unsafe_reflection.rb"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-csrf-skip-global.yaml",
+      "source": "archgen-ported-railroader",
+      "ruleId": "archgen-rb-csrf-skip-global",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_filter_skipping.rb"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-detailed-exceptions-enabled.yaml",
+      "source": "archgen-ported-railroader",
+      "ruleId": "archgen-rb-detailed-exceptions-enabled",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_detailed_exceptions.rb"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-file-path-concat.yaml",
+      "source": "archgen-ported-railroader",
+      "ruleId": "archgen-rb-file-path-concat",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_file_access.rb"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-header-injection.yaml",
+      "source": "archgen-ported-railroader",
+      "ruleId": "archgen-rb-header-injection",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_response_splitting.rb"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-json-load.yaml",
+      "source": "archgen-ported-railroader",
+      "ruleId": "archgen-rb-json-load",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_json_parsing.rb"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-marshal-load.yaml",
+      "source": "archgen-ported-railroader",
+      "ruleId": "archgen-rb-marshal-load",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_deserialize.rb"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-permit-all.yaml",
+      "source": "archgen-ported-railroader",
+      "ruleId": "archgen-rb-permit-all",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_permit_attributes.rb"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-redirect-tainted.yaml",
+      "source": "archgen-ported-railroader",
+      "ruleId": "archgen-rb-redirect-tainted",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_redirect.rb"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-sql-concat.yaml",
+      "source": "archgen-ported-railroader",
+      "ruleId": "archgen-rb-sql-concat",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_sql.rb"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-xss-raw-dynamic.yaml",
+      "source": "archgen-ported-railroader",
+      "ruleId": "archgen-rb-xss-raw-dynamic",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_cross_site_scripting.rb"
+    },
+    {
+      "path": "rulepack/archgen-ported-railroader/archgen-rb-yaml-unsafe-load.yaml",
+      "source": "archgen-ported-railroader",
+      "ruleId": "archgen-rb-yaml-unsafe-load",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_yaml_parsing.rb"
+    },
+    {
+      "path": "rulepack/devskim/DS101155.yaml",
+      "source": "devskim",
+      "ruleId": "DS101155",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/general.json"
+    },
+    {
+      "path": "rulepack/devskim/DS101159.yaml",
+      "source": "devskim",
+      "ruleId": "DS101159",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/general.json"
+    },
+    {
+      "path": "rulepack/devskim/DS106863.yaml",
+      "source": "devskim",
+      "ruleId": "DS106863",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/ciphers.json"
+    },
+    {
+      "path": "rulepack/devskim/DS106864.yaml",
+      "source": "devskim",
+      "ruleId": "DS106864",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/ciphers.json"
+    },
+    {
+      "path": "rulepack/devskim/DS108330.yaml",
+      "source": "devskim",
+      "ruleId": "DS108330",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/dangerous_api.json"
+    },
+    {
+      "path": "rulepack/devskim/DS108647.yaml",
+      "source": "devskim",
+      "ruleId": "DS108647",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/hash_algorithm.json"
+    },
+    {
+      "path": "rulepack/devskim/DS109501.yaml",
+      "source": "devskim",
+      "ruleId": "DS109501",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/ciphers.json"
+    },
+    {
+      "path": "rulepack/devskim/DS109733.yaml",
+      "source": "devskim",
+      "ruleId": "DS109733",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/underhanded.json"
+    },
+    {
+      "path": "rulepack/devskim/DS111237.yaml",
+      "source": "devskim",
+      "ruleId": "DS111237",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/dangerous_api.json"
+    },
+    {
+      "path": "rulepack/devskim/DS112266.yaml",
+      "source": "devskim",
+      "ruleId": "DS112266",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/storage/secure_storage.json"
+    },
+    {
+      "path": "rulepack/devskim/DS112835.yaml",
+      "source": "devskim",
+      "ruleId": "DS112835",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_securityprotocol.json"
+    },
+    {
+      "path": "rulepack/devskim/DS112836.yaml",
+      "source": "devskim",
+      "ruleId": "DS112836",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_sslprotocol.json"
+    },
+    {
+      "path": "rulepack/devskim/DS112837.yaml",
+      "source": "devskim",
+      "ruleId": "DS112837",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_appcontext.json"
+    },
+    {
+      "path": "rulepack/devskim/DS112839.yaml",
+      "source": "devskim",
+      "ruleId": "DS112839",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_functioncall.json"
+    },
+    {
+      "path": "rulepack/devskim/DS117838.yaml",
+      "source": "devskim",
+      "ruleId": "DS117838",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/privacy/secrets.json"
+    },
+    {
+      "path": "rulepack/devskim/DS121708.yaml",
+      "source": "devskim",
+      "ruleId": "DS121708",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/suggested_api.json"
+    },
+    {
+      "path": "rulepack/devskim/DS126187.yaml",
+      "source": "devskim",
+      "ruleId": "DS126187",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/certificate.json"
+    },
+    {
+      "path": "rulepack/devskim/DS126188.yaml",
+      "source": "devskim",
+      "ruleId": "DS126188",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/certificate.json"
+    },
+    {
+      "path": "rulepack/devskim/DS126858.yaml",
+      "source": "devskim",
+      "ruleId": "DS126858",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/hash_algorithm.json"
+    },
+    {
+      "path": "rulepack/devskim/DS127101.yaml",
+      "source": "devskim",
+      "ruleId": "DS127101",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/protocol.json"
+    },
+    {
+      "path": "rulepack/devskim/DS132780.yaml",
+      "source": "devskim",
+      "ruleId": "DS132780",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/xml/external_entities.json"
+    },
+    {
+      "path": "rulepack/devskim/DS137038.yaml",
+      "source": "devskim",
+      "ruleId": "DS137038",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/attack_surface/outbound_network.json"
+    },
+    {
+      "path": "rulepack/devskim/DS140021.yaml",
+      "source": "devskim",
+      "ruleId": "DS140021",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/suggested_api.json"
+    },
+    {
+      "path": "rulepack/devskim/DS141863.yaml",
+      "source": "devskim",
+      "ruleId": "DS141863",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/dangerous_api.json"
+    },
+    {
+      "path": "rulepack/devskim/DS144436.yaml",
+      "source": "devskim",
+      "ruleId": "DS144436",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/protocol.json"
+    },
+    {
+      "path": "rulepack/devskim/DS148264.yaml",
+      "source": "devskim",
+      "ruleId": "DS148264",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/random.json"
+    },
+    {
+      "path": "rulepack/devskim/DS149435.yaml",
+      "source": "devskim",
+      "ruleId": "DS149435",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/random.json"
+    },
+    {
+      "path": "rulepack/devskim/DS154189.yaml",
+      "source": "devskim",
+      "ruleId": "DS154189",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/dangerous_api.json"
+    },
+    {
+      "path": "rulepack/devskim/DS156431.yaml",
+      "source": "devskim",
+      "ruleId": "DS156431",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/ciphers.json"
+    },
+    {
+      "path": "rulepack/devskim/DS159369.yaml",
+      "source": "devskim",
+      "ruleId": "DS159369",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/certificate.json"
+    },
+    {
+      "path": "rulepack/devskim/DS161085.yaml",
+      "source": "devskim",
+      "ruleId": "DS161085",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/suggested_api.json"
+    },
+    {
+      "path": "rulepack/devskim/DS162092.yaml",
+      "source": "devskim",
+      "ruleId": "DS162092",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/hygiene/localhost.json"
+    },
+    {
+      "path": "rulepack/devskim/DS165746.yaml",
+      "source": "devskim",
+      "ruleId": "DS165746",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/control_flow/dynamic_execution.json"
+    },
+    {
+      "path": "rulepack/devskim/DS168931.yaml",
+      "source": "devskim",
+      "ruleId": "DS168931",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/hash_algorithm.json"
+    },
+    {
+      "path": "rulepack/devskim/DS169125.yaml",
+      "source": "devskim",
+      "ruleId": "DS169125",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/protocol.json"
+    },
+    {
+      "path": "rulepack/devskim/DS169126.yaml",
+      "source": "devskim",
+      "ruleId": "DS169126",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/protocol.json"
+    },
+    {
+      "path": "rulepack/devskim/DS169127.yaml",
+      "source": "devskim",
+      "ruleId": "DS169127",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/protocol.json"
+    },
+    {
+      "path": "rulepack/devskim/DS172412.yaml",
+      "source": "devskim",
+      "ruleId": "DS172412",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/manualreview/dynamiccode.json"
+    },
+    {
+      "path": "rulepack/devskim/DS176209.yaml",
+      "source": "devskim",
+      "ruleId": "DS176209",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/hygiene/todo.json"
+    },
+    {
+      "path": "rulepack/devskim/DS176603.yaml",
+      "source": "devskim",
+      "ruleId": "DS176603",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/certificate.json"
+    },
+    {
+      "path": "rulepack/devskim/DS179924.yaml",
+      "source": "devskim",
+      "ruleId": "DS179924",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/misused_api.json"
+    },
+    {
+      "path": "rulepack/devskim/DS180000.yaml",
+      "source": "devskim",
+      "ruleId": "DS180000",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/frameworks/android.json"
+    },
+    {
+      "path": "rulepack/devskim/DS181021.yaml",
+      "source": "devskim",
+      "ruleId": "DS181021",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/dangerous_api.json"
+    },
+    {
+      "path": "rulepack/devskim/DS185832.yaml",
+      "source": "devskim",
+      "ruleId": "DS185832",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/dangerous_api.json"
+    },
+    {
+      "path": "rulepack/devskim/DS187371.yaml",
+      "source": "devskim",
+      "ruleId": "DS187371",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/weak_cipher_modes.json"
+    },
+    {
+      "path": "rulepack/devskim/DS197836.yaml",
+      "source": "devskim",
+      "ruleId": "DS197836",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/hash_algorithm.json"
+    },
+    {
+      "path": "rulepack/devskim/DS425030.yaml",
+      "source": "devskim",
+      "ruleId": "DS425030",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/deserialization.json"
+    },
+    {
+      "path": "rulepack/devskim/DS425040.yaml",
+      "source": "devskim",
+      "ruleId": "DS425040",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/deserialization.json"
+    },
+    {
+      "path": "rulepack/devskim/DS440010.yaml",
+      "source": "devskim",
+      "ruleId": "DS440010",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/hardcoded_tls.json"
+    },
+    {
+      "path": "rulepack/devskim/DS440011.yaml",
+      "source": "devskim",
+      "ruleId": "DS440011",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_generic.json"
+    },
+    {
+      "path": "rulepack/devskim/DS440012.yaml",
+      "source": "devskim",
+      "ruleId": "DS440012",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_generic.json"
+    },
+    {
+      "path": "rulepack/devskim/DS440013.yaml",
+      "source": "devskim",
+      "ruleId": "DS440013",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_generic.json"
+    },
+    {
+      "path": "rulepack/devskim/DS440014.yaml",
+      "source": "devskim",
+      "ruleId": "DS440014",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_generic.json"
+    },
+    {
+      "path": "rulepack/devskim/DS440015.yaml",
+      "source": "devskim",
+      "ruleId": "DS440015",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_generic.json"
+    },
+    {
+      "path": "rulepack/devskim/DS440020.yaml",
+      "source": "devskim",
+      "ruleId": "DS440020",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/hardcoded_tls.json"
+    },
+    {
+      "path": "rulepack/devskim/DS440073.yaml",
+      "source": "devskim",
+      "ruleId": "DS440073",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_rust.json"
+    },
+    {
+      "path": "rulepack/devskim/DS440074.yaml",
+      "source": "devskim",
+      "ruleId": "DS440074",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_win32.json"
+    },
+    {
+      "path": "rulepack/devskim/DS440075.yaml",
+      "source": "devskim",
+      "ruleId": "DS440075",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_win32.json"
+    },
+    {
+      "path": "rulepack/devskim/DS440076.yaml",
+      "source": "devskim",
+      "ruleId": "DS440076",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_win32.json"
+    },
+    {
+      "path": "rulepack/devskim/DS440077.yaml",
+      "source": "devskim",
+      "ruleId": "DS440077",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_win32.json"
+    },
+    {
+      "path": "rulepack/devskim/DS440080.yaml",
+      "source": "devskim",
+      "ruleId": "DS440080",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_macos.json"
+    },
+    {
+      "path": "rulepack/devskim/DS440100.yaml",
+      "source": "devskim",
+      "ruleId": "DS440100",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_generic.json"
+    },
+    {
+      "path": "rulepack/devskim/DS450001.yaml",
+      "source": "devskim",
+      "ruleId": "DS450001",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/frameworks/dotnet_framework.json"
+    },
+    {
+      "path": "rulepack/devskim/DS450003.yaml",
+      "source": "devskim",
+      "ruleId": "DS450003",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/microsoft/DevSkim/blob/main/rules/default/security/frameworks/dotnet_framework.json"
+    },
+    {
+      "path": "rulepack/dgryski/anonymous-struct-args.yaml",
+      "source": "dgryski",
+      "ruleId": "anonymous-struct-args",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/anon-struct-args.yml"
+    },
+    {
+      "path": "rulepack/dgryski/bad-exponentiation.yaml",
+      "source": "dgryski",
+      "ruleId": "bad-exponentiation",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/badexponentiation.yml"
+    },
+    {
+      "path": "rulepack/dgryski/bad-nil-guard.yaml",
+      "source": "dgryski",
+      "ruleId": "bad-nil-guard",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/badnilguard.yml"
+    },
+    {
+      "path": "rulepack/dgryski/bad-sort-slice-function.yaml",
+      "source": "dgryski",
+      "ruleId": "bad-sort-slice-function",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/sortslice.yml"
+    },
+    {
+      "path": "rulepack/dgryski/cancelable-context-not-systematically-cancelled.yaml",
+      "source": "dgryski",
+      "ruleId": "cancelable-context-not-systematically-cancelled",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/contextCancelable.yml"
+    },
+    {
+      "path": "rulepack/dgryski/context-todo.yaml",
+      "source": "dgryski",
+      "ruleId": "context-todo",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/contextTODO.yml"
+    },
+    {
+      "path": "rulepack/dgryski/ctx-done-and-timers.yaml",
+      "source": "dgryski",
+      "ruleId": "ctx-done-and-timers",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/ctx-time.yml"
+    },
+    {
+      "path": "rulepack/dgryski/deprecated-ioutil-discard.yaml",
+      "source": "dgryski",
+      "ruleId": "deprecated-ioutil-discard",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/ioutil.yml"
+    },
+    {
+      "path": "rulepack/dgryski/deprecated-ioutil-nopcloser.yaml",
+      "source": "dgryski",
+      "ruleId": "deprecated-ioutil-nopcloser",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/ioutil.yml"
+    },
+    {
+      "path": "rulepack/dgryski/deprecated-ioutil-readall.yaml",
+      "source": "dgryski",
+      "ruleId": "deprecated-ioutil-readall",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/ioutil.yml"
+    },
+    {
+      "path": "rulepack/dgryski/deprecated-ioutil-readdir.yaml",
+      "source": "dgryski",
+      "ruleId": "deprecated-ioutil-readdir",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/ioutil.yml"
+    },
+    {
+      "path": "rulepack/dgryski/deprecated-ioutil-readfile.yaml",
+      "source": "dgryski",
+      "ruleId": "deprecated-ioutil-readfile",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/ioutil.yml"
+    },
+    {
+      "path": "rulepack/dgryski/deprecated-ioutil-tempdir.yaml",
+      "source": "dgryski",
+      "ruleId": "deprecated-ioutil-tempdir",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/ioutil.yml"
+    },
+    {
+      "path": "rulepack/dgryski/deprecated-ioutil-tempfile.yaml",
+      "source": "dgryski",
+      "ruleId": "deprecated-ioutil-tempfile",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/ioutil.yml"
+    },
+    {
+      "path": "rulepack/dgryski/deprecated-ioutil-writefile.yaml",
+      "source": "dgryski",
+      "ruleId": "deprecated-ioutil-writefile",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/ioutil.yml"
+    },
+    {
+      "path": "rulepack/dgryski/err-nil-check.yaml",
+      "source": "dgryski",
+      "ruleId": "err-nil-check",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/errnilcheck.yml"
+    },
+    {
+      "path": "rulepack/dgryski/err-todo.yaml",
+      "source": "dgryski",
+      "ruleId": "err-todo",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/errtodo.yml"
+    },
+    {
+      "path": "rulepack/dgryski/go-fuzz-to-native-fuzzing.yaml",
+      "source": "dgryski",
+      "ruleId": "go-fuzz-to-native-fuzzing",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/gofuzz.yml"
+    },
+    {
+      "path": "rulepack/dgryski/hash-sum-without-write.yaml",
+      "source": "dgryski",
+      "ruleId": "hash-sum-without-write",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/hashsum.yml"
+    },
+    {
+      "path": "rulepack/dgryski/hmac-needs-new.yaml",
+      "source": "dgryski",
+      "ruleId": "hmac-needs-new",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/hmac-hash.yml"
+    },
+    {
+      "path": "rulepack/dgryski/http-request-go-context.yaml",
+      "source": "dgryski",
+      "ruleId": "http-request-go-context",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/http-ctx-goroutine.yml"
+    },
+    {
+      "path": "rulepack/dgryski/io-readfull-n.yaml",
+      "source": "dgryski",
+      "ruleId": "io-readfull-n",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/readfull.yml"
+    },
+    {
+      "path": "rulepack/dgryski/json-encoder-needs-type.yaml",
+      "source": "dgryski",
+      "ruleId": "json-encoder-needs-type",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/json-writer.yml"
+    },
+    {
+      "path": "rulepack/dgryski/leaky-time-after.yaml",
+      "source": "dgryski",
+      "ruleId": "leaky-time-after",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/timeafter.yml"
+    },
+    {
+      "path": "rulepack/dgryski/marshal-json-misspell.yaml",
+      "source": "dgryski",
+      "ruleId": "marshal-json-misspell",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/marshaljson.yml"
+    },
+    {
+      "path": "rulepack/dgryski/marshal-json-pointer-receiver.yaml",
+      "source": "dgryski",
+      "ruleId": "marshal-json-pointer-receiver",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/marshaljson.yml"
+    },
+    {
+      "path": "rulepack/dgryski/marshal-yaml-misspell.yaml",
+      "source": "dgryski",
+      "ruleId": "marshal-yaml-misspell",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/marshalyaml.yml"
+    },
+    {
+      "path": "rulepack/dgryski/maybe-wrong-err.yaml",
+      "source": "dgryski",
+      "ruleId": "maybe-wrong-err",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/wrongerrcall.yml"
+    },
+    {
+      "path": "rulepack/dgryski/net-ip-req-remoteaddr.yaml",
+      "source": "dgryski",
+      "ruleId": "net-ip-req-remoteaddr",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/netip.yml"
+    },
+    {
+      "path": "rulepack/dgryski/newrelic-start-without-end.yaml",
+      "source": "dgryski",
+      "ruleId": "newrelic-start-without-end",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/nrtxn.yml"
+    },
+    {
+      "path": "rulepack/dgryski/not-after.yaml",
+      "source": "dgryski",
+      "ruleId": "not-after",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/unixnano.yml"
+    },
+    {
+      "path": "rulepack/dgryski/not-before.yaml",
+      "source": "dgryski",
+      "ruleId": "not-before",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/unixnano.yml"
+    },
+    {
+      "path": "rulepack/dgryski/odd-bits-leadingzeros.yaml",
+      "source": "dgryski",
+      "ruleId": "odd-bits-leadingzeros",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/oddmathbits.yml"
+    },
+    {
+      "path": "rulepack/dgryski/odd-bitwise.yaml",
+      "source": "dgryski",
+      "ruleId": "odd-bitwise",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/oddbitwise.yml"
+    },
+    {
+      "path": "rulepack/dgryski/odd-comparison-subtract-eq-zero.yaml",
+      "source": "dgryski",
+      "ruleId": "odd-comparison-subtract-eq-zero",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/oddcompare.yml"
+    },
+    {
+      "path": "rulepack/dgryski/odd-comparison-subtract-gt-zero.yaml",
+      "source": "dgryski",
+      "ruleId": "odd-comparison-subtract-gt-zero",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/oddcompare.yml"
+    },
+    {
+      "path": "rulepack/dgryski/odd-comparison-subtract-gte-zero.yaml",
+      "source": "dgryski",
+      "ruleId": "odd-comparison-subtract-gte-zero",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/oddcompare.yml"
+    },
+    {
+      "path": "rulepack/dgryski/odd-comparison-subtract-lt-zero.yaml",
+      "source": "dgryski",
+      "ruleId": "odd-comparison-subtract-lt-zero",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/oddcompare.yml"
+    },
+    {
+      "path": "rulepack/dgryski/odd-comparison-subtract-lte-zero.yaml",
+      "source": "dgryski",
+      "ruleId": "odd-comparison-subtract-lte-zero",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/oddcompare.yml"
+    },
+    {
+      "path": "rulepack/dgryski/odd-comparison-subtract-neq-zero.yaml",
+      "source": "dgryski",
+      "ruleId": "odd-comparison-subtract-neq-zero",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/oddcompare.yml"
+    },
+    {
+      "path": "rulepack/dgryski/odd-comparison-xor-eq-zero.yaml",
+      "source": "dgryski",
+      "ruleId": "odd-comparison-xor-eq-zero",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/oddcompare.yml"
+    },
+    {
+      "path": "rulepack/dgryski/odd-comparison-xor-neq-zero.yaml",
+      "source": "dgryski",
+      "ruleId": "odd-comparison-xor-neq-zero",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/oddcompare.yml"
+    },
+    {
+      "path": "rulepack/dgryski/odd-compound-expression.yaml",
+      "source": "dgryski",
+      "ruleId": "odd-compound-expression",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/oddcompound.yml"
+    },
+    {
+      "path": "rulepack/dgryski/odd-sequence-ifs.yaml",
+      "source": "dgryski",
+      "ruleId": "odd-sequence-ifs",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/oddifsequence.yml"
+    },
+    {
+      "path": "rulepack/dgryski/os-error-is-exist.yaml",
+      "source": "dgryski",
+      "ruleId": "os-error-is-exist",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/oserrors.yml"
+    },
+    {
+      "path": "rulepack/dgryski/os-error-is-not-exist.yaml",
+      "source": "dgryski",
+      "ruleId": "os-error-is-not-exist",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/oserrors.yml"
+    },
+    {
+      "path": "rulepack/dgryski/os-error-is-permission.yaml",
+      "source": "dgryski",
+      "ruleId": "os-error-is-permission",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/oserrors.yml"
+    },
+    {
+      "path": "rulepack/dgryski/os-error-is-timeout.yaml",
+      "source": "dgryski",
+      "ruleId": "os-error-is-timeout",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/oserrors.yml"
+    },
+    {
+      "path": "rulepack/dgryski/parseint-downcast.yaml",
+      "source": "dgryski",
+      "ruleId": "parseint-downcast",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/parseint-downcast.yml"
+    },
+    {
+      "path": "rulepack/dgryski/read-io-eof.yaml",
+      "source": "dgryski",
+      "ruleId": "read-io-eof",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/readeof.yml"
+    },
+    {
+      "path": "rulepack/dgryski/return-nil.yaml",
+      "source": "dgryski",
+      "ruleId": "return-nil",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/returnnil.yml"
+    },
+    {
+      "path": "rulepack/dgryski/return-nil-err.yaml",
+      "source": "dgryski",
+      "ruleId": "return-nil-err",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/nilerr.yml"
+    },
+    {
+      "path": "rulepack/dgryski/rows-not-closed.yaml",
+      "source": "dgryski",
+      "ruleId": "rows-not-closed",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/close-sql-query-rows.yml"
+    },
+    {
+      "path": "rulepack/dgryski/sprintf-host-port.yaml",
+      "source": "dgryski",
+      "ruleId": "sprintf-host-port",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/hostport.yml"
+    },
+    {
+      "path": "rulepack/dgryski/sprintf-mail-address.yaml",
+      "source": "dgryski",
+      "ruleId": "sprintf-mail-address",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/mail-address.yml"
+    },
+    {
+      "path": "rulepack/dgryski/unmarshal-json-misspell.yaml",
+      "source": "dgryski",
+      "ruleId": "unmarshal-json-misspell",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/marshaljson.yml"
+    },
+    {
+      "path": "rulepack/dgryski/unmarshal-yaml-misspell.yaml",
+      "source": "dgryski",
+      "ruleId": "unmarshal-yaml-misspell",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/marshalyaml.yml"
+    },
+    {
+      "path": "rulepack/dgryski/use-err-error.yaml",
+      "source": "dgryski",
+      "ruleId": "use-err-error",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/sprinterr.yml"
+    },
+    {
+      "path": "rulepack/dgryski/use-fprintf-not-write-fsprint.yaml",
+      "source": "dgryski",
+      "ruleId": "use-fprintf-not-write-fsprint",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/writestring.yml"
+    },
+    {
+      "path": "rulepack/dgryski/use-hmac-equal.yaml",
+      "source": "dgryski",
+      "ruleId": "use-hmac-equal",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/hmac-bytes.yml"
+    },
+    {
+      "path": "rulepack/dgryski/use-math-bits.yaml",
+      "source": "dgryski",
+      "ruleId": "use-math-bits",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/mathbits.yml"
+    },
+    {
+      "path": "rulepack/dgryski/use-net-errclosed.yaml",
+      "source": "dgryski",
+      "ruleId": "use-net-errclosed",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/errclosed.yml"
+    },
+    {
+      "path": "rulepack/dgryski/use-strings-join-path.yaml",
+      "source": "dgryski",
+      "ruleId": "use-strings-join-path",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/joinpath.yml"
+    },
+    {
+      "path": "rulepack/dgryski/use-write-not-fprint.yaml",
+      "source": "dgryski",
+      "ruleId": "use-write-not-fprint",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/writestring.yml"
+    },
+    {
+      "path": "rulepack/dgryski/use-writer-not-writestring.yaml",
+      "source": "dgryski",
+      "ruleId": "use-writer-not-writestring",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/writestring.yml"
+    },
+    {
+      "path": "rulepack/dgryski/wrong-lock-unlock.yaml",
+      "source": "dgryski",
+      "ruleId": "wrong-lock-unlock",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/dgryski/semgrep-go/blob/master/wronglock.yml"
+    },
+    {
+      "path": "rulepack/dotta/android-apps3c.yaml",
+      "source": "dotta",
+      "ruleId": "android-apps3c",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/federicodotta/semgrep-rules/blob/main/java/android-webview/android-webview-java-apps3c.yaml"
+    },
+    {
+      "path": "rulepack/dotta/android-webview-kotlin-apps3c.yaml",
+      "source": "dotta",
+      "ruleId": "android-webview-kotlin-apps3c",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/federicodotta/semgrep-rules/blob/main/kotlin/android-webview/android-webview-kotlin-apps3c.yaml"
+    },
+    {
+      "path": "rulepack/dotta/auth-bypass-yii-framework-apps3c.yaml",
+      "source": "dotta",
+      "ruleId": "auth-bypass-yii-framework-apps3c",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/federicodotta/semgrep-rules/blob/main/php/frameworks/yii/auth-bypass-yii-framework-apps3c.yaml"
+    },
+    {
+      "path": "rulepack/dotta/auth-bypass-yii-framework-potential-apps3c.yaml",
+      "source": "dotta",
+      "ruleId": "auth-bypass-yii-framework-potential-apps3c",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/federicodotta/semgrep-rules/blob/main/php/frameworks/yii/auth-bypass-yii-framework-potential-apps3c.yaml"
+    },
+    {
+      "path": "rulepack/dotta/sql-injection-kotlin-apps3c.yaml",
+      "source": "dotta",
+      "ruleId": "sql-injection-kotlin-apps3c",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/federicodotta/semgrep-rules/blob/main/kotlin/lang/security/sql-injection-kotlin-apps3c.yaml"
+    },
+    {
+      "path": "rulepack/dotta/sql-injection-kotlin-potential-apps3c.yaml",
+      "source": "dotta",
+      "ruleId": "sql-injection-kotlin-potential-apps3c",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/federicodotta/semgrep-rules/blob/main/kotlin/lang/security/sql-injection-kotlin-potential-apps3c.yaml"
+    },
+    {
+      "path": "rulepack/dotta/sql-injection-php-apps3c.yaml",
+      "source": "dotta",
+      "ruleId": "sql-injection-php-apps3c",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/federicodotta/semgrep-rules/blob/main/php/lang/security/sql-injection-php-apps3c.yaml"
+    },
+    {
+      "path": "rulepack/dotta/sql-injection-php-potential-apps3c.yaml",
+      "source": "dotta",
+      "ruleId": "sql-injection-php-potential-apps3c",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/federicodotta/semgrep-rules/blob/main/php/lang/security/sql-injection-php-potential-apps3c.yaml"
+    },
+    {
+      "path": "rulepack/dotta/sql-injection-yii-framework-apps3c.yaml",
+      "source": "dotta",
+      "ruleId": "sql-injection-yii-framework-apps3c",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/federicodotta/semgrep-rules/blob/main/php/frameworks/yii/sql-injection-yii-framework-apps3c.yaml"
+    },
+    {
+      "path": "rulepack/dotta/sql-injection-yii-framework-potential-apps3c.yaml",
+      "source": "dotta",
+      "ruleId": "sql-injection-yii-framework-potential-apps3c",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/federicodotta/semgrep-rules/blob/main/php/frameworks/yii/sql-injection-yii-framework-potential-apps3c.yaml"
+    },
+    {
+      "path": "rulepack/dotta/xss-yii-framework-potential-apps3c.yaml",
+      "source": "dotta",
+      "ruleId": "xss-yii-framework-potential-apps3c",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/federicodotta/semgrep-rules/blob/main/php/frameworks/yii/xss-yii-framework-potential-apps3c.yaml"
+    },
+    {
+      "path": "rulepack/elttam/UnsafeHttpInvokerServiceExporter-XML.yaml",
+      "source": "elttam",
+      "ruleId": "UnsafeHttpInvokerServiceExporter-XML",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/java/spring/security/audit/remoting/UnsafeHttpInvokerServiceExporterXml.yml"
+    },
+    {
+      "path": "rulepack/elttam/UnsafeHttpInvokerServiceExporter-func.yaml",
+      "source": "elttam",
+      "ruleId": "UnsafeHttpInvokerServiceExporter-func",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/java/spring/security/audit/remoting/UnsafeHttpInvokerServiceExporter.yml"
+    },
+    {
+      "path": "rulepack/elttam/UnsafeHttpInvokerServiceExporter-var.yaml",
+      "source": "elttam",
+      "ruleId": "UnsafeHttpInvokerServiceExporter-var",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/java/spring/security/audit/remoting/UnsafeHttpInvokerServiceExporter.yml"
+    },
+    {
+      "path": "rulepack/elttam/allow-privilege-escalation.yaml",
+      "source": "elttam",
+      "ruleId": "allow-privilege-escalation",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/yaml/kubernetes/security/allow-privilege-escalation.yaml"
+    },
+    {
+      "path": "rulepack/elttam/aspnet-controller-entrypoint.yaml",
+      "source": "elttam",
+      "ruleId": "aspnet-controller-entrypoint",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/csharp/dotnet/security/audit/entrypoints/aspnet-controller.yml"
+    },
+    {
+      "path": "rulepack/elttam/beego-ormleak-dynamic-expr-review.yaml",
+      "source": "elttam",
+      "ruleId": "beego-ormleak-dynamic-expr-review",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/go/orm-leak/beego-orm.yaml"
+    },
+    {
+      "path": "rulepack/elttam/beego-ormleak-dynamic-orderby-review.yaml",
+      "source": "elttam",
+      "ruleId": "beego-ormleak-dynamic-orderby-review",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/go/orm-leak/beego-orm.yaml"
+    },
+    {
+      "path": "rulepack/elttam/beego-ormleak-filterraw.yaml",
+      "source": "elttam",
+      "ruleId": "beego-ormleak-filterraw",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/go/orm-leak/beego-orm.yaml"
+    },
+    {
+      "path": "rulepack/elttam/beego-ormleak-taint-dynamic-expr.yaml",
+      "source": "elttam",
+      "ruleId": "beego-ormleak-taint-dynamic-expr",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/go/orm-leak/beego-orm.yaml"
+    },
+    {
+      "path": "rulepack/elttam/consumes-class-star.yaml",
+      "source": "elttam",
+      "ruleId": "consumes-class-star",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/jax-rs/security/audit/entrypoints/consumes-class-star.yml"
+    },
+    {
+      "path": "rulepack/elttam/consumes-method-star.yaml",
+      "source": "elttam",
+      "ruleId": "consumes-method-star",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/jax-rs/security/audit/entrypoints/consumes-method-star.yml"
+    },
+    {
+      "path": "rulepack/elttam/convention-annotation-package-info.yaml",
+      "source": "elttam",
+      "ruleId": "convention-annotation-package-info",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/struts2/security/audit/entrypoints/convention-annotation-package-info.yml"
+    },
+    {
+      "path": "rulepack/elttam/default-properties-devmode.yaml",
+      "source": "elttam",
+      "ruleId": "default-properties-devmode",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/struts2/security/audit/devmode/default-properties-devmode.yml"
+    },
+    {
+      "path": "rulepack/elttam/django-filter-exposes-all-fields.yaml",
+      "source": "elttam",
+      "ruleId": "django-filter-exposes-all-fields",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/python/orm-leak/django-orm.yaml"
+    },
+    {
+      "path": "rulepack/elttam/django-orm-dynamic-lookup-kwargs.yaml",
+      "source": "elttam",
+      "ruleId": "django-orm-dynamic-lookup-kwargs",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/python/orm-leak/django-orm.yaml"
+    },
+    {
+      "path": "rulepack/elttam/django-orm-dynamic-lookup-variable-key.yaml",
+      "source": "elttam",
+      "ruleId": "django-orm-dynamic-lookup-variable-key",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/python/orm-leak/django-orm.yaml"
+    },
+    {
+      "path": "rulepack/elttam/django-orm-dynamic-orderby-or-values.yaml",
+      "source": "elttam",
+      "ruleId": "django-orm-dynamic-orderby-or-values",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/python/orm-leak/django-orm.yaml"
+    },
+    {
+      "path": "rulepack/elttam/ef-ormleak-dynamic-orderby.yaml",
+      "source": "elttam",
+      "ruleId": "ef-ormleak-dynamic-orderby",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/csharp/dotnet/orm-leak/entity-framework-orm.yaml"
+    },
+    {
+      "path": "rulepack/elttam/ef-ormleak-dynamic-where.yaml",
+      "source": "elttam",
+      "ruleId": "ef-ormleak-dynamic-where",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/csharp/dotnet/orm-leak/entity-framework-orm.yaml"
+    },
+    {
+      "path": "rulepack/elttam/ef-ormleak-taint-dynamic-include.yaml",
+      "source": "elttam",
+      "ruleId": "ef-ormleak-taint-dynamic-include",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/csharp/dotnet/orm-leak/entity-framework-orm.yaml"
+    },
+    {
+      "path": "rulepack/elttam/ef-ormleak-taint-property.yaml",
+      "source": "elttam",
+      "ruleId": "ef-ormleak-taint-property",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/csharp/dotnet/orm-leak/entity-framework-orm.yaml"
+    },
+    {
+      "path": "rulepack/elttam/email-domain-endswith.yaml",
+      "source": "elttam",
+      "ruleId": "email-domain-endswith",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/java/audit/email-validation/jakarta-mail-email-primitives.yml"
+    },
+    {
+      "path": "rulepack/elttam/email-domain-lastindexof.yaml",
+      "source": "elttam",
+      "ruleId": "email-domain-lastindexof",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/java/audit/email-validation/jakarta-mail-email-primitives.yml"
+    },
+    {
+      "path": "rulepack/elttam/email-domain-split-index.yaml",
+      "source": "elttam",
+      "ruleId": "email-domain-split-index",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/java/audit/email-validation/jakarta-mail-email-primitives.yml"
+    },
+    {
+      "path": "rulepack/elttam/exec.yaml",
+      "source": "elttam",
+      "ruleId": "exec",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/c/lang/security/audit/exec.yaml"
+    },
+    {
+      "path": "rulepack/elttam/execute-method.yaml",
+      "source": "elttam",
+      "ruleId": "execute-method",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/struts2/security/audit/entrypoints/execute-method.yml"
+    },
+    {
+      "path": "rulepack/elttam/express-app-router-handler.yaml",
+      "source": "elttam",
+      "ruleId": "express-app-router-handler",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/javascript/express/security/audit/entrypoints/app-router-handler.yml"
+    },
+    {
+      "path": "rulepack/elttam/express-mongodb-nosqli.yaml",
+      "source": "elttam",
+      "ruleId": "express-mongodb-nosqli",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/javascript/express/security/audit/mongodb-nosqli.yml"
+    },
+    {
+      "path": "rulepack/elttam/flask-app-route-handler.yaml",
+      "source": "elttam",
+      "ruleId": "flask-app-route-handler",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/python/flask/security/audit/entrypoints/app-route-handler.yml"
+    },
+    {
+      "path": "rulepack/elttam/fromXML.yaml",
+      "source": "elttam",
+      "ruleId": "fromXML",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/xstream/security/audit/fromxml.yml"
+    },
+    {
+      "path": "rulepack/elttam/gcm-static-iv.yaml",
+      "source": "elttam",
+      "ruleId": "gcm-static-iv",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/java/lang/security/audit/crypto/gcm-static-iv.yml"
+    },
+    {
+      "path": "rulepack/elttam/gorilla-cookiestore-default-samesite-none.yaml",
+      "source": "elttam",
+      "ruleId": "gorilla-cookiestore-default-samesite-none",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/go/gorilla/security/audit/gorilla-cookiestore-default-samesite-none.yaml"
+    },
+    {
+      "path": "rulepack/elttam/hibernate-email-annotation-field.yaml",
+      "source": "elttam",
+      "ruleId": "hibernate-email-annotation-field",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/java/audit/email-validation/jakarta-mail-email-primitives.yml"
+    },
+    {
+      "path": "rulepack/elttam/http-method.class-path.yaml",
+      "source": "elttam",
+      "ruleId": "http-method.class-path",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/jax-rs/security/audit/entrypoints/method-path.yml"
+    },
+    {
+      "path": "rulepack/elttam/http-method.no-path.yaml",
+      "source": "elttam",
+      "ruleId": "http-method.no-path",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/jax-rs/security/audit/entrypoints/method-path.yml"
+    },
+    {
+      "path": "rulepack/elttam/http-method.path-path.yaml",
+      "source": "elttam",
+      "ruleId": "http-method.path-path",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/jax-rs/security/audit/entrypoints/method-path.yml"
+    },
+    {
+      "path": "rulepack/elttam/jakarta-mail-internetaddress-overloaded-ctor.yaml",
+      "source": "elttam",
+      "ruleId": "jakarta-mail-internetaddress-overloaded-ctor",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/java/audit/email-validation/jakarta-mail-email-primitives.yml"
+    },
+    {
+      "path": "rulepack/elttam/jakarta-mail-internetaddress-single-arg-validator.yaml",
+      "source": "elttam",
+      "ruleId": "jakarta-mail-internetaddress-single-arg-validator",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/java/audit/email-validation/jakarta-mail-email-primitives.yml"
+    },
+    {
+      "path": "rulepack/elttam/jakarta-mail-mimemessage-newsgroups-recipients.yaml",
+      "source": "elttam",
+      "ruleId": "jakarta-mail-mimemessage-newsgroups-recipients",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/java/audit/email-validation/jakarta-mail-email-primitives.yml"
+    },
+    {
+      "path": "rulepack/elttam/jakarta-mail-mimemessage-raw-envelope-ctor.yaml",
+      "source": "elttam",
+      "ruleId": "jakarta-mail-mimemessage-raw-envelope-ctor",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/java/audit/email-validation/jakarta-mail-email-primitives.yml"
+    },
+    {
+      "path": "rulepack/elttam/jax-rs.httpmethod.yaml",
+      "source": "elttam",
+      "ruleId": "jax-rs.httpmethod",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/jax-rs/security/audit/entrypoints/httpmethod.yml"
+    },
+    {
+      "path": "rulepack/elttam/jax-rs.path-expression.yaml",
+      "source": "elttam",
+      "ruleId": "jax-rs.path-expression",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/jax-rs/security/audit/entrypoints/jax-rs.path-expression.yml"
+    },
+    {
+      "path": "rulepack/elttam/json-decode-without-content-type-check.yaml",
+      "source": "elttam",
+      "ruleId": "json-decode-without-content-type-check",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/go/lang/security/audit/json-decode-without-content-type-check.yaml"
+    },
+    {
+      "path": "rulepack/elttam/json-marshaler-pointer-receiver.yaml",
+      "source": "elttam",
+      "ruleId": "json-marshaler-pointer-receiver",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/go/lang/security/audit/json-marshaler-pointer-receiver.yaml"
+    },
+    {
+      "path": "rulepack/elttam/len-cast-into-binary-length-prefix.yaml",
+      "source": "elttam",
+      "ruleId": "len-cast-into-binary-length-prefix",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/go/lang/security/audit/len-cast-to-narrow-int-overflow.yaml"
+    },
+    {
+      "path": "rulepack/elttam/len-cast-to-narrow-int-overflow.yaml",
+      "source": "elttam",
+      "ruleId": "len-cast-to-narrow-int-overflow",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/go/lang/security/audit/len-cast-to-narrow-int-overflow.yaml"
+    },
+    {
+      "path": "rulepack/elttam/missing-null-byte-check-at-trust-boundary.yaml",
+      "source": "elttam",
+      "ruleId": "missing-null-byte-check-at-trust-boundary",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/go/lang/security/audit/missing-null-byte-check-at-trust-boundary.yaml"
+    },
+    {
+      "path": "rulepack/elttam/net-url-pointer-alias-mutation.yaml",
+      "source": "elttam",
+      "ruleId": "net-url-pointer-alias-mutation",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/go/lang/security/audit/net-url-pointer-alias-mutation.yaml"
+    },
+    {
+      "path": "rulepack/elttam/network-policy-ingress-any.yaml",
+      "source": "elttam",
+      "ruleId": "network-policy-ingress-any",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/yaml/kubernetes/audit/network-policy-ingress-any.yaml"
+    },
+    {
+      "path": "rulepack/elttam/no-security-context.yaml",
+      "source": "elttam",
+      "ruleId": "no-security-context",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/yaml/kubernetes/security/no-security-context.yaml"
+    },
+    {
+      "path": "rulepack/elttam/non-atomic-use-of-converted-uintptr.yaml",
+      "source": "elttam",
+      "ruleId": "non-atomic-use-of-converted-uintptr",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/go/lang/security/audit/uintptr-nonatomic.yaml"
+    },
+    {
+      "path": "rulepack/elttam/path-class-method.yaml",
+      "source": "elttam",
+      "ruleId": "path-class-method",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/jax-rs/security/audit/entrypoints/path-class-method.yml"
+    },
+    {
+      "path": "rulepack/elttam/path-method-string.yaml",
+      "source": "elttam",
+      "ruleId": "path-method-string",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/jax-rs/security/audit/entrypoints/path-class-method-string.yml"
+    },
+    {
+      "path": "rulepack/elttam/php-filter-chain-read-from-oracle.yaml",
+      "source": "elttam",
+      "ruleId": "php-filter-chain-read-from-oracle",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/php/php-filter-chain-read-from-oracle.yml"
+    },
+    {
+      "path": "rulepack/elttam/polymorphic-typing.yaml",
+      "source": "elttam",
+      "ruleId": "polymorphic-typing",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/jackson/polymorphic-typing.yml"
+    },
+    {
+      "path": "rulepack/elttam/potential-symlink-takeover-with-os.executable.yaml",
+      "source": "elttam",
+      "ruleId": "potential-symlink-takeover-with-os.executable",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/go/lang/security/audit/executable-symlink.yaml"
+    },
+    {
+      "path": "rulepack/elttam/prisma-orm-operator-injection.yaml",
+      "source": "elttam",
+      "ruleId": "prisma-orm-operator-injection",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/javascript/orm-leak/prisma-orm.yaml"
+    },
+    {
+      "path": "rulepack/elttam/prisma-ormleak-taint-orderby.yaml",
+      "source": "elttam",
+      "ruleId": "prisma-ormleak-taint-orderby",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/javascript/orm-leak/prisma-orm.yaml"
+    },
+    {
+      "path": "rulepack/elttam/prisma-ormleak-taint-projection.yaml",
+      "source": "elttam",
+      "ruleId": "prisma-ormleak-taint-projection",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/javascript/orm-leak/prisma-orm.yaml"
+    },
+    {
+      "path": "rulepack/elttam/prisma-ormleak-taint-where.yaml",
+      "source": "elttam",
+      "ruleId": "prisma-ormleak-taint-where",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/javascript/orm-leak/prisma-orm.yaml"
+    },
+    {
+      "path": "rulepack/elttam/privileged-container.yaml",
+      "source": "elttam",
+      "ruleId": "privileged-container",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/yaml/kubernetes/audit/privileged-container.yaml"
+    },
+    {
+      "path": "rulepack/elttam/processbuilder.yaml",
+      "source": "elttam",
+      "ruleId": "processbuilder",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/lang/security/audit/processbuilder.yml"
+    },
+    {
+      "path": "rulepack/elttam/provider-class.yaml",
+      "source": "elttam",
+      "ruleId": "provider-class",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/jax-rs/security/audit/entrypoints/provider.yml"
+    },
+    {
+      "path": "rulepack/elttam/rand-token-insecure-rng.yaml",
+      "source": "elttam",
+      "ruleId": "rand-token-insecure-rng",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/javascript/rand-token.yml"
+    },
+    {
+      "path": "rulepack/elttam/randomstringutils-insecure-rng.yaml",
+      "source": "elttam",
+      "ruleId": "randomstringutils-insecure-rng",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/java/lang/security/audit/crypto/randomstringutils.yml"
+    },
+    {
+      "path": "rulepack/elttam/rest-DeleteMapping.yaml",
+      "source": "elttam",
+      "ruleId": "rest-DeleteMapping",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/spring/security/audit/entrypoints/deletemapping.yml"
+    },
+    {
+      "path": "rulepack/elttam/rest-GetMapping.yaml",
+      "source": "elttam",
+      "ruleId": "rest-GetMapping",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/spring/security/audit/entrypoints/getmapping.yml"
+    },
+    {
+      "path": "rulepack/elttam/rest-PatchMapping.yaml",
+      "source": "elttam",
+      "ruleId": "rest-PatchMapping",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/spring/security/audit/entrypoints/patchmapping.yml"
+    },
+    {
+      "path": "rulepack/elttam/rest-PostMapping.yaml",
+      "source": "elttam",
+      "ruleId": "rest-PostMapping",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/spring/security/audit/entrypoints/postmapping.yml"
+    },
+    {
+      "path": "rulepack/elttam/rest-PutMapping.yaml",
+      "source": "elttam",
+      "ruleId": "rest-PutMapping",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/spring/security/audit/entrypoints/putmapping.yml"
+    },
+    {
+      "path": "rulepack/elttam/rest-ResponseBody.yaml",
+      "source": "elttam",
+      "ruleId": "rest-ResponseBody",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/spring/security/audit/entrypoints/responsebody.yml"
+    },
+    {
+      "path": "rulepack/elttam/rest-servletregistrationbean.yaml",
+      "source": "elttam",
+      "ruleId": "rest-servletregistrationbean",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/spring/security/audit/entrypoints/servletregistrationbean.yml"
+    },
+    {
+      "path": "rulepack/elttam/run-as-non-root.yaml",
+      "source": "elttam",
+      "ruleId": "run-as-non-root",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/yaml/kubernetes/security/run-as-non-root.yaml"
+    },
+    {
+      "path": "rulepack/elttam/run-as-non-root-unsafe-value.yaml",
+      "source": "elttam",
+      "ruleId": "run-as-non-root-unsafe-value",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/yaml/kubernetes/security/run-as-non-root-unsafe-value.yaml"
+    },
+    {
+      "path": "rulepack/elttam/save-state.yaml",
+      "source": "elttam",
+      "ruleId": "save-state",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/yaml/github-actions/security/save-state.yaml"
+    },
+    {
+      "path": "rulepack/elttam/spark-route-handler.yaml",
+      "source": "elttam",
+      "ruleId": "spark-route-handler",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/kotlin/spark/security/audit/entrypoints/route-handler.yml"
+    },
+    {
+      "path": "rulepack/elttam/spring-internetaddresseditor-usage.yaml",
+      "source": "elttam",
+      "ruleId": "spring-internetaddresseditor-usage",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/java/audit/email-validation/jakarta-mail-email-primitives.yml"
+    },
+    {
+      "path": "rulepack/elttam/spring-simplemailmessage-setfrom-raw.yaml",
+      "source": "elttam",
+      "ruleId": "spring-simplemailmessage-setfrom-raw",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/java/audit/email-validation/jakarta-mail-email-primitives.yml"
+    },
+    {
+      "path": "rulepack/elttam/sprintf-unescaped-control-characters.yaml",
+      "source": "elttam",
+      "ruleId": "sprintf-unescaped-control-characters",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules/go/lang/security/audit/sprintf-plain-string.yaml"
+    },
+    {
+      "path": "rulepack/elttam/struts-xml-action-dmi.yaml",
+      "source": "elttam",
+      "ruleId": "struts-xml-action-dmi",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/struts2/security/audit/dmi/struts-xml-action-dmi.yml"
+    },
+    {
+      "path": "rulepack/elttam/struts-xml-action-name.yaml",
+      "source": "elttam",
+      "ruleId": "struts-xml-action-name",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/struts2/security/audit/entrypoints/struts-xml-action-name.yml"
+    },
+    {
+      "path": "rulepack/elttam/struts-xml-always-select-full-namespace.yaml",
+      "source": "elttam",
+      "ruleId": "struts-xml-always-select-full-namespace",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/struts2/security/audit/struts-xml-always-select-full-namespace.yml"
+    },
+    {
+      "path": "rulepack/elttam/struts-xml-devmode.yaml",
+      "source": "elttam",
+      "ruleId": "struts-xml-devmode",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/struts2/security/audit/devmode/struts-xml-devmode.yml"
+    },
+    {
+      "path": "rulepack/elttam/struts-xml-dmi.yaml",
+      "source": "elttam",
+      "ruleId": "struts-xml-dmi",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/struts2/security/audit/dmi/struts-xml-dmi.yml"
+    },
+    {
+      "path": "rulepack/elttam/taglib-action.yaml",
+      "source": "elttam",
+      "ruleId": "taglib-action",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/struts2/security/audit/entrypoints/taglib-action.yml"
+    },
+    {
+      "path": "rulepack/elttam/taglib-action-dmi.yaml",
+      "source": "elttam",
+      "ruleId": "taglib-action-dmi",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/struts2/security/audit/dmi/taglib-action-dmi.yml"
+    },
+    {
+      "path": "rulepack/elttam/taglib-directive.yaml",
+      "source": "elttam",
+      "ruleId": "taglib-directive",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/struts2/security/audit/entrypoints/taglib-directive.yml"
+    },
+    {
+      "path": "rulepack/elttam/type-resolver-override.yaml",
+      "source": "elttam",
+      "ruleId": "type-resolver-override",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/jackson/type-resolver-override.yml"
+    },
+    {
+      "path": "rulepack/elttam/web-xml.yaml",
+      "source": "elttam",
+      "ruleId": "web-xml",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/struts2/security/audit/entrypoints/web-xml.yml"
+    },
+    {
+      "path": "rulepack/elttam/web-xml-devmode.yaml",
+      "source": "elttam",
+      "ruleId": "web-xml-devmode",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/struts2/security/audit/devmode/web-xml-devmode.yml"
+    },
+    {
+      "path": "rulepack/elttam/web-xml-filter-url-pattern.yaml",
+      "source": "elttam",
+      "ruleId": "web-xml-filter-url-pattern",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/struts2/security/audit/entrypoints/web-xml-filter-url-pattern.yml"
+    },
+    {
+      "path": "rulepack/elttam/web-xml-listener.yaml",
+      "source": "elttam",
+      "ruleId": "web-xml-listener",
+      "license": "MIT",
+      "sourceUrl": "https://github.com/elttam/semgrep-rules/blob/main/rules-audit/java/struts2/security/audit/entrypoints/web-xml-listener.yml"
+    },
+    {
+      "path": "rulepack/gitlab-mit/generic_injection_rule-BiDiTrojanSource.yaml",
+      "source": "gitlab-mit",
+      "ruleId": "generic_injection_rule-BiDiTrojanSource",
+      "license": "MIT",
+      "sourceUrl": "https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/main/rules/gitlab/generic/injection/bidi/rule-BiDiTrojanSource.yml"
+    },
+    {
+      "path": "rulepack/gitlab-mit/java_deserialization_rule-InsecureDeserialization.yaml",
+      "source": "gitlab-mit",
+      "ruleId": "java_deserialization_rule-InsecureDeserialization",
+      "license": "MIT",
+      "sourceUrl": "https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/main/rules/gitlab/java/deserialization/rule-InsecureDeserialization.yml"
+    },
+    {
+      "path": "rulepack/gitlab-mit/java_deserialization_rule-JacksonUnsafeDeserialization.yaml",
+      "source": "gitlab-mit",
+      "ruleId": "java_deserialization_rule-JacksonUnsafeDeserialization",
+      "license": "MIT",
+      "sourceUrl": "https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/main/rules/gitlab/java/deserialization/rule-JacksonUnsafeDeserialization.yml"
+    },
+    {
+      "path": "rulepack/gitlab-mit/javascript_crypto_rule-NodeLibcurlSSLVerificationDisable.yaml",
+      "source": "gitlab-mit",
+      "ruleId": "javascript_crypto_rule-NodeLibcurlSSLVerificationDisable",
+      "license": "MIT",
+      "sourceUrl": "https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/main/rules/gitlab/javascript/crypto/rule-NodeLibcurlSSLVerificationDisable.yml"
+    },
+    {
+      "path": "rulepack/gitlab-mit/kotlin_pathtraversal_rule-FilePathTraversal.yaml",
+      "source": "gitlab-mit",
+      "ruleId": "kotlin_pathtraversal_rule-FilePathTraversal",
+      "license": "MIT",
+      "sourceUrl": "https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/main/rules/gitlab/kotlin/pathtraversal/rule-FilePathTraversal.yml"
+    },
+    {
+      "path": "rulepack/gitlab-mit/python_exec_rule-start-process-partial-path.yaml",
+      "source": "gitlab-mit",
+      "ruleId": "python_exec_rule-start-process-partial-path",
+      "license": "MIT",
+      "sourceUrl": "https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/main/rules/gitlab/python/exec/rule-start-process-partial-path.yml"
+    },
+    {
+      "path": "rulepack/gitlab-mit/python_exec_rule-start-process-path.yaml",
+      "source": "gitlab-mit",
+      "ruleId": "python_exec_rule-start-process-path",
+      "license": "MIT",
+      "sourceUrl": "https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/main/rules/gitlab/python/exec/rule-start-process-path.yml"
+    },
+    {
+      "path": "rulepack/gitlab-mit/python_exec_rule-subprocess-call-array.yaml",
+      "source": "gitlab-mit",
+      "ruleId": "python_exec_rule-subprocess-call-array",
+      "license": "MIT",
+      "sourceUrl": "https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/main/rules/gitlab/python/exec/rule-subprocess-call-array.yml"
+    },
+    {
+      "path": "rulepack/gitlab-mit/scala_unsafe_rule-InformationExposureVariant2.yaml",
+      "source": "gitlab-mit",
+      "ruleId": "scala_unsafe_rule-InformationExposureVariant2",
+      "license": "MIT",
+      "sourceUrl": "https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/main/rules/gitlab/scala/unsafe/rule-InformationExposureVariant2.yml"
+    }
+  ]
+}

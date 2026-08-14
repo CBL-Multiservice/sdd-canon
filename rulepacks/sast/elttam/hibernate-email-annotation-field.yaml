@@ -1,0 +1,28 @@
+rules:
+  - id: hibernate-email-annotation-field
+    languages:
+      - java
+    severity: INFO
+    message: Field annotated with @Email. The default Hibernate validator is not RFC
+      2047-aware and can accept complex syntax (e.g.
+      "\"foo@bar.com\"@example.com"). Review any domain or trust logic that uses
+      this field (split/substring/endsWith).
+    metadata:
+      cwe:
+        - "CWE-20: Improper Input Validation"
+      owasp:
+        - A04:2021 – Insecure Design
+      references:
+        - https://elttam.com/blog/jakarta-mail-primitives/
+        - https://cwe.mitre.org/data/definitions/20.html
+        - https://owasp.org/Top10/A04_2021-Insecure_Design/
+      category: security
+      subcategory: audit
+      likelihood: LOW
+      impact: MEDIUM
+      confidence: LOW
+      technology:
+        - java
+    pattern: |-
+      @Email
+      $TYPE $STRING_VAR

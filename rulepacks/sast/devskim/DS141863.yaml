@@ -1,0 +1,17 @@
+rules:
+  - id: DS141863
+    languages:
+      - c
+      - cpp
+    severity: WARNING
+    message: Banned C function detected (strcat) — If the combination of strings is
+      larger than the destination buffer, strcat will cbuffer overflow the
+      destination buffer — Use strcat_s or strlcat if possible. strncat's size
+      parameter excludes the null terminator, which leads to frequent mistakes
+    metadata:
+      source: devskim
+      source-rule: DS141863
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/dangerous_api.json
+      references:
+        - DS141863.md
+    pattern-regex: \bstrcat\s*\(([^,]+),([^,]+?)\)

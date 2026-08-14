@@ -1,0 +1,21 @@
+rules:
+  - id: DS159369
+    languages:
+      - cpp
+    severity: ERROR
+    message: Disabled certificate validation — Extend default certificate
+      validation, but do not disable or override default rules. — Always use a
+      valid certificate, even during testing.
+    metadata:
+      source: devskim
+      source-rule: DS159369
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/certificate.json
+      references:
+        - DS181865.md
+    pattern-either:
+      - pattern-regex: \bSECURITY_FLAG_IGNORE_CERT_CN_INVALID\b
+      - pattern-regex: \bSECURITY_FLAG_IGNORE_CERT_DATE_INVALID\b
+      - pattern-regex: \bSECURITY_FLAG_IGNORE_REVOCATION\b
+      - pattern-regex: \bSECURITY_FLAG_IGNORE_UNKNOWN_CA\b
+      - pattern-regex: \bSECURITY_FLAG_IGNORE_WRONG_USAGE\b
+      - pattern-regex: \bSECURITY_FLAG_IGNORE_CERT_WRONG_USAGE\b

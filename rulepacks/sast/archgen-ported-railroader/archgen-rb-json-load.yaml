@@ -1,0 +1,13 @@
+rules:
+  - id: archgen-rb-json-load
+    pattern: JSON.load(...)
+    message: JSON.load (ao contrário de JSON.parse) pode instanciar objetos Ruby
+      arbitrários via create_id — dado não-confiável vira desserialização
+      insegura. Use JSON.parse.
+    languages:
+      - ruby
+    severity: WARNING
+    metadata:
+      cwe: CWE-502
+      source-rule: railroader check_json_parsing
+      source-url: https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_json_parsing.rb

@@ -1,0 +1,29 @@
+rules:
+  - id: web-xml-listener
+    message: web.xml Struts2 listener-class $...LISTENER_CLASS
+    severity: INFO
+    languages:
+      - generic
+    metadata:
+      category: security
+      subcategory: audit
+      likelihood: LOW
+      impact: LOW
+      confidence: LOW
+      technology:
+        - JVM
+        - Struts2
+    paths:
+      include:
+        - web.xml
+        - web-xml-listener.xml
+    patterns:
+      - pattern: |
+          <listener>
+              ...
+              <listener-class>$...LISTENER_CLASS</listener-class>
+              ...
+          </listener>
+      - metavariable-regex:
+          metavariable: $...LISTENER_CLASS
+          regex: org\.apache\.struts2.*

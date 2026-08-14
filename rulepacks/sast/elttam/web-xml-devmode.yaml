@@ -1,0 +1,31 @@
+rules:
+  - id: web-xml-devmode
+    message: web.xml devMode = $MODE
+    severity: WARNING
+    languages:
+      - generic
+    metadata:
+      category: security
+      subcategory: audit
+      likelihood: LOW
+      impact: LOW
+      confidence: LOW
+      technology:
+        - JVM
+        - Struts2
+    paths:
+      include:
+        - web.xml
+        - web-xml-devmode.xml
+    patterns:
+      - pattern: |
+          <init-param>
+              ...
+              <param-name>struts.devMode</param-name>
+              ...
+              <param-value>$MODE</param-value>
+              ...
+          </init-param>
+      - metavariable-regex:
+          metavariable: $MODE
+          regex: (true|1)

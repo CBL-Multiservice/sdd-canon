@@ -1,0 +1,19 @@
+rules:
+  - id: DS181021
+    languages:
+      - c
+      - cpp
+    severity: WARNING
+    message: Banned C function detected (gets) — gets will read in as many bytes as
+      are provided, regardless of the size of buffer recieving the bytes.  This
+      allows for conditions that cause a buffer overlow in the destination
+      buffer. — Use gets_s or fgets if possible. fgets has different behavior
+      from gets (may include newline for example), so care should be taken if it
+      is used.
+    metadata:
+      source: devskim
+      source-rule: DS181021
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/dangerous_api.json
+      references:
+        - DS181021.md
+    pattern-regex: \bgets\s*\(([^,\)]+)\)

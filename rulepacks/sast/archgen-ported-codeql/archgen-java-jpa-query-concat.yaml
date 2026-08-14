@@ -1,0 +1,16 @@
+rules:
+  - id: archgen-java-jpa-query-concat
+    pattern-either:
+      - pattern: $EM.createQuery(<... "..." + $X ...>)
+      - pattern: $EM.createNativeQuery(<... "..." + $X ...>)
+      - pattern: $EM.createQuery(String.format("...", ...))
+      - pattern: $EM.createNativeQuery(String.format("...", ...))
+    message: Query JPA/Hibernate montada por concatenação/format — injeção de
+      SQL/JPQL. Use parâmetros nomeados (:param) com setParameter.
+    languages:
+      - java
+    severity: ERROR
+    metadata:
+      cwe: CWE-89
+      source-rule: codeql java/sql-injection (SqlTainted.ql)
+      source-url: https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-089/SqlTainted.ql

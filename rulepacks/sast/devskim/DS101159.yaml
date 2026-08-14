@@ -1,0 +1,14 @@
+rules:
+  - id: DS101159
+    languages:
+      - cpp
+    severity: INFO
+    message: Initializing Security Context — SecurityContext initialization, look
+      here for cryptography functions.
+    metadata:
+      source: devskim
+      source-rule: DS101159
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/general.json
+      references:
+        - DS101159.md
+    pattern-regex: \bInitializeSecurityContext\b

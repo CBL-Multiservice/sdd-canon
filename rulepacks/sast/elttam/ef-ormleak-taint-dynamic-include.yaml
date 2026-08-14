@@ -1,0 +1,31 @@
+rules:
+  - id: ef-ormleak-taint-dynamic-include
+    message: User-controlled navigation path passed to Include(string). Dynamic
+      Include allows traversal of relations and can expose sensitive data.
+    severity: WARNING
+    metadata:
+      cwe:
+        - "CWE-203: Observable Discrepancy"
+      owasp:
+        - A01:2021 - Broken Access Control
+      references:
+        - https://cwe.mitre.org/data/definitions/203.html
+        - https://owasp.org/Top10/A01_2021-Broken_Access_Control/
+        - https://www.elttam.com/blog/leaking-more-than-you-joined-for/
+      category: security
+      technology:
+        - csharp
+      subcategory:
+        - vuln
+      likelihood: LOW
+      impact: MEDIUM
+      confidence: LOW
+    languages:
+      - csharp
+    mode: taint
+    pattern-sources:
+      - pattern: $REQ.Query[$KEY]
+      - pattern: $CTX.Request.Query[$KEY]
+      - pattern: $MODEL.$FIELD
+    pattern-sinks:
+      - pattern: $Q.Include($PATH)

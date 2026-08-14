@@ -1,0 +1,42 @@
+rules:
+  - id: struts-xml-devmode
+    message: struts.xml devMode = "$...MODE"
+    severity: WARNING
+    languages:
+      - generic
+    metadata:
+      docs:
+        - https://struts.apache.org/core-developers/constant-configuration
+        - https://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html
+      category: security
+      subcategory: audit
+      likelihood: LOW
+      impact: LOW
+      confidence: LOW
+      technology:
+        - JVM
+        - Struts2
+    paths:
+      include:
+        - struts*.xml
+    patterns:
+      - pattern-either:
+          - pattern: |
+              <constant ... name='struts.devMode' ... value='$...MODE' ... />
+          - pattern: |
+              <constant ... name='struts.devMode' ... value="$...MODE" ... />
+          - pattern: |
+              <constant ... name="struts.devMode" ... value='$...MODE' ... />
+          - pattern: |
+              <constant ... name="struts.devMode" ... value="$...MODE" ... />
+          - pattern: |
+              <constant ... value='$...MODE' ... name='struts.devMode' ... />
+          - pattern: |
+              <constant ... value='$...MODE' ... name="struts.devMode" ... />
+          - pattern: |
+              <constant ... value="$...MODE" ... name='struts.devMode' ... />
+          - pattern: |
+              <constant ... value="$...MODE" ... name="struts.devMode" ... />
+      - metavariable-regex:
+          metavariable: $...MODE
+          regex: (true|1)

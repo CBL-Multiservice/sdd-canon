@@ -1,0 +1,18 @@
+rules:
+  - id: archgen-rb-xss-raw-dynamic
+    patterns:
+      - pattern-either:
+          - pattern: raw($X)
+          - pattern: $X.html_safe
+      - pattern-not: raw("...")
+      - pattern-not: '"...".html_safe'
+    message: raw()/html_safe desliga o auto-escape do ERB pra este valor — se o
+      conteúdo tem influência externa (não é literal fixo), é XSS. Deixe o
+      auto-escape padrão fazer o trabalho ou use sanitize().
+    languages:
+      - ruby
+    severity: WARNING
+    metadata:
+      cwe: CWE-79
+      source-rule: railroader check_cross_site_scripting
+      source-url: https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_cross_site_scripting.rb

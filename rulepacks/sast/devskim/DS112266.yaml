@@ -1,0 +1,16 @@
+rules:
+  - id: DS112266
+    languages:
+      - csharp
+    severity: WARNING
+    message: ProtectedData used without additional entropy — The ProtectedData class
+      should be used with additional entropy to reduce the risk of other
+      application calling DPAPI to access the data. — Add additional entropy
+      (per-application secret).
+    metadata:
+      source: devskim
+      source-rule: DS112266
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/storage/secure_storage.json
+      references:
+        - DS112266.md
+    pattern-regex: ProtectedData\.Protect.*,\s*null.*

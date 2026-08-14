@@ -1,0 +1,15 @@
+rules:
+  - id: archgen-java-xpath-concat
+    pattern-either:
+      - pattern: $XP.compile(<... "..." + $X ...>)
+      - pattern: $XP.evaluate(<... "..." + $X ...>, ...)
+    message: "Expressão XPath montada por concatenação — entrada externa vira
+      injeção de XPath (lê qualquer nó do documento, ex.: credenciais em XML de
+      config). Use XPathVariableResolver em vez de concatenar."
+    languages:
+      - java
+    severity: ERROR
+    metadata:
+      cwe: CWE-643
+      source-rule: codeql java/xml/xpath-injection (XPathInjection.ql)
+      source-url: https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-643/XPathInjection.ql

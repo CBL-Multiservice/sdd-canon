@@ -1,0 +1,30 @@
+rules:
+  - id: UnsafeHttpInvokerServiceExporter-func
+    metadata:
+      cve: CVE-2016-1000027
+      docs:
+        - https://blog.gypsyengineer.com/en/security/detecting-dangerous-spring-exporters-with-codeql.html
+        - https://www.tenable.com/security/research/tra-2016-20
+      category: security
+      subcategory: audit
+      likelihood: LOW
+      impact: LOW
+      confidence: LOW
+      technology:
+        - spring
+        - spring-framework
+        - jvm
+    languages:
+      - java
+    severity: INFO
+    message: Unsafe Spring Service Exporter func $FUNC
+    pattern-either:
+      - pattern: >
+          org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter
+          $FUNC(...)
+      - pattern: |
+          org.springframework.remoting.httpinvoker.SimpleHttpInvokerServiceExporter $FUNC(...)
+      - pattern: |
+          HttpInvokerServiceExporter $FUNC(...)
+      - pattern: |
+          SimpleHttpInvokerServiceExporter $FUNC(...)

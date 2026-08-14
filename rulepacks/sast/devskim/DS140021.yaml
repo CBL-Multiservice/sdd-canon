@@ -1,0 +1,17 @@
+rules:
+  - id: DS140021
+    languages:
+      - c
+      - cpp
+    severity: INFO
+    message: Problematic C function detected (strlen) — If a string is missing a
+      null terminator, strlen will read past the end of the buffer — In
+      instances where you know the maximum size of a string's buffer, use
+      strlen_s or strnlen to prevent over-reading
+    metadata:
+      source: devskim
+      source-rule: DS140021
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/suggested_api.json
+      references:
+        - DS140021.md
+    pattern-regex: \bstrlen\s*\(([^,\)]+)\)

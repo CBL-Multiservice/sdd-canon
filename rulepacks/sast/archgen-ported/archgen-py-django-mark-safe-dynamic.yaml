@@ -1,0 +1,14 @@
+rules:
+  - id: archgen-py-django-mark-safe-dynamic
+    patterns:
+      - pattern: django.utils.safestring.mark_safe($X)
+      - pattern-not: django.utils.safestring.mark_safe("...")
+    message: mark_safe com conteúdo dinâmico desliga o auto-escape do template —
+      entrada externa aqui é XSS. Use format_html ou escape antes.
+    languages:
+      - python
+    severity: WARNING
+    metadata:
+      cwe: CWE-79
+      source-rule: bandit B703
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b703_django_mark_safe.html

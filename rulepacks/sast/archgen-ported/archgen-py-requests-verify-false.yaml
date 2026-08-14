@@ -1,0 +1,21 @@
+rules:
+  - id: archgen-py-requests-verify-false
+    pattern-either:
+      - pattern: requests.get(..., verify=False, ...)
+      - pattern: requests.post(..., verify=False, ...)
+      - pattern: requests.put(..., verify=False, ...)
+      - pattern: requests.delete(..., verify=False, ...)
+      - pattern: requests.patch(..., verify=False, ...)
+      - pattern: requests.head(..., verify=False, ...)
+      - pattern: requests.request(..., verify=False, ...)
+      - pattern: requests.Session().request(..., verify=False, ...)
+    message: verify=False desliga a validação do certificado TLS — a conexão aceita
+      qualquer certificado (man-in-the-middle). Corrija a cadeia de certificados
+      em vez de desligar a verificação.
+    languages:
+      - python
+    severity: ERROR
+    metadata:
+      cwe: CWE-295
+      source-rule: bandit B501
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b501_request_with_no_cert_validation.html

@@ -1,0 +1,16 @@
+rules:
+  - id: DS112837
+    languages:
+      - csharp
+    severity: INFO
+    message: .NET - Hard-coded SSL/TLS Protocol — .NET - Hard-coded SSL/TLS Protocol
+      — Review to ensure that a TLS protocol agility is maintained.
+    metadata:
+      source: devskim
+      source-rule: DS112837
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_appcontext.json
+      references:
+        - DS112835.md
+    pattern-either:
+      - pattern-regex: \bTestSwitch\.LocalAppContext\.DisableCaching\b
+      - pattern-regex: \bSwitch\.System\.Net\.DontEnableSchUseStrongCrypto\b

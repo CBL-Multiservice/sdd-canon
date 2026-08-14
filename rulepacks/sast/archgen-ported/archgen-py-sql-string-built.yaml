@@ -1,0 +1,19 @@
+rules:
+  - id: archgen-py-sql-string-built
+    pattern-either:
+      - pattern: $CURSOR.execute(<... "..." + $X ...>)
+      - pattern: $CURSOR.execute(<... "..." % $X ...>)
+      - pattern: $CURSOR.execute(<... "...".format(...) ...>)
+      - pattern: $CURSOR.execute(f"...{$X}...")
+      - pattern: $CURSOR.executemany(<... "..." + $X ...>)
+      - pattern: $CURSOR.executemany(f"...{$X}...")
+    message: "SQL montado por concatenação/format/f-string — o valor entra na string
+      da query, não como parâmetro: injeção de SQL. Use placeholder do driver
+      (execute(sql, params))."
+    languages:
+      - python
+    severity: ERROR
+    metadata:
+      cwe: CWE-89
+      source-rule: bandit B608
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b608_hardcoded_sql_expressions.html

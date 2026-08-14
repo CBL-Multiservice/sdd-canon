@@ -1,0 +1,24 @@
+rules:
+  - id: DS126187
+    languages:
+      - csharp
+    severity: ERROR
+    message: Disabled certificate validation — Extend default certificate
+      validation, but do not disable or override default rules. — Always use a
+      valid certificate, even during testing.
+    metadata:
+      source: devskim
+      source-rule: DS126187
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/certificate.json
+      references:
+        - DS181865.md
+    pattern-either:
+      - pattern-regex: ServerCertificateValidationCallback\s*=\s*delegate\s*{\s*return
+          true;\s*}
+      - pattern-regex: ServerCertificateValidationCallback\s*=\s*\(?[^\)]+\)\s*=>\s*{\s*return
+          true;\s*}
+      - pattern-regex: ServerCertificateValidationCallback\s*=\s*\(+[^\)]+\)\s*=>\s*true
+      - pattern-regex: RemoteCertificateValidationCallback\(delegate\s*{\s*return true;\s*}\)
+      - pattern-regex: CertificatePolicy\s*=\s*delegate\s*{\s*return true;\s*}
+      - pattern-regex: \bX509CertificateValidationMode\.None\b
+      - pattern-regex: SkipTlsVerify\s*=\s*true

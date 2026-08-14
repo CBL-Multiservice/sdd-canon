@@ -1,0 +1,24 @@
+rules:
+  - id: DS109733
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: ERROR
+    message: Source implementation of a weak/broken cryptography hash function — An
+      implementation of a weak/broken hash function was found in source code. —
+      Do not use MD5, and always prefer OS- or library-provided cryptography
+      implementations.
+    metadata:
+      source: devskim
+      source-rule: DS109733
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/underhanded.json
+      references:
+        - DS109733.md
+    pattern-either:
+      - pattern-regex: 242070db|02441453|db702024|53144402|3572445317
+      - pattern-regex: 98BADCFE|FEDCBC98|C3D2E1F0|F0E1D2C3

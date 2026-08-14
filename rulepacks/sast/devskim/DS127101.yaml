@@ -1,0 +1,15 @@
+rules:
+  - id: DS127101
+    languages:
+      - cpp
+    severity: WARNING
+    message: Hardcoding TLS protocol version — It's usually better to rely on the
+      operating system configuration, rather than hardcoding a specific list of
+      protocols.
+    metadata:
+      source: devskim
+      source-rule: DS127101
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/protocol.json
+      references:
+        - DS112835.md
+    pattern-regex: \b(?:SecPkgCred_SupportedProtocols)\b

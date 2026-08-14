@@ -1,0 +1,14 @@
+rules:
+  - id: archgen-rb-detailed-exceptions-enabled
+    pattern: $CFG.consider_all_requests_local = true
+    message: consider_all_requests_local=true expõe o debugger/stack trace completo
+      (incluindo variáveis locais) em qualquer erro — vazamento de informação
+      sensível e, com a gem web-console, execução de código pelo navegador. Deve
+      ser false fora de development.
+    languages:
+      - ruby
+    severity: WARNING
+    metadata:
+      cwe: CWE-209
+      source-rule: railroader check_detailed_exceptions
+      source-url: https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_detailed_exceptions.rb

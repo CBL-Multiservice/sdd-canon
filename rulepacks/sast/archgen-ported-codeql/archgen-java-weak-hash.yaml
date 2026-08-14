@@ -1,0 +1,17 @@
+rules:
+  - id: archgen-java-weak-hash
+    pattern-either:
+      - pattern: MessageDigest.getInstance("MD5")
+      - pattern: MessageDigest.getInstance("MD2")
+      - pattern: MessageDigest.getInstance("SHA-1")
+      - pattern: MessageDigest.getInstance("SHA1")
+    message: MD5/MD2/SHA-1 são quebrados por colisão — inaceitáveis para senha,
+      assinatura ou integridade. Use SHA-256+ (integridade) ou
+      bcrypt/scrypt/argon2 (senha).
+    languages:
+      - java
+    severity: WARNING
+    metadata:
+      cwe: CWE-328
+      source-rule: codeql java/weak-cryptographic-algorithm (BrokenCryptoAlgorithm.ql)
+      source-url: https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-327/BrokenCryptoAlgorithm.ql

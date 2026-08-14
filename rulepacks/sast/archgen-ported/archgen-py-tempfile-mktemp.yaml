@@ -1,0 +1,12 @@
+rules:
+  - id: archgen-py-tempfile-mktemp
+    pattern: tempfile.mktemp(...)
+    message: tempfile.mktemp cria o NOME sem criar o arquivo — corrida entre o nome
+      e o open (symlink attack). Use NamedTemporaryFile/mkstemp.
+    languages:
+      - python
+    severity: WARNING
+    metadata:
+      cwe: CWE-377
+      source-rule: bandit B306
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b306_mktemp_q.html

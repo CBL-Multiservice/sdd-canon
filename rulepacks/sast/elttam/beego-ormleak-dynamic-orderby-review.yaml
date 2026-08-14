@@ -1,0 +1,30 @@
+rules:
+  - id: beego-ormleak-dynamic-orderby-review
+    message: Dynamic OrderBy expression. Beego supports ordering on related fields
+      and "-" prefix for descending order. Review attacker control and
+      inference/oracle risk.
+    severity: INFO
+    metadata:
+      cwe:
+        - "CWE-203: Observable Discrepancy"
+      owasp:
+        - A01:2021 - Broken Access Control
+      references:
+        - https://cwe.mitre.org/data/definitions/203.html
+        - https://owasp.org/Top10/A01_2021-Broken_Access_Control/
+        - https://www.elttam.com/blog/leaking-more-than-you-joined-for/
+      category: security
+      technology:
+        - golang
+      subcategory:
+        - vuln
+      likelihood: LOW
+      impact: MEDIUM
+      confidence: LOW
+    languages:
+      - go
+    pattern: $QS.OrderBy($EXPR, ...)
+    metavariable-pattern:
+      metavariable: $EXPR
+      patterns:
+        - pattern-not: '"..."'

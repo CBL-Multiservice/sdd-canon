@@ -1,0 +1,26 @@
+rules:
+  - id: DS440011
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: INFO
+    message: "OpenSSL: Hard-coded SSL/TLS Protocol — OpenSSL: Hard-coded SSL/TLS
+      Protocol — Review to ensure that a TLS protocol agility is maintained."
+    metadata:
+      source: devskim
+      source-rule: DS440011
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_generic.json
+      references:
+        - DS440001.md
+    pattern-either:
+      - pattern-regex: SSLv2?3_method|D?TLSv1_([123]_)?(client_|server_)?method
+      - pattern-regex: DTLSv1_listen|SSL_stateless
+      - pattern-regex: SSL_(CTX_)?set_(min|max)_proto_version
+      - pattern-regex: SSL_EXT_TLS_ONLY|SSL_EXT_DTLS_ONLY|SSL_EXT_TLS_IMPLEMENTATION_ONLY|SSL_EXT_SSL3_ALLOWED|SSL_EXT_TLS1_2_AND_BELOW_ONLY|SSL_EXT|TLS1_3_ONLY|SSL_EXT_TLS1_2_SERVER_HELLO|SSL_EXT_TLS1_3_SERVER_HELLO
+      - pattern-regex: SSL_OP_(NO_(SSLv2|SSLv3|TLSv1|TLSv1_1|TLSv1_2|TLSv1_3|DTLSv1|DTLSv1_2))
+      - pattern-regex: ((ADH-)?(AES[0-9]*|DES|RC4|SEED)-(CBC3|GCM|SHA[0-9]*|MD5))(-SHA[0-9]*)?|(AECDH-(AES[0-9]*|DES|NULL|RC4)-(SHA|CBC3))(-SHA)?|((ECDHE-(ECDSA|RSA)-)|(DHE?-(DSS|RSA)-))?(NULL|RC4|CAMELLIA[0-9]*|DES|SEED|AES[0-9]*)-(CBC3|CCM8?|GCM|SHA[0-9]*)(-SHA[0-9]*)?|DES-CBC3-SHA|(GOST(2001|94)-(GOST89|NULL))-GOST(89|94)|IDEA-CBC-SHA|NULL-(MD5|SHA(0-9)*)|TLS_(AES|CHACHA20)_([0-9]*|POLY1305)(_(CCM(_8)?|GCM))?_SHA[0-9]*

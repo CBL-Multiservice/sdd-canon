@@ -1,0 +1,21 @@
+rules:
+  - id: DS197836
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: WARNING
+    message: Do not take the hash of low-entropy content. — Taking a hash of a time
+      value is suspicious, as there is insufficient entropy to protect against
+      brute-force attacks.
+    metadata:
+      source: devskim
+      source-rule: DS197836
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/hash_algorithm.json
+      references:
+        - DS197836.md
+    pattern-regex: (?i)(MD4|MD5|(SHA(1|224|256|384|512))).*Time

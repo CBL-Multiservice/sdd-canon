@@ -1,0 +1,22 @@
+rules:
+  - id: DS440080
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: INFO
+    message: MacOS - Hard-coded SSL/TLS Protocol — MacOS - Hard-coded SSL/TLS
+      Protocol — Review to ensure that a TLS protocol agility is maintained.
+    metadata:
+      source: devskim
+      source-rule: DS440080
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_macos.json
+      references:
+        - DS440000.md
+    pattern-either:
+      - pattern-regex: \bkSSLProtocol([\d]+|MaxSupported)(Only)?
+      - pattern-regex: SSLSetProtocolVersion(Min|Max|Enabled)

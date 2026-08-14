@@ -1,0 +1,14 @@
+rules:
+  - id: DS132780
+    languages:
+      - swift
+    severity: WARNING
+    message: Do not enable external entity resolution. — Do not enable external
+      entity resolution. — x.setShouldResolveExternalEntities = FALSE;
+    metadata:
+      source: devskim
+      source-rule: DS132780
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/xml/external_entities.json
+      references:
+        - DS132779.md
+    pattern-regex: \b(?:shouldResolveExternalEntities\s*=\s*TRUE)\b

@@ -1,0 +1,15 @@
+rules:
+  - id: archgen-rb-redirect-tainted
+    pattern-either:
+      - pattern: redirect_to(params[$K])
+      - pattern: redirect_to params[$K]
+    message: "redirect_to com valor direto de params — o cliente controla o destino
+      do redirect: open redirect (phishing usando o domínio confiável como
+      trampolim). Valide contra uma lista branca de destinos ou fixe o host."
+    languages:
+      - ruby
+    severity: WARNING
+    metadata:
+      cwe: CWE-601
+      source-rule: railroader check_redirect
+      source-url: https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_redirect.rb

@@ -1,0 +1,15 @@
+rules:
+  - id: archgen-py-django-raw-sql
+    pattern-either:
+      - pattern: $M.raw(<... "..." + $X ...>, ...)
+      - pattern: $M.raw(f"...{$X}...", ...)
+      - pattern: django.db.models.expressions.RawSQL(<... "..." + $X ...>, ...)
+    message: Query raw do Django com string construída dinamicamente — injeção de
+      SQL. Passe parâmetros pelo argumento params, nunca na string.
+    languages:
+      - python
+    severity: ERROR
+    metadata:
+      cwe: CWE-89
+      source-rule: bandit B611
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b611_django_rawsql_used.html

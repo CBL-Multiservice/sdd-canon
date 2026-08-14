@@ -1,0 +1,20 @@
+rules:
+  - id: DS106863
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: ERROR
+    message: Do not use the DES symmetric block cipher. — The DES cipher was found,
+      which is widely considered to be broken. — Use AES instead.
+    metadata:
+      source: devskim
+      source-rule: DS106863
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/ciphers.json
+      references:
+        - DS106864.md
+    pattern-regex: \bDES\b

@@ -1,0 +1,21 @@
+rules:
+  - id: DS450003
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: INFO
+    message: Web.config debug is enabled — Having debug mode enabled is inefficient
+      and could leak sensitive application information in production. — Disable
+      debug mode.
+    metadata:
+      source: devskim
+      source-rule: DS450003
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/frameworks/dotnet_framework.json
+      references:
+        - DS450003.md
+    pattern-regex: "true"

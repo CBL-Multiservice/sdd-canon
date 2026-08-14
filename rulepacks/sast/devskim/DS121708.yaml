@@ -1,0 +1,18 @@
+rules:
+  - id: DS121708
+    languages:
+      - c
+      - cpp
+    severity: INFO
+    message: Problematic C function detected (memcpy) — There are a number of
+      conditions in which memcpy can introduce a vulnerability (mismatched
+      buffer sizes, null pointers, etc.). More secure alternitives perform
+      additional validation of the source and destination buffer — Use memcpy_s
+      if possible.
+    metadata:
+      source: devskim
+      source-rule: DS121708
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/suggested_api.json
+      references:
+        - DS121708.md
+    pattern-regex: \bmemcpy\s*\(([^,]+),([^,]+),([^,\)]+)\)

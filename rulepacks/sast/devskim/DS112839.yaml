@@ -1,0 +1,20 @@
+rules:
+  - id: DS112839
+    languages:
+      - csharp
+    severity: INFO
+    message: .NET - Hard-coded SSL/TLS Protocol — .NET - Hard-coded SSL/TLS Protocol
+      — Review to ensure that a TLS protocol agility is maintained.
+    metadata:
+      source: devskim
+      source-rule: DS112839
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_functioncall.json
+      references:
+        - DS440000.md
+    pattern-either:
+      - pattern-regex: \bSslStream\.AuthenticateAsClient\b
+      - pattern-regex: \bSslStream\.AuthenticateAsClientAsync\b
+      - pattern-regex: \bBeginAuthenticateAsClient\b
+      - pattern-regex: \bSslStream\.AuthenticateAsServer\b
+      - pattern-regex: \bSslStream\.AuthenticateAsServerAsync\b
+      - pattern-regex: \bBeginAuthenticateAsServer\b

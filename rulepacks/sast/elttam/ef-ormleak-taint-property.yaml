@@ -1,0 +1,35 @@
+rules:
+  - id: ef-ormleak-taint-property
+    message: User-controlled data flows into EF.Property(). If attackers control the
+      property name, this enables dynamic field access and ORM leak-style
+      inference.
+    severity: WARNING
+    metadata:
+      cwe:
+        - "CWE-203: Observable Discrepancy"
+      owasp:
+        - A01:2021 - Broken Access Control
+      references:
+        - https://cwe.mitre.org/data/definitions/203.html
+        - https://owasp.org/Top10/A01_2021-Broken_Access_Control/
+        - https://www.elttam.com/blog/leaking-more-than-you-joined-for/
+      category: security
+      technology:
+        - csharp
+      subcategory:
+        - vuln
+      likelihood: LOW
+      impact: MEDIUM
+      confidence: LOW
+    languages:
+      - csharp
+    mode: taint
+    pattern-sources:
+      - pattern: $REQ.Query[$KEY]
+      - pattern: $REQ.Form[$KEY]
+      - pattern: $REQ.RouteValues[$KEY]
+      - pattern: $CTX.Request.Query[$KEY]
+      - pattern: $CTX.Request.Form[$KEY]
+      - pattern: $MODEL.$FIELD
+    pattern-sinks:
+      - pattern: EF.Property<$T>($X, $PROP)

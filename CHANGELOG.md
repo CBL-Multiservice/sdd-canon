@@ -3,6 +3,29 @@
 Format based on Keep a Changelog; semantic versioning (see README for the
 MAJOR/MINOR/PATCH semantics specific to canon content).
 
+## [0.3.0] — 2026-08-14
+
+### Added
+
+- `rulepacks/sast/` — the first mechanical rulepack, produced by the
+  ArchGenerator `canon-export` (one source, two consumers): **291 rules from 8
+  permissively-licensed upstreams** (MIT/Apache-2.0/BSD), one Semgrep-format
+  YAML doc per rule, attribution preserved per rule (`MANIFEST.json` with
+  per-rule source, license, upstream URL and sha256; `LICENSES.md` per
+  upstream). Non-permissive rules the engine also curates are NOT distributed
+  and are counted in the manifest (LGPL-3.0: 164 · LGPL-2.1: 36). Commons
+  Clause sources never enter, in any form. MINOR bump: new canon content —
+  kits consume via `sdd canon update` and the `sast` sensor leaves `[DEFINE]`
+  by pointing at the LOCAL pinned rulepack (never a remote --config).
+
+### Changed
+
+- `canon/advisory-sources.md` — the `sca` advisory row expanded to the REAL
+  live-source set of the product engine sync: OSV per ecosystem (npm, PyPI,
+  Go, crates.io, Maven, Packagist, RubyGems, NuGet) + CISA KEV (known-exploited
+  flag) + FIRST EPSS (exploit probability). Advisory epistemics unchanged:
+  live consultation never decides — claims enter as `[P]`.
+
 ## [0.2.0] — 2026-08-13
 
 ### Added

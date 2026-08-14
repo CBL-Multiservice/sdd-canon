@@ -1,0 +1,20 @@
+rules:
+  - id: archgen-java-sql-concat
+    pattern-either:
+      - pattern: $STMT.executeQuery(<... "..." + $X ...>)
+      - pattern: $STMT.executeUpdate(<... "..." + $X ...>)
+      - pattern: $STMT.execute(<... "..." + $X ...>)
+      - pattern: $STMT.addBatch(<... "..." + $X ...>)
+      - pattern: $STMT.executeQuery(String.format("...", ...))
+      - pattern: $STMT.executeUpdate(String.format("...", ...))
+      - pattern: $STMT.execute(String.format("...", ...))
+    message: "SQL montado por concatenação/format e executado direto no Statement —
+      o valor entra na string da query, não como parâmetro: injeção de SQL. Use
+      PreparedStatement com placeholders (?) e setXxx()."
+    languages:
+      - java
+    severity: ERROR
+    metadata:
+      cwe: CWE-89
+      source-rule: codeql java/concatenated-sql-query (SqlConcatenated.ql)
+      source-url: https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-089/SqlConcatenated.ql

@@ -1,0 +1,18 @@
+rules:
+  - id: DS108330
+    languages:
+      - c
+      - cpp
+    severity: WARNING
+    message: Banned C function detected (strncat) — strncat adds the null terminator
+      at character 'n + 1', rather than at the nth character. this frequently
+      leads to the null terminator being added in the memory adjacent to the
+      destination buffer, rather than in the destination buffer. — Use strcat_s
+      or strlcat if possible.
+    metadata:
+      source: devskim
+      source-rule: DS108330
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/dangerous_api.json
+      references:
+        - DS108330.md
+    pattern-regex: \bstrncat\s*\(([^,]+),([^,]+),([^,]+?)\)+

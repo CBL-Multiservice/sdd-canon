@@ -1,0 +1,15 @@
+rules:
+  - id: DS109501
+    languages:
+      - csharp
+    severity: WARNING
+    message: Do not use the 3DES symmetric block cipher. — The 3DES cipher was
+      found, which is only secure if three independent keys are used. — Use AES
+      instead.
+    metadata:
+      source: devskim
+      source-rule: DS109501
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/ciphers.json
+      references:
+        - DS109501.md
+    pattern-regex: \bTripleDESCryptoServiceProvider\b

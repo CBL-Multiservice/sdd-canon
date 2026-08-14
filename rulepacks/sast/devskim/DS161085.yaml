@@ -1,0 +1,18 @@
+rules:
+  - id: DS161085
+    languages:
+      - c
+      - cpp
+    severity: INFO
+    message: Problematic C function detected (malloc) — If the value provided to
+      malloc is the result of unsafe integer math, it can result in an
+      exploitable condition. — calloc handles the most common integer math in
+      memory allocation (# of elements * their size) with error handling to
+      prevent overflows in most implementations, and zeros out memory
+    metadata:
+      source: devskim
+      source-rule: DS161085
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/suggested_api.json
+      references:
+        - DS161085.md
+    pattern-regex: \bmalloc\s*\(([^,\)]+)\)

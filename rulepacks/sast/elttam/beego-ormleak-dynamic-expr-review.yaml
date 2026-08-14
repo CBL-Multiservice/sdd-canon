@@ -1,0 +1,35 @@
+rules:
+  - id: beego-ormleak-dynamic-expr-review
+    message: Dynamic Beego ORM expression string passed to
+      Filter/Exclude/Condition.*. Review whether the expression can include
+      attacker-controlled "__" traversal or operator suffixes (e.g.
+      "__contains", "__gt").
+    severity: INFO
+    metadata:
+      cwe:
+        - "CWE-203: Observable Discrepancy"
+      owasp:
+        - A01:2021 - Broken Access Control
+      references:
+        - https://cwe.mitre.org/data/definitions/203.html
+        - https://owasp.org/Top10/A01_2021-Broken_Access_Control/
+        - https://www.elttam.com/blog/leaking-more-than-you-joined-for/
+      category: security
+      technology:
+        - golang
+      subcategory:
+        - vuln
+      likelihood: LOW
+      impact: MEDIUM
+      confidence: LOW
+    languages:
+      - go
+    pattern-either:
+      - pattern: $QS.Filter($EXPR, ...)
+      - pattern: $QS.Exclude($EXPR, ...)
+      - pattern: $COND.And($EXPR, ...)
+      - pattern: $COND.Or($EXPR, ...)
+    metavariable-pattern:
+      metavariable: $EXPR
+      patterns:
+        - pattern-not: '"..."'

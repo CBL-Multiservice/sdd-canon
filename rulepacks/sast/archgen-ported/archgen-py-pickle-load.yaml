@@ -1,0 +1,19 @@
+rules:
+  - id: archgen-py-pickle-load
+    pattern-either:
+      - pattern: pickle.load(...)
+      - pattern: pickle.loads(...)
+      - pattern: cPickle.load(...)
+      - pattern: cPickle.loads(...)
+      - pattern: dill.load(...)
+      - pattern: dill.loads(...)
+    message: Desserialização com pickle/dill executa código arbitrário do dado
+      desserializado. Dado não-confiável aqui é execução remota de código. Use
+      um formato de dados (JSON) ou assine/verifique a origem.
+    languages:
+      - python
+    severity: ERROR
+    metadata:
+      cwe: CWE-502
+      source-rule: bandit B301
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b301_pickle.html

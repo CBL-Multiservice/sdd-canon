@@ -1,0 +1,14 @@
+rules:
+  - id: archgen-py-telnetlib
+    pattern-either:
+      - pattern: telnetlib.Telnet(...)
+      - pattern: import telnetlib
+    message: Telnet trafega credenciais e dados em texto claro. Use SSH (paramiko)
+      no lugar.
+    languages:
+      - python
+    severity: WARNING
+    metadata:
+      cwe: CWE-319
+      source-rule: bandit B312
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b312_telnetlib.html

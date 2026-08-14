@@ -1,0 +1,42 @@
+rules:
+  - id: prisma-ormleak-taint-projection
+    message: User-controlled data flows into Prisma `select/include`. If attackers
+      can control projection/relations, sensitive data may be exposed.
+    severity: WARNING
+    metadata:
+      cwe:
+        - "CWE-203: Observable Discrepancy"
+      owasp:
+        - A01:2021 - Broken Access Control
+      references:
+        - https://cwe.mitre.org/data/definitions/203.html
+        - https://owasp.org/Top10/A01_2021-Broken_Access_Control/
+        - https://www.elttam.com/blog/plorming-your-primsa-orm/
+      category: security
+      technology:
+        - javascript
+        - typescript
+      subcategory:
+        - vuln
+      likelihood: LOW
+      impact: MEDIUM
+      confidence: LOW
+    languages:
+      - javascript
+      - typescript
+    mode: taint
+    pattern-sources:
+      - pattern: $REQ.query
+      - pattern: $REQ.body
+      - pattern: $CTX.request.body
+      - pattern: await $REQ.json()
+      - pattern: await $REQUEST.json()
+      - pattern: JSON.parse($EVENT.body)
+    pattern-sinks:
+      - patterns:
+          - pattern-either:
+              - pattern: "$P.$M.$FUNC({ ..., select: $SEL, ... })"
+              - pattern: "$P.$M.$FUNC({ ..., include: $INC, ... })"
+          - metavariable-regex:
+              metavariable: $FUNC
+              regex: ^(find.*)

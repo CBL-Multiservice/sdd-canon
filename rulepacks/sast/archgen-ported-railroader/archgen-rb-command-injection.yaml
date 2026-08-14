@@ -1,0 +1,20 @@
+rules:
+  - id: archgen-rb-command-injection
+    pattern-either:
+      - pattern: system("...#{$X}...")
+      - pattern: system(<... "..." + $X ...>)
+      - pattern: Kernel.exec("...#{$X}...")
+      - pattern: Kernel.exec(<... "..." + $X ...>)
+      - pattern: IO.popen("...#{$X}...")
+      - pattern: IO.popen(<... "..." + $X ...>)
+      - pattern: Open3.popen3("...#{$X}...")
+    message: Comando de shell montado por interpolação/concatenação — entrada
+      externa vira injeção de comando. Passe o programa e cada argumento como
+      itens SEPARADOS do array (system('prog', arg) — sem passar pelo shell).
+    languages:
+      - ruby
+    severity: ERROR
+    metadata:
+      cwe: CWE-78
+      source-rule: railroader check_execute
+      source-url: https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_execute.rb

@@ -1,0 +1,14 @@
+rules:
+  - id: DS168931
+    languages:
+      - csharp
+    severity: ERROR
+    message: Do not use broken/weak cryptographic hash algorithms — A potentially
+      weak hashing algorithm was used. — Use SHA-256 instead.
+    metadata:
+      source: devskim
+      source-rule: DS168931
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/hash_algorithm.json
+      references:
+        - DS126858.md
+    pattern-regex: MD5CryptoServiceProvider

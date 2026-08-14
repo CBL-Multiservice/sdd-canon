@@ -1,0 +1,20 @@
+rules:
+  - id: DS176209
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: INFO
+    message: Suspicious comment — A "TODO" or similar was left in source code,
+      possibly indicating incomplete functionality
+    metadata:
+      source: devskim
+      source-rule: DS176209
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/hygiene/todo.json
+      references:
+        - DS176209.md
+    pattern-regex: \b(?:(TODO|FIXME|REMOVEME|HACK|BLACK MAGIC))\b

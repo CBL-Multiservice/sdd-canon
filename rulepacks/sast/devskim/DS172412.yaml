@@ -1,0 +1,16 @@
+rules:
+  - id: DS172412
+    languages:
+      - csharp
+    severity: INFO
+    message: Review unsafe code — The unsafe keyword denotes an unsafe context,
+      which is required for any operation involving pointers. Unsafe code in is
+      not necessarily dangerous; it is just code whose safety cannot be verified
+      by the CLR.
+    metadata:
+      source: devskim
+      source-rule: DS172412
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/manualreview/dynamiccode.json
+      references:
+        - DS172412.md
+    pattern-regex: \b(?:unsafe)\b

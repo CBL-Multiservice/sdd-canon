@@ -1,0 +1,20 @@
+rules:
+  - id: DS440012
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: INFO
+    message: "BoringSSL: Hard-coded SSL/TLS Protocol — BoringSSL: Hard-coded SSL/TLS
+      Protocol — Review to ensure that a TLS protocol agility is maintained."
+    metadata:
+      source: devskim
+      source-rule: DS440012
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_generic.json
+      references:
+        - DS440001.md
+    pattern-regex: \b(SSL|D?TLS) ?v?[0123_\.]*_VERSION(_MAJOR)?

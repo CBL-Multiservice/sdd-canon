@@ -1,0 +1,27 @@
+rules:
+  - id: DS148264
+    languages:
+      - c
+      - cpp
+      - csharp
+    severity: WARNING
+    message: Do not use weak/non-cryptographic random number generators — Use
+      cryptographic random numbers generators for anything even close to a
+      security function. — Replacements depend on language.
+    metadata:
+      source: devskim
+      source-rule: DS148264
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/random.json
+      references:
+        - DS148264.md
+    pattern-either:
+      - pattern-regex: \bpseudoRandomBytes\b
+      - pattern-regex: \brand\(
+      - pattern-regex: random_shuffle\(
+      - pattern-regex: \bshuffle\(
+      - pattern-regex: \bRAND_MAX\b
+      - pattern-regex: \brand\(\s*\)\s*%
+      - pattern-regex: \bmwc1616\b
+      - pattern-regex: \bSystem\.Random\b
+      - pattern-regex: \b(?:\bRandom\()\b
+      - pattern-regex: \barc4random\b

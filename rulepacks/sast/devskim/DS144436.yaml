@@ -1,0 +1,16 @@
+rules:
+  - id: DS144436
+    languages:
+      - csharp
+    severity: WARNING
+    message: Do not use outdated SSL/TLS protocols — It's usually better to rely on
+      the operating system configuration, rather than hardcoding a specific
+      SecurityProtocolType. — Either leave off or set to
+      SecurityProtocolType.Tls12;
+    metadata:
+      source: devskim
+      source-rule: DS144436
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/protocol.json
+      references:
+        - DS169126.md
+    pattern-regex: \b(?:SecurityProtocolType\.(Ssl3|Tls|Tls11))\b

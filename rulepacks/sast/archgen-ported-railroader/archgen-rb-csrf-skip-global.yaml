@@ -1,0 +1,16 @@
+rules:
+  - id: archgen-rb-csrf-skip-global
+    pattern-either:
+      - pattern: skip_before_action :verify_authenticity_token
+      - pattern: skip_before_filter :verify_authenticity_token
+    message: "verify_authenticity_token desligado SEM escopo (only:/except:) — a
+      proteção CSRF cai pra TODAS as actions do controller. Se algumas actions
+      realmente precisam (ex.: API sem sessão), escope com only:/except: em vez
+      de desligar geral."
+    languages:
+      - ruby
+    severity: WARNING
+    metadata:
+      cwe: CWE-352
+      source-rule: railroader check_filter_skipping
+      source-url: https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_filter_skipping.rb

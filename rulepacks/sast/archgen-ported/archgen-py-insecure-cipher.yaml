@@ -1,0 +1,17 @@
+rules:
+  - id: archgen-py-insecure-cipher
+    pattern-either:
+      - pattern: Crypto.Cipher.DES.new(...)
+      - pattern: Crypto.Cipher.ARC4.new(...)
+      - pattern: Crypto.Cipher.ARC2.new(...)
+      - pattern: Crypto.Cipher.XOR.new(...)
+      - pattern: Crypto.Cipher.Blowfish.new(...)
+    message: Cifra fraca/quebrada (DES/RC4/RC2/XOR/Blowfish). Use AES-GCM ou
+      ChaCha20-Poly1305 (AEAD).
+    languages:
+      - python
+    severity: ERROR
+    metadata:
+      cwe: CWE-327
+      source-rule: bandit B304
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b304_b305_ciphers_and_modes.html

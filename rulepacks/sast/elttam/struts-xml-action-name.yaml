@@ -1,0 +1,23 @@
+rules:
+  - id: struts-xml-action-name
+    message: struts.xml action $...NAME
+    severity: INFO
+    languages:
+      - generic
+    metadata:
+      category: security
+      subcategory: audit
+      likelihood: LOW
+      impact: LOW
+      confidence: LOW
+      technology:
+        - JVM
+        - Struts2
+    paths:
+      include:
+        - "*.xml"
+    pattern-either:
+      - pattern: |
+          <action ... name="$...NAME"
+      - pattern: |
+          <action ... name='$...NAME'

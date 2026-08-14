@@ -1,0 +1,12 @@
+rules:
+  - id: archgen-py-flask-debug
+    pattern: $APP.run(..., debug=True, ...)
+    message: Flask com debug=True expõe o debugger do Werkzeug — que permite
+      executar código Python arbitrário pelo navegador. Nunca em produção.
+    languages:
+      - python
+    severity: ERROR
+    metadata:
+      cwe: CWE-489
+      source-rule: bandit B201
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b201_flask_debug_true.html

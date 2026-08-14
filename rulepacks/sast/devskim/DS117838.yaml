@@ -1,0 +1,21 @@
+rules:
+  - id: DS117838
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: ERROR
+    message: Do not store tokens or keys in source code. — A token or key was found
+      in source code. If this represents a secret, it should be moved somewhere
+      else.
+    metadata:
+      source: devskim
+      source-rule: DS117838
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/privacy/secrets.json
+      references:
+        - DS117838.md
+    pattern-regex: (secret|license|key|pass).*[a-f0-9]{30,}

@@ -1,0 +1,17 @@
+rules:
+  - id: archgen-rb-constantize-dynamic
+    pattern-either:
+      - pattern: $X.constantize
+      - pattern: Object.const_get($X)
+      - pattern: Kernel.const_get($X)
+    message: constantize/const_get resolve uma STRING pra uma classe Ruby — com
+      entrada externa, o atacante instancia QUALQUER classe carregada (remote
+      code execution via classe inesperada). Restrinja a uma lista branca antes
+      de resolver.
+    languages:
+      - ruby
+    severity: WARNING
+    metadata:
+      cwe: CWE-470
+      source-rule: railroader check_unsafe_reflection
+      source-url: https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_unsafe_reflection.rb

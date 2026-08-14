@@ -1,0 +1,17 @@
+rules:
+  - id: archgen-py-yaml-unsafe-load
+    pattern-either:
+      - pattern: yaml.load($X)
+      - pattern: yaml.load($X, Loader=yaml.Loader)
+      - pattern: yaml.load($X, Loader=yaml.UnsafeLoader)
+      - pattern: yaml.unsafe_load(...)
+    message: yaml.load sem SafeLoader instancia objetos Python arbitrários do YAML —
+      dado não-confiável vira execução de código. Use yaml.safe_load ou
+      Loader=yaml.SafeLoader.
+    languages:
+      - python
+    severity: ERROR
+    metadata:
+      cwe: CWE-502
+      source-rule: bandit B506
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b506_yaml_load.html

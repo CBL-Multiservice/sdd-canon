@@ -1,0 +1,14 @@
+rules:
+  - id: DS440020
+    languages:
+      - csharp
+    severity: WARNING
+    message: .NET - Do not hardcode SSL/TLS versions within an application. — .NET-
+      Do not hardcode SSL/TLS versions within an application.
+    metadata:
+      source: devskim
+      source-rule: DS440020
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/hardcoded_tls.json
+      references:
+        - DS440000.md
+    pattern-regex: SecurityProtocolType|SecurityProtocolTypeExtensions|SslProtocols|SslProtocolsExtensions|DontEnableSchUseStrongCrypto|DisableUsingServicePointManagerSecurityProtocols|DontEnableSystemDefaultTlsVersions

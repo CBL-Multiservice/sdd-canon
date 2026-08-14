@@ -1,0 +1,29 @@
+rules:
+  - id: spring-simplemailmessage-setfrom-raw
+    languages:
+      - java
+    severity: INFO
+    message: SimpleMailMessage.setFrom(...) called. If the from-address is
+      influenced by user input, be aware of encoded names and complex email
+      syntax (e.g. encoded words, group addresses, angle-bracket forms).
+    metadata:
+      cwe:
+        - "CWE-20: Improper Input Validation"
+      owasp:
+        - A04:2021 – Insecure Design
+      references:
+        - https://elttam.com/blog/jakarta-mail-primitives/
+        - https://cwe.mitre.org/data/definitions/20.html
+        - https://owasp.org/Top10/A04_2021-Insecure_Design/
+      category: security
+      subcategory: audit
+      likelihood: LOW
+      impact: MEDIUM
+      confidence: LOW
+      technology:
+        - java
+    patterns:
+      - pattern: $MSG.setFrom(...)
+      - metavariable-type:
+          metavariable: $MSG
+          type: org.springframework.mail.SimpleMailMessage

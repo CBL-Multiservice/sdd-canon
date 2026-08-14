@@ -1,0 +1,29 @@
+rules:
+  - id: jakarta-mail-mimemessage-raw-envelope-ctor
+    languages:
+      - java
+    severity: INFO
+    message: MimeMessage constructed from a raw source or InputStream. Headers such
+      as From, Reply-To, Subject, and Newsgroups will be parsed using
+      InternetAddress/NewsAddress. Ensure user-controlled envelopes are
+      canonicalized and not blindly trusted.
+    metadata:
+      cwe:
+        - "CWE-20: Improper Input Validation"
+      owasp:
+        - A04:2021 – Insecure Design
+      references:
+        - https://elttam.com/blog/jakarta-mail-primitives/
+        - https://cwe.mitre.org/data/definitions/20.html
+        - https://owasp.org/Top10/A04_2021-Insecure_Design/
+      category: security
+      subcategory: audit
+      likelihood: LOW
+      impact: MEDIUM
+      confidence: LOW
+      technology:
+        - java
+    pattern-either:
+      - pattern: new jakarta.mail.internet.MimeMessage($SESSION, $IS)
+      - pattern: new jakarta.mail.internet.MimeMessage($FOLDER, $IS, $MSGNUM)
+      - pattern: new jakarta.mail.internet.MimeMessage($SOURCE)

@@ -1,0 +1,15 @@
+rules:
+  - id: archgen-java-ldap-filter-concat
+    pattern-either:
+      - pattern: $CTX.search($BASE, <... "..." + $X ...>, ...)
+      - pattern: $CTX.search($BASE, String.format("...", ...), ...)
+    message: Filtro LDAP montado por concatenação/format — entrada externa vira
+      injeção de LDAP (bypass de autenticação/enumeração). Escape os valores do
+      filtro ou use uma API de filtro parametrizada.
+    languages:
+      - java
+    severity: ERROR
+    metadata:
+      cwe: CWE-90
+      source-rule: codeql java/ldap-injection (LdapInjection.ql)
+      source-url: https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-090/LdapInjection.ql

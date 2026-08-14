@@ -1,0 +1,22 @@
+rules:
+  - id: DS440077
+    languages:
+      - c
+      - cpp
+    severity: INFO
+    message: Win32 - Hard-coded SSL/TLS Protocol — Win32 - Hard-coded SSL/TLS
+      Protocol — Review to ensure that a TLS protocol agility is maintained.
+    metadata:
+      source: devskim
+      source-rule: DS440077
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_win32.json
+      references:
+        - DS440000.md
+    pattern-either:
+      - pattern-regex: CONF_modules_load_file|SSL_CTX_config|SSL_config|SSL_CONF_cmd|SSL_CONF_cmd_value_type
+      - pattern-regex: SSL_set_security_callback|SSL_set_security_level|SSL_CTX_set_security_level
+      - pattern-regex: SSL_(CTX_)?set_(min|max)_proto_version
+      - pattern-regex: DTLS_client_method|DTLS_server_method|TLS_client_method|TLS_server_method|TLS_method
+      - pattern-regex: SSLv3_method|SSLv3_server_method|SSLv3_client_method|SSLv23_method|SSLv23_server_method|SSLv23_client_method|TLSv1_method|TLSv1_server_method|TLSv1_client_method|TLSv1_1_method|TLSv1_1_server_method|TLSv1_1_client_method|TLSv1_2_method|TLSv1_2_server_method|TLSv1_2_client_method|DTLSv1_method|DTLSv1_server_method|DTLSv1_client_method|DTLSv1_2_method|DTLSv1_2_server_method|DTLSv1_2_client_method
+      - pattern-regex: SSL_set_ssl_method|SSL_CTX_set_ssl_version|SSL_CTX_new|SSL_CTX_add_client_custom_ext|SSL_CTX_add_server_custom_ext
+      - pattern-regex: DTLSv1_listen|SSL_stateless|SSL_CTX_add_custom_ext

@@ -1,0 +1,13 @@
+rules:
+  - id: archgen-java-cookie-insecure
+    pattern: $COOKIE.setSecure(false)
+    message: Cookie com setSecure(false) trafega também em HTTP claro — a sessão
+      vaza em qualquer rede interceptável. Cookies de sessão devem ser Secure (e
+      HttpOnly).
+    languages:
+      - java
+    severity: WARNING
+    metadata:
+      cwe: CWE-614
+      source-rule: codeql java/insecure-cookie (InsecureCookie.ql)
+      source-url: https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-614/InsecureCookie.ql

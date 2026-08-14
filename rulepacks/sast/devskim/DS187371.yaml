@@ -1,0 +1,20 @@
+rules:
+  - id: DS187371
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: WARNING
+    message: A weak cipher mode of operation was used — A potentially weak cipher
+      mode of operation was used. — Consider using CBC, CTR, or GCM.
+    metadata:
+      source: devskim
+      source-rule: DS187371
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/weak_cipher_modes.json
+      references:
+        - DS182720.md
+    pattern-regex: \b(?:(ECB|OFB|CFB|CTS|PCBC|GMAC|XCBC|IACBC|IAPM|EAX|OCB|CWC|AEAD|LRW|XEX|XTS|CMC|EME|CBCMAC|OMAC|PMAC))\b

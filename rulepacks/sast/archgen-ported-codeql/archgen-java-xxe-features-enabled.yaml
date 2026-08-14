@@ -1,0 +1,23 @@
+rules:
+  - id: archgen-java-xxe-features-enabled
+    pattern-either:
+      - pattern: $F.setFeature("http://xml.org/sax/features/external-general-entities",
+          true)
+      - pattern: $F.setFeature("http://xml.org/sax/features/external-parameter-entities",
+          true)
+      - pattern: $F.setExpandEntityReferences(true)
+      - pattern: $F.setProperty(XMLInputFactory.SUPPORT_DTD, true)
+      - pattern: $F.setProperty("javax.xml.stream.supportDTD", true)
+      - pattern: $F.setProperty(XMLInputFactory.IS_SUPPORTING_EXTERNAL_ENTITIES, true)
+      - pattern: $F.setProperty("javax.xml.stream.isSupportingExternalEntities", true)
+    message: Entidades externas/DTD LIGADAS explicitamente no parser XML — dado
+      não-confiável vira XXE (leitura de arquivo local, SSRF, negação de
+      serviço). Desligue DTD e entidades externas; a referência é o XXE
+      Prevention Cheat Sheet da OWASP.
+    languages:
+      - java
+    severity: ERROR
+    metadata:
+      cwe: CWE-611
+      source-rule: codeql java/xxe (XXE.ql)
+      source-url: https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-611/XXE.ql

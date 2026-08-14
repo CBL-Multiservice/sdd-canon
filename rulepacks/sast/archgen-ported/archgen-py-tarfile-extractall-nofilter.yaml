@@ -1,0 +1,15 @@
+rules:
+  - id: archgen-py-tarfile-extractall-nofilter
+    patterns:
+      - pattern: $TAR.extractall(...)
+      - pattern-not: $TAR.extractall(..., filter=..., ...)
+    message: extractall sem filter= extrai caminhos do tar como vêm — arquivo
+      malicioso escreve fora do diretório destino (path traversal, CVE clássica
+      do tarfile). Use filter='data' (Python 3.12+) ou valide cada membro.
+    languages:
+      - python
+    severity: WARNING
+    metadata:
+      cwe: CWE-22
+      source-rule: bandit B202
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b202_tarfile_unsafe_members.html

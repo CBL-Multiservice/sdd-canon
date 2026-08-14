@@ -1,0 +1,14 @@
+rules:
+  - id: DS108647
+    languages:
+      - ruby
+    severity: ERROR
+    message: Do not use broken/weak cryptographic hash algorithms — Avoid using
+      broken or weak hash algorithms. — Use Digest::SHA256 or Digest::SHA512
+    metadata:
+      source: devskim
+      source-rule: DS108647
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/hash_algorithm.json
+      references:
+        - DS126858.md
+    pattern-regex: Digest::(MD5|RMD160|SHA1)

@@ -1,0 +1,15 @@
+rules:
+  - id: DS176603
+    languages:
+      - ruby
+    severity: ERROR
+    message: Disabled certificate validation — Extend default certificate
+      validation, but do not disable or override default rules. — Always use a
+      valid certificate, even during testing.
+    metadata:
+      source: devskim
+      source-rule: DS176603
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/certificate.json
+      references:
+        - DS181865.md
+    pattern-regex: \bOpenSSL::SSL::VERIFY_NONE\b

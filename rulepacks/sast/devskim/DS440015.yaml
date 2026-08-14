@@ -1,0 +1,22 @@
+rules:
+  - id: DS440015
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: INFO
+    message: "mbedTLS: Hard-coded SSL/TLS Protocol — mbedTLS: Hard-coded SSL/TLS
+      Protocol — Review to ensure that a TLS protocol agility is maintained."
+    metadata:
+      source: devskim
+      source-rule: DS440015
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/TLS/tls_generic.json
+      references:
+        - DS440001.md
+    pattern-either:
+      - pattern-regex: MBEDTLS_SSL_PROTO_(SSL|D?TLS)[123_]+
+      - pattern-regex: MBEDTLS_SSL_(MAJOR|MINOR)_VERSION_[0123]

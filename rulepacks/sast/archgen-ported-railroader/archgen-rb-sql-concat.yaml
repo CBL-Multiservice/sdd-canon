@@ -1,0 +1,21 @@
+rules:
+  - id: archgen-rb-sql-concat
+    pattern-either:
+      - pattern: $M.where("...#{$X}...")
+      - pattern: $M.where(<... "..." + $X ...>)
+      - pattern: $M.find_by_sql("...#{$X}...")
+      - pattern: $M.find_by_sql(<... "..." + $X ...>)
+      - pattern: $CONN.execute("...#{$X}...")
+      - pattern: $CONN.execute(<... "..." + $X ...>)
+      - pattern: $CONN.exec_query("...#{$X}...")
+      - pattern: $CONN.exec_query(<... "..." + $X ...>)
+    message: "SQL/condição ActiveRecord montada por interpolação/concatenação — o
+      valor entra na query como texto, não como parâmetro bind: injeção de SQL.
+      Use array de condições (where('id = ?', id)) ou hash (where(id: id))."
+    languages:
+      - ruby
+    severity: ERROR
+    metadata:
+      cwe: CWE-89
+      source-rule: railroader check_sql
+      source-url: https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_sql.rb

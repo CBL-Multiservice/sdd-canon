@@ -1,0 +1,27 @@
+rules:
+  - id: jakarta-mail-internetaddress-single-arg-validator
+    languages:
+      - java
+    severity: INFO
+    message: new InternetAddress(String) parses an email for RFC compliance, but
+      should not be treated as a full security/identity check. Ensure domain
+      checks and trust decisions are not based solely on constructor success.
+    metadata:
+      cwe:
+        - "CWE-20: Improper Input Validation"
+      owasp:
+        - A04:2021 – Insecure Design
+      references:
+        - https://elttam.com/blog/jakarta-mail-primitives/
+        - https://cwe.mitre.org/data/definitions/20.html
+        - https://owasp.org/Top10/A04_2021-Insecure_Design/
+      category: security
+      subcategory: audit
+      likelihood: MEDIUM
+      impact: MEDIUM
+      confidence: LOW
+      technology:
+        - java
+      vulnerability_class:
+        - Improper Validation
+    pattern: new jakarta.mail.internet.InternetAddress($ADDR)

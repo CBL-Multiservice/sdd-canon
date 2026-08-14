@@ -1,0 +1,22 @@
+rules:
+  - id: archgen-java-broken-cipher
+    pattern-either:
+      - pattern: Cipher.getInstance("DES")
+      - pattern: Cipher.getInstance("=~/^DES\/.*/")
+      - pattern: Cipher.getInstance("DESede")
+      - pattern: Cipher.getInstance("=~/^DESede\/.*/")
+      - pattern: Cipher.getInstance("RC4")
+      - pattern: Cipher.getInstance("ARCFOUR")
+      - pattern: Cipher.getInstance("RC2")
+      - pattern: Cipher.getInstance("Blowfish")
+      - pattern: Cipher.getInstance("=~/^Blowfish\/.*/")
+    message: Cifra quebrada/fraca (DES/3DES/RC4/RC2/Blowfish) — inaceitável para
+      dado que importa (DES é quebrável por força bruta; 3DES/Blowfish sofrem
+      Sweet32). Use AES-GCM ou ChaCha20-Poly1305.
+    languages:
+      - java
+    severity: ERROR
+    metadata:
+      cwe: CWE-327
+      source-rule: codeql java/weak-cryptographic-algorithm (BrokenCryptoAlgorithm.ql)
+      source-url: https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-327/BrokenCryptoAlgorithm.ql

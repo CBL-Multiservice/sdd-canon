@@ -1,0 +1,17 @@
+rules:
+  - id: DS425030
+    languages:
+      - ruby
+    severity: INFO
+    message: Do not deserialize untrusted data. — Deserializing attacker-supplied
+      data using YAML, Syck, or Marshall can result in code execution. — Either
+      add integrity protection or use a data format like JSON.
+    metadata:
+      source: devskim
+      source-rule: DS425030
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/deserialization.json
+      references:
+        - DS425000.md
+    pattern-either:
+      - pattern-regex: (YAML|Syck|Marshal)\.load
+      - pattern-regex: (YAML|Syck|Marshal)::load

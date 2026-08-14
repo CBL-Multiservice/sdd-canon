@@ -1,0 +1,14 @@
+rules:
+  - id: archgen-rb-permit-all
+    pattern: $PARAMS.permit!
+    message: "params.permit! permite TODOS os atributos da requisição sem lista
+      branca — mass assignment: o cliente escreve qualquer coluna do model (ex.:
+      admin=true). Liste os atributos explicitamente em permit(:campo1,
+      :campo2)."
+    languages:
+      - ruby
+    severity: ERROR
+    metadata:
+      cwe: CWE-915
+      source-rule: railroader check_permit_attributes
+      source-url: https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_permit_attributes.rb

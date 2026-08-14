@@ -1,0 +1,20 @@
+rules:
+  - id: archgen-py-xml-stdlib-parse
+    pattern-either:
+      - pattern: xml.etree.ElementTree.parse(...)
+      - pattern: xml.etree.ElementTree.fromstring(...)
+      - pattern: xml.dom.minidom.parse(...)
+      - pattern: xml.dom.minidom.parseString(...)
+      - pattern: xml.sax.parse(...)
+      - pattern: xml.sax.parseString(...)
+      - pattern: xml.dom.pulldom.parse(...)
+    message: "Parser XML da stdlib com dado não-confiável: variantes de negação de
+      serviço por expansão de entidade (billion laughs) seguem possíveis mesmo
+      com XXE mitigado nas versões novas. Para XML externo use defusedxml."
+    languages:
+      - python
+    severity: INFO
+    metadata:
+      cwe: CWE-776
+      source-rule: bandit B313-B320
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b313-b320_xml.html

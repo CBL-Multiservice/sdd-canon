@@ -24,7 +24,9 @@ sdd: canon-advisory
 | api | https://owasp.org/API-Security/ | OWASP API Security Top 10 |
 | ai-llm | https://owasp.org/www-project-top-10-for-large-language-model-applications/ | OWASP LLM Top 10 |
 | fitness-functions | https://endoflife.date/ | Runtime/dependency end-of-life dates |
-| sca | https://osv.dev/ | Known-vulnerability data for dependencies |
+| sca | https://osv.dev/ | Known-vulnerability data, synced per ecosystem (npm, PyPI, Go, crates.io, Maven, Packagist, RubyGems, NuGet) |
+| sca | https://www.cisa.gov/known-exploited-vulnerabilities-catalog | Known-exploited flag per CVE (enrichment) |
+| sca | https://www.first.org/epss/ | Exploit-probability score per CVE (enrichment) |
 | cloud | https://aws.amazon.com/architecture/well-architected/ | AWS Well-Architected pillars and updates |
 | cloud | https://learn.microsoft.com/azure/well-architected/ | Azure Well-Architected framework |
 | cloud | https://cloud.google.com/architecture/framework | Google Cloud Architecture Framework |

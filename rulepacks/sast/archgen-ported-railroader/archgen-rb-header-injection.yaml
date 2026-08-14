@@ -1,0 +1,17 @@
+rules:
+  - id: archgen-rb-header-injection
+    pattern-either:
+      - pattern: response.headers[$K] = "...#{$X}..."
+      - pattern: response.set_header($K, "...#{$X}...")
+      - pattern: headers[$K] = "...#{$X}..."
+    message: Cabeçalho de resposta HTTP montado por interpolação com dado externo —
+      CRLF na entrada injeta cabeçalhos/corpo adicionais (response
+      splitting/header injection). Sanitize/valide o valor antes de escrevê-lo
+      no cabeçalho.
+    languages:
+      - ruby
+    severity: WARNING
+    metadata:
+      cwe: CWE-113
+      source-rule: railroader check_response_splitting
+      source-url: https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_response_splitting.rb

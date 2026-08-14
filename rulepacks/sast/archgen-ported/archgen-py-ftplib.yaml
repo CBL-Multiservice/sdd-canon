@@ -1,0 +1,12 @@
+rules:
+  - id: archgen-py-ftplib
+    pattern: ftplib.FTP(...)
+    message: FTP trafega credenciais em texto claro. Use SFTP/FTPS (ftplib.FTP_TLS
+      ou paramiko).
+    languages:
+      - python
+    severity: WARNING
+    metadata:
+      cwe: CWE-319
+      source-rule: bandit B321
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b321_ftplib.html

@@ -1,0 +1,31 @@
+rules:
+  - id: processbuilder
+    message: ProcessBuilder in $METHOD()
+    severity: INFO
+    languages:
+      - java
+    mode: taint
+    metadata:
+      interfile: true
+      category: security
+      subcategory: audit
+      likelihood: LOW
+      impact: LOW
+      confidence: LOW
+      technology:
+        - java
+    pattern-sources:
+      - pattern: |
+          $RETURN $METHOD(...) {
+              ...
+          }
+    pattern-sinks:
+      - pattern-either:
+          - pattern: |
+              new ProcessBuilder($CMD, ...)
+          - patterns:
+              - pattern-inside: |
+                  $TYPE $PB = new ProcessBuilder(...);
+                  ...
+              - pattern: |
+                  $PB.command($CMD, ...)

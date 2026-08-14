@@ -1,0 +1,54 @@
+rules:
+  - id: len-cast-to-narrow-int-overflow
+    message: >-
+      The result of len() is cast to a narrower fixed-width integer
+      (uint32/int32/uint16/int16/uint8/int8). len() returns int (64-bit on
+      amd64/arm64), so a length above the target type's max silently wraps. This
+      is benign for in-memory counts/sizes but dangerous when the value becomes
+      a length/size field in a binary or wire format, where a truncated length
+      desynchronises the parser from the payload (data smuggling / boundary
+      confusion). Validate the length before casting, or keep the full-width
+      value and reject oversized input.
+
+      NOTE: this broad rule fires on every narrowing len() cast and is
+      INFO/audit. For the dangerous subset, see
+      len-cast-into-binary-length-prefix below.
+    languages:
+      - go
+    severity: INFO
+    patterns:
+      - pattern-either:
+          - pattern: uint32(len($X))
+          - pattern: int32(len($X))
+          - pattern: uint16(len($X))
+          - pattern: int16(len($X))
+          - pattern: uint8(len($X))
+          - pattern: int8(len($X))
+      - pattern-not-inside: |
+          if len($X) > $MAX { ... }
+          ...
+      - pattern-not-inside: |
+          if len($X) <= $MAX { ... }
+          ...
+      - pattern-not-inside: |
+          if len($X) >= $MAX { ... }
+          ...
+      - pattern-not-inside: |
+          if $LEN := len($X); $LEN > $MAX { ... }
+          ...
+    metadata:
+      cwe:
+        - "CWE-190: Integer Overflow or Wraparound"
+      owasp:
+        - A03:2021 - Injection
+      category: security
+      subcategory:
+        - audit
+      confidence: LOW
+      likelihood: LOW
+      impact: MEDIUM
+      technology:
+        - go
+      references:
+        - https://github.com/tinylib/msgp/blob/v1.5.0/msgp/write.go
+        - https://blog.trailofbits.com/2025/12/31/detect-gos-silent-arithmetic-bugs-with-go-panikint/

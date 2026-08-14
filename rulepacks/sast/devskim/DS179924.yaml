@@ -1,0 +1,16 @@
+rules:
+  - id: DS179924
+    languages:
+      - cpp
+      - c
+    severity: WARNING
+    message: Do not copy a FILE object (CERT FIO38-C) — The CERT Secure Coding
+      Standard recommends that FILE objects not be copied. — Copy a pointer to
+      the FILE object instead.
+    metadata:
+      source: devskim
+      source-rule: DS179924
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/misused_api.json
+      references:
+        - DS179924.md
+    pattern-regex: FILE [a-z0-9_][^=]*=\s*\*

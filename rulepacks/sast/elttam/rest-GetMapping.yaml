@@ -1,0 +1,41 @@
+rules:
+  - id: rest-GetMapping
+    message: Entrypoint $METHOD GET $PATH
+    severity: INFO
+    languages:
+      - java
+    metadata:
+      docs: https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/GetMapping.html
+      category: security
+      subcategory: audit
+      likelihood: LOW
+      impact: LOW
+      confidence: LOW
+      technology:
+        - spring
+        - spring-framework
+    pattern-either:
+      - pattern: |
+          @org.springframework.web.bind.annotation.GetMapping(value=$PATH)
+          $RETURN $METHOD(...)
+      - pattern: |
+          @org.springframework.web.bind.annotation.GetMapping(path=$PATH)
+          $RETURN $METHOD(...)
+      - pattern: |
+          @org.springframework.web.bind.annotation.GetMapping($PATH)
+          $RETURN $METHOD(...)
+      - pattern: |
+          @org.springframework.web.bind.annotation.GetMapping(...)
+          $RETURN $METHOD(...)
+      - pattern: |
+          @GetMapping(value=$PATH)
+          $RETURN $METHOD(...)
+      - pattern: |
+          @GetMapping(path=$PATH)
+          $RETURN $METHOD(...)
+      - pattern: |
+          @GetMapping($PATH)
+          $RETURN $METHOD(...)
+      - pattern: |
+          @GetMapping(...)
+          $RETURN $METHOD(...)

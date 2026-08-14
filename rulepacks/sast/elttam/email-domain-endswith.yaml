@@ -1,0 +1,37 @@
+rules:
+  - id: email-domain-endswith
+    languages:
+      - java
+    severity: WARNING
+    message: Domain/tenant derived using email.endsWith("..."). This can be bypassed
+      with addresses like tester@evil.com@trusted.com. Prefer comparing the
+      canonical domain returned by a parser.
+    metadata:
+      cwe:
+        - "CWE-20: Improper Input Validation"
+      owasp:
+        - A04:2021 – Insecure Design
+      references:
+        - https://elttam.com/blog/jakarta-mail-primitives/
+        - https://cwe.mitre.org/data/definitions/20.html
+        - https://owasp.org/Top10/A04_2021-Insecure_Design/
+      category: security
+      subcategory: audit
+      likelihood: LOW
+      impact: MEDIUM
+      confidence: LOW
+      technology:
+        - java
+    pattern-either:
+      - patterns:
+          - pattern: $EMAIL.endsWith("$SUFFIX")
+          - metavariable-regex:
+              metavariable: $SUFFIX
+              regex: ^@
+      - patterns:
+          - patterns:
+              - pattern: String $VAR = "$SUFFIX";
+              - metavariable-regex:
+                  metavariable: $SUFFIX
+                  regex: ^@
+          - pattern: $EMAIL.endsWith($VAR)

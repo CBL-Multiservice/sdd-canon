@@ -1,0 +1,23 @@
+rules:
+  - id: DS149435
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: ERROR
+    message: Do not seed randomness based on system time or a static value. —
+      Passing a predicable value to srand() is very insecure and should be
+      avoided.
+    metadata:
+      source: devskim
+      source-rule: DS149435
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/random.json
+      references:
+        - DS149435.md
+    pattern-either:
+      - pattern-regex: \bsrand\(\s*time\(
+      - pattern-regex: \bsrand\(\s*\d+\s*\)

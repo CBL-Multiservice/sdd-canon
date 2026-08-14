@@ -1,0 +1,19 @@
+rules:
+  - id: DS111237
+    languages:
+      - c
+      - cpp
+    severity: WARNING
+    message: Banned C function detected (strncpy) — strncpy is dangerous, as if the
+      source contains 'n' or more characters, it will not null terminate the
+      destination. — Use strcpy_s or strlcpy if possible. If no safe function is
+      viable, strcpy/strncpy should be proceeded by conditional checks to verify
+      tha that the source string will fit in the destination with a null
+      termnator.
+    metadata:
+      source: devskim
+      source-rule: DS111237
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/api/dangerous_api.json
+      references:
+        - DS111237.md
+    pattern-regex: \bstrncpy\s*\(([^,]+),([^,]+),([^,]+?)\)+

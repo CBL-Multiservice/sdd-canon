@@ -1,0 +1,19 @@
+rules:
+  - id: archgen-java-trust-all-manager
+    pattern-either:
+      - pattern: >
+          public void checkServerTrusted(X509Certificate[] $CHAIN, String $AUTH)
+          { }
+      - pattern: >
+          public void checkClientTrusted(X509Certificate[] $CHAIN, String $AUTH)
+          { }
+    message: TrustManager com checkServerTrusted/checkClientTrusted VAZIO aceita
+      qualquer cadeia de certificados — desliga o TLS na prática
+      (man-in-the-middle). Importe a CA no truststore em vez de confiar em tudo.
+    languages:
+      - java
+    severity: ERROR
+    metadata:
+      cwe: CWE-295
+      source-rule: codeql java/insecure-trustmanager (InsecureTrustManager.ql)
+      source-url: https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-295/InsecureTrustManager.ql

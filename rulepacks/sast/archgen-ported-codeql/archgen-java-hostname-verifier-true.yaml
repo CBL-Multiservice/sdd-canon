@@ -1,0 +1,17 @@
+rules:
+  - id: archgen-java-hostname-verifier-true
+    pattern-either:
+      - pattern: $CONN.setHostnameVerifier(($H, $S) -> true)
+      - pattern: HttpsURLConnection.setDefaultHostnameVerifier(($H, $S) -> true)
+      - pattern: |
+          public boolean verify(String $H, SSLSession $S) { return true; }
+    message: HostnameVerifier que sempre devolve true aceita certificado de QUALQUER
+      host — man-in-the-middle com qualquer certificado válido. Deixe a
+      verificação default do HTTPS fazer o trabalho.
+    languages:
+      - java
+    severity: ERROR
+    metadata:
+      cwe: CWE-297
+      source-rule: codeql java/unsafe-hostname-verification (UnsafeHostnameVerification.ql)
+      source-url: https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-297/UnsafeHostnameVerification.ql

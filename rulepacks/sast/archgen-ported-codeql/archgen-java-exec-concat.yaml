@@ -1,0 +1,19 @@
+rules:
+  - id: archgen-java-exec-concat
+    pattern-either:
+      - pattern: $RT.exec(<... "..." + $X ...>)
+      - pattern: $RT.exec(String.format("...", ...))
+      - pattern: new ProcessBuilder(<... "..." + $X ...>)
+      - pattern: new ProcessBuilder(String.format("...", ...))
+      - pattern: new ProcessBuilder(..., <... "..." + $X ...>, ...)
+    message: Comando de sistema montado por concatenação/format — entrada externa
+      vira injeção de comando. Passe programa e argumentos como itens SEPARADOS
+      da lista (ProcessBuilder(java.util.List)) e nunca concatene valor dentro
+      de um item.
+    languages:
+      - java
+    severity: ERROR
+    metadata:
+      cwe: CWE-78
+      source-rule: codeql java/concatenated-command-line (ExecUnescaped.ql)
+      source-url: https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-078/ExecUnescaped.ql

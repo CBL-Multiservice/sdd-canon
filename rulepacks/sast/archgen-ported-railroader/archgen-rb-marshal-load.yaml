@@ -1,0 +1,16 @@
+rules:
+  - id: archgen-rb-marshal-load
+    pattern-either:
+      - pattern: Marshal.load(...)
+      - pattern: Marshal.restore(...)
+    message: Marshal.load desserializa objetos Ruby arbitrários do bytestream — dado
+      não-confiável aqui é execução remota de código (gadget chains conhecidas
+      em gems populares). Nunca desserialize Marshal de fonte não-confiável; use
+      JSON.
+    languages:
+      - ruby
+    severity: ERROR
+    metadata:
+      cwe: CWE-502
+      source-rule: railroader check_deserialize
+      source-url: https://github.com/david-a-wheeler/railroader/blob/master/lib/railroader/checks/check_deserialize.rb

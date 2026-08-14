@@ -1,0 +1,14 @@
+rules:
+  - id: DS156431
+    languages:
+      - csharp
+    severity: ERROR
+    message: Do not use the RC2 symmetric block cipher. — The RC2 cipher was found,
+      which is considered to be broken. — Use AES instead.
+    metadata:
+      source: devskim
+      source-rule: DS156431
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/ciphers.json
+      references:
+        - DS156431.md
+    pattern-regex: \bRC2CryptoServiceProvider\b

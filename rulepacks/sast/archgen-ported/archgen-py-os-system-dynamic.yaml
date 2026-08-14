@@ -1,0 +1,18 @@
+rules:
+  - id: archgen-py-os-system-dynamic
+    patterns:
+      - pattern-either:
+          - pattern: os.system($CMD)
+          - pattern: os.popen($CMD)
+      - pattern-not: os.system("...")
+      - pattern-not: os.popen("...")
+    message: os.system/os.popen com comando construído dinamicamente roda no shell —
+      entrada externa vira injeção de comando. Use subprocess com lista de
+      argumentos.
+    languages:
+      - python
+    severity: ERROR
+    metadata:
+      cwe: CWE-78
+      source-rule: bandit B605
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html

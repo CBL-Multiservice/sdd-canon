@@ -1,0 +1,22 @@
+rules:
+  - id: DS162092
+    languages:
+      - c
+      - cpp
+      - csharp
+      - ruby
+      - rust
+      - swift
+      - bash
+    severity: INFO
+    message: Do not leave debug code in production — Accessing localhost could
+      indicate debug code, or could hinder scaling.
+    metadata:
+      source: devskim
+      source-rule: DS162092
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/hygiene/localhost.json
+      references:
+        - DS162092.md
+    pattern-either:
+      - pattern-regex: \blocalhost\b
+      - pattern-regex: \b127\.0\.0\.1\b

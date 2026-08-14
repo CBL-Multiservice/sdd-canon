@@ -1,0 +1,15 @@
+rules:
+  - id: archgen-py-marshal-load
+    pattern-either:
+      - pattern: marshal.load(...)
+      - pattern: marshal.loads(...)
+    message: marshal desserializa bytecode Python — dado não-confiável vira execução
+      de código. O próprio módulo documenta que não é seguro contra dado
+      malicioso.
+    languages:
+      - python
+    severity: ERROR
+    metadata:
+      cwe: CWE-502
+      source-rule: bandit B302
+      source-url: https://bandit.readthedocs.io/en/latest/plugins/b302_marshal.html

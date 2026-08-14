@@ -1,0 +1,14 @@
+rules:
+  - id: DS126188
+    languages:
+      - bash
+    severity: ERROR
+    message: Disabled certificate validation — Do not disable certificate validation
+      (Kubernetes) — Always use a valid certificate, even during testing.
+    metadata:
+      source: devskim
+      source-rule: DS126188
+      source-url: https://github.com/microsoft/DevSkim/blob/main/rules/default/security/cryptography/certificate.json
+      references:
+        - DS181865.md
+    pattern-regex: --insecure-skip-tls-verify(=true|$|[^=])

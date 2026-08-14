@@ -1,0 +1,12 @@
+rules:
+  - id: archgen-java-cookie-no-httponly
+    pattern: $COOKIE.setHttpOnly(false)
+    message: Cookie com setHttpOnly(false) fica legível por JavaScript — XSS na
+      página rouba a sessão. Cookies de sessão devem ser HttpOnly.
+    languages:
+      - java
+    severity: INFO
+    metadata:
+      cwe: CWE-1004
+      source-rule: codeql java/cookie-httponly-not-set (SensitiveCookieNotHttpOnly.ql)
+      source-url: https://github.com/github/codeql/blob/main/java/ql/src/Security/CWE/CWE-1004/SensitiveCookieNotHttpOnly.ql
