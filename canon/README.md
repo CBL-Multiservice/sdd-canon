@@ -92,15 +92,17 @@ dimension is reported as **"not assessable"** — it is NEVER scored, neither
 well nor badly, in the absence of evidence. The sensor enforces that the
 declaration exists; honoring it at assessment time is the assessor's contract.
 
-### 4. Normative pinned, advisory live (registry arrives in phase 4)
+### 4. Normative pinned, advisory live
 
-Content that decides or blocks is versioned in the `sdd-canon` registry,
-pinned by version + hash (`canon.lock`), vendored offline-first, and updated
-only by explicit human act after a reviewed diff. Advisory content (curated
-live sources) may be consulted on demand and enters the work as `[P]` until
-verified. **Consuming remote configuration in any enforcement mechanism is
-FORBIDDEN.** Until the registry ships (phase 4), everything in this directory
-is vendored content under version control — there is nothing remote to pin.
+Content that decides or blocks is distributed through the `sdd-canon`
+registry (github.com/CBL-Multiservice/sdd-canon): a kit vendors it under
+`.sdd/canon/` and pins version + hash in `canon.lock`. Updating is a human
+act — `sdd canon update` (tools/canon.py) downloads a release, verifies the
+hash chain, shows the diff and stops; only a human applies. Advisory content
+(curated live sources) may be consulted on demand and enters the work as
+`[P]` until verified. **Consuming remote configuration in any enforcement
+mechanism is FORBIDDEN** — the registry link exists to update, never to
+operate.
 
 ### 5. An agent never updates the canon on its own
 

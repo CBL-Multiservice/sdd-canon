@@ -3,6 +3,16 @@
 Format based on Keep a Changelog; semantic versioning (see README for the
 MAJOR/MINOR/PATCH semantics specific to canon content).
 
+## [0.1.2] — 2026-08-13
+
+### Changed
+
+- `canon/README.md` §4 reworded for the post-registry era: the registry now
+  exists — content is distributed via `sdd-canon`, vendored under
+  `.sdd/canon/` and pinned in `canon.lock`; updates go through
+  `sdd canon update` (human-approved). The stale "Until the registry ships
+  (phase 4)" clause is gone. No verdict is affected (PATCH).
+
 ## [0.1.1] — 2026-08-13
 
 ### Changed
